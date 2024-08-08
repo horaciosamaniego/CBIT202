@@ -21,7 +21,7 @@ csl: chicago-fullnote-bibliography.csl
 
 -   **Universidad Austral de Chile:** [Laboratorio de Ecoinformatica](http://www.ecoinformatica.cl)
 -   **Nombre asignatura:** Introducción al Análisis de Datos Geoespaciales
--   **Código asignatuta:** CBIT202
+-   **Código asignatuta:** CBIT202-18   
 -   **Docente responsable:** Horacio Samaniego
 -   **Correo electrónico:** [horaciosamaniego\@uach.cl](mailto:horaciosamaniego@uach.cl){.email}
 -   **Creadores:** [Derek Corcoran B.](https://derek-corcoran-barrios.github.io/) & Giorgia Graells C.
@@ -29,7 +29,7 @@ csl: chicago-fullnote-bibliography.csl
     -   Prácticas
     -   Presenciales
     -   Consultas por [Discord](https://discord.gg/ePVuEBBZ) (chat o video) -- link válido 7 días! - hasta 15/8/2024
--   **Horario de clases:** Jueves 10:00 - 13:00 hrs
+-   **Horario de clases:** Jueves 9:50 - 13:00 hrs
 -   **Lugar:** Sala de computación, Facultad de Ciencias Forestales y Recursos Naturales, Campus Isla Teja, Valdivia
 -   **Inicio clases:** 8 agosto 2024
 -   **Término clases:** 28 noviembre 2024 (puede modificarse según calendario académico)
@@ -54,8 +54,8 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 ### tareas
 -   Se entregarán ejercicios que deben resolverse semanales. La entrega se hará usando la plataforma GitHub. Cada estudiante será responsable de entregar su tarea y de corregir a tres compañeros al azar. Las correcciones ocurrirán en modalidad "doble ciego", es decir, tanto el corrector como el autor de la tarea serán mantenido como anónimo. Esta modalidad de corrección por pares será moderada por el profesor y seguirá una pauta entregada para cada tarea. Los estudiantes recibirán un punto por cada tarea revisada, lo que se sumará para completar el puntaje de su propia tarea. 
 
-### proyecto
--   Se desarrollá un proyecto de análisis y de programación que será desarrollado durante el último mes de clases y presentado en las últimas dos sesiones del curso.
+### proyectos
+-   Se desarrollán proyectos de análisis y de programación que consistirán en la resolución de un problema o set de preguntas.
 
 ### calificaciones
 ```{=html}
@@ -67,61 +67,98 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 | *Evaluación*               | *Ponderación* |
 |----------------------------|---------------|
 | Ejercicios \& Tareas  $$\frac{1}{n}\sum_i^n nota\, tarea_i$$       | 50%           |
-| Proyecto reporte           | 10%           |
-| Proyecto código            | 20%           |
-| Presentación               | 15%           |
-| Participación / Asistencia | 5%            |
+| Proyecto código 1           | 15%           |
+| Proyecto código 2           | 10%           |
+| Proyecto código 3           | 15%           |
+| Participación / Asistencia | 10%            |
 :::
 
 ## Calendario
 
-+------------+---------------+-------------------------------------------------------------+
-| Semana     | Fecha         | Actividad                                                   |
-+============+===============+=============================================================+
-| 1          | 10 Agosto     | -   Presentación del curso                                  |
-|            |               |                                                             |
-|            |               | -   Procedimientos y reglas de evaluación.                  |
-|            |               |                                                             |
-|            |               | -   R, sus variables, objetos y funciones                   |
-+------------+---------------+-------------------------------------------------------------+
-| 2          | 17 Agosto     | -   Introducción a GitHub;                                  |
-|            |               |                                                             |
-|            |               | -   Investigación reproducible                              |
-+------------+---------------+-------------------------------------------------------------+
-| 3          | 24 Agosto     | Markdown y Rmd avanzado                                     |
-+------------+---------------+-------------------------------------------------------------+
-| 4          | 31 Agosto     | Visualización I                                             |
-|            |               |                                                             |
-|            |               | -   ggplot2                                                 |
-|            |               |                                                             |
-|            |               | -   otras librerías                                         |
-+------------+---------------+-------------------------------------------------------------+
-| 5          | 7 Septiembre  | Correlación y Regresión                                     |
-+------------+---------------+-------------------------------------------------------------+
-| 6          | 14 Septiembre | Intorducción a R como un Sistemas de Información Geográfica |
-+------------+---------------+-------------------------------------------------------------+
-| 7          | 21 Septiembre | Rasters                                                     |
-+------------+---------------+-------------------------------------------------------------+
-| 8          | 28 Septiembre | Modelos en rasters                                          |
-+------------+---------------+-------------------------------------------------------------+
-| 9          | 5 Octubre     | Autocorrelación espacial                                    |
-+------------+---------------+-------------------------------------------------------------+
-| 10         | 12 Octubre    | Visualización II (mapas)                                    |
-+------------+---------------+-------------------------------------------------------------+
-| 11         | 19 Octubre    | Visualización III (interactiva)                             |
-+------------+---------------+-------------------------------------------------------------+
-| 12         | 26 Octubre    | Sensores Remotos                                            |
-+------------+---------------+-------------------------------------------------------------+
-| 13         | 2 Noviembre   | Proyecto - Definición de Objetivos                          |
-+------------+---------------+-------------------------------------------------------------+
-| 14         | 9 Noviembre   | Proyecto - Modelo de Estudio e hipótesis de trabajo         |
-+------------+---------------+-------------------------------------------------------------+
-| 15         | 16 Noviembre  | Proyecto - Resultados                                       |
-+------------+---------------+-------------------------------------------------------------+
-| 16         | 23 Noviembre  | Proyecto - Presentación de Proyectos                        |
-+------------+---------------+-------------------------------------------------------------+
-| 17         | 30 Noviembre  | Epílogo & Presentación de Proyectos                         |
-+------------+---------------+-------------------------------------------------------------+
+### Módulo 1: Introducción a R y RStudio
+
+1. 8 Agosto — Presentación del curso
+    - R como lenguaje de programación para análisis de datos
+    - Entorno de RStudio: navegación básica y gestión del espacio de trabajo
+    - Tipos y estructuras de datos: vectores, matrices, data frames y tibbles
+    - Operaciones aritméticas y lógicas básicas
+    - Introducción a paquetes y gestión de paquetes
+  
+(.) 15 Agosto - FERIADO (Asunción de la Virgen) 
+
+### Módulo 2: R Markdown \& Github
+
+2.  22 Agosto — Introducción a Markdown y R Markdown
+    - Creación de informes reproducibles
+    - Sintaxis Markdown
+    - Incorporación de fragmentos de código R
+    - Formatos de salida (HTML, PDF, Word)
+    - Investigación reproducible
+
+### Módulo 3: Manipulación de Datos con Tidyverse
+
+3. 29 Agosto — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
+    - Introducción al tidyverse
+    - Importación y Exportación de Datos
+    - Manejo de valores faltantes
+    - Limpieza y preprocesamiento de datos
+
+4. 5 Septiembre  — ****
+    - Manipulación de datos con dplyr: select, filter, arrange, mutate, group_by, summarize
+    - Tabulaciones
+    - Ordenación de datos con tidyr: gather, spread, separate, unite
+    - Transformación de datos con purrr: programación funcional para análisis de datos
+
+### Modulo 5: Visualización de Datos
+
+5. 12 Septiembre — Introducción a ggplot2
+    - Creación de diversos tipos de gráficos (diagramas de dispersión, histogramas, diagramas de caja, gráficos de barras, gráficos de líneas)
+    - Personalización de gráficos con estética, escalas y temas
+    - Facetas y capas de gráficos
+    
+
+(.) 19 Septiembre - FERIADO (Fiestas patrias)
+
+6. 26 Septiembre — Visualización 
+    - Visualización interactiva
+    - Mapview
+    - 
+
+### Módulo 6: Introducción al Análisis Geoespacial
+
+7. 3 Octubre — Introducción a los datos espaciales
+
+   - Lectura y escritura de datos espaciales (shapefiles, GeoJSON, etc.)
+   - Definir y transformar proyecciones
+   - Operaciones espaciales básicas (unión, intersección, búfer)
+   - Análisis de datos espaciales
+
+8. 10 Octubre — datos en grilla
+    - Fuentes y formatos
+    - filtros y procesamiento
+    - algebra de mapa
+    - mapas categóricos, clasificación y reclasificación
+
+9.  17 Octubre — Mapas
+    - Cartografía
+    - Mapas de distintas fuentes
+    - Mapas interactivos, mapview y leaflet
+  
+10. 24 Octubre — Operaciones de grillas
+    - Operaciones espaciales conjuntas: puntos, vectores y grillas
+    - Tabular informacion raster
+    - interpolaciones
+
+(.) 31 Octubre — FERIADO (Día de las Iglesias Evangélicas)
+
+11. 7 Noviembre —
+
+12. 14 Noviembre —
+
+13. 21 Noviembre —
+
+14. 28 Noviembre —
+
 
 
 ## Recursos adicionales

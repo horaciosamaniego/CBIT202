@@ -3,9 +3,14 @@ descripción-del-curso
 objetivos
 evaluación
 tareas
-proyecto
+proyectos
 calificaciones
 calendario
+módulo-1-introducción-a-r-y-rstudio
+módulo-2-r-markdown-github
+módulo-3-manipulación-de-datos-con-tidyverse
+modulo-5-visualización-de-datos
+módulo-6-introducción-al-análisis-geoespacial
 recursos-adicionales
 introducción
 objetos
