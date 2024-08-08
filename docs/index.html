@@ -4,51 +4,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 1 About | A Minimal Book Example</title>
-<meta name="author" content="John Doe">
-<meta name="description" content="&lt;p&gt;This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::bs4_book,
-set in the _output.yml file.&lt;/p&gt;">
+<title>Capítulo 1 Datos del curso | Programación y Análisis de Datos Geoespaciales</title>
+<meta name="author" content="Horacio Samaniego">
+<meta name="description" content="&lt;p&gt;Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
+Universidad Austral de Chile&lt;/p&gt;">
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
-<meta property="og:title" content="Capítulo 1 About | A Minimal Book Example">
+<meta property="og:title" content="Capítulo 1 Datos del curso | Programación y Análisis de Datos Geoespaciales">
 <meta property="og:type" content="book">
-<meta property="og:description" content="&lt;p&gt;This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::bs4_book,
-set in the _output.yml file.&lt;/p&gt;">
+<meta property="og:description" content="&lt;p&gt;Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
+Universidad Austral de Chile&lt;/p&gt;">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 1 About | A Minimal Book Example">
-<meta name="twitter:description" content="&lt;p&gt;This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::bs4_book,
-set in the _output.yml file.&lt;/p&gt;">
+<meta name="twitter:title" content="Capítulo 1 Datos del curso | Programación y Análisis de Datos Geoespaciales">
+<meta name="twitter:description" content="&lt;p&gt;Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
+Universidad Austral de Chile&lt;/p&gt;">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  </style>
-<style type="text/css">
-    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-          margin-bottom: 0em;
-        }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }
   </style>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -60,7 +35,7 @@ set in the _output.yml file.&lt;/p&gt;">
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">A Minimal Book Example</a>
+        <a href="index.html" title="">Programación y Análisis de Datos Geoespaciales</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -72,14 +47,9 @@ set in the _output.yml file.&lt;/p&gt;">
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="active" href="index.html"><span class="header-section-number">1</span> About</a></li>
-<li><a class="" href="hello-bookdown.html"><span class="header-section-number">2</span> Hello bookdown</a></li>
-<li><a class="" href="cross.html"><span class="header-section-number">3</span> Cross-references</a></li>
-<li><a class="" href="parts.html"><span class="header-section-number">4</span> Parts</a></li>
-<li><a class="" href="footnotes-and-citations.html"><span class="header-section-number">5</span> Footnotes and citations</a></li>
-<li><a class="" href="blocks.html"><span class="header-section-number">6</span> Blocks</a></li>
-<li><a class="" href="sharing-your-book.html"><span class="header-section-number">7</span> Sharing your book</a></li>
-<li><a class="" href="references.html">References</a></li>
+<li><a class="active" href="index.html"><span class="header-section-number">1</span> Datos del curso</a></li>
+<li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></li>
+<li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></li>
 </ul>
 
         <div class="book-extra">
@@ -87,53 +57,282 @@ set in the _output.yml file.&lt;/p&gt;">
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="about" class="section level1" number="1">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="datos-del-curso" class="section level1" number="1">
 <h1>
-<span class="header-section-number">Capítulo 1</span> About<a class="anchor" aria-label="anchor" href="#about"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 1</span> Datos del curso<a class="anchor" aria-label="anchor" href="#datos-del-curso"><i class="fas fa-link"></i></a>
 </h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports; for example, a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<div id="usage" class="section level2" number="1.1">
+<ul>
+<li>
+<strong>Universidad Austral de Chile:</strong> <a href="http://www.ecoinformatica.cl">Laboratorio de Ecoinformatica</a>
+</li>
+<li>
+<strong>Nombre asignatura:</strong> Introducción al Análisis de Datos Geoespaciales</li>
+<li>
+<strong>Código asignatuta:</strong> CBIT202</li>
+<li>
+<strong>Docente responsable:</strong> Horacio Samaniego</li>
+<li>
+<strong>Correo electrónico:</strong> <a href="mailto:horaciosamaniego@uach.cl" class="email">horaciosamaniego@uach.cl</a>
+</li>
+<li>
+<strong>Creadores:</strong> <a href="https://derek-corcoran-barrios.github.io/">Derek Corcoran B.</a> &amp; Giorgia Graells C.</li>
+<li>
+<strong>Modalidad de clases:</strong>
+<ul>
+<li>Prácticas</li>
+<li>Presenciales</li>
+<li>Consultas por <a href="https://discord.gg/ePVuEBBZ">Discord</a> (chat o video) – link válido 7 días! - hasta 15/8/2024</li>
+</ul>
+</li>
+<li>
+<strong>Horario de clases:</strong> Jueves 10:00 - 13:00 hrs</li>
+<li>
+<strong>Lugar:</strong> Sala de computación, Facultad de Ciencias Forestales y Recursos Naturales, Campus Isla Teja, Valdivia</li>
+<li>
+<strong>Inicio clases:</strong> 8 agosto 2024</li>
+<li>
+<strong>Término clases:</strong> 28 noviembre 2024 (puede modificarse según calendario académico)</li>
+<li>
+<strong>Web del curso</strong> <a href="https://cbit202-18-analisis-de-datos-geo.github.io/CBIT202_libro/">aqui</a>
+</li>
+</ul>
+<div id="descripción-del-curso" class="section level2" number="1.1">
 <h2>
-<span class="header-section-number">1.1</span> Usage<a class="anchor" aria-label="anchor" href="#usage"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.1</span> DESCRIPCIÓN DEL CURSO<a class="anchor" aria-label="anchor" href="#descripci%C3%B3n-del-curso"><i class="fas fa-link"></i></a>
 </h2>
-<p>Each <strong>bookdown</strong> chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter <em>must</em> start with a first-level heading: <code># A good chapter</code>, and can contain one (and only one) first-level heading.</p>
-<p>Use second-level and higher headings within chapters like: <code>## A short section</code> or <code>### An even shorter section</code>.</p>
-<p>The <code>index.Rmd</code> file is required, and is also your first book chapter. It will be the homepage when you render the book.</p>
-</div>
-<div id="render-book" class="section level2" number="1.2">
-<h2>
-<span class="header-section-number">1.2</span> Render book<a class="anchor" aria-label="anchor" href="#render-book"><i class="fas fa-link"></i></a>
-</h2>
-<p>You can render the HTML version of this example book without changing anything:</p>
+<p>Este curso tiene como objetivo central adquirir herramientas para el manejo de datos con un énfasis en datos espaciales para el menejo de los recursos naturales y la aproximación y resolución de problemas ambientaleslos. Se busca la creación de competencias en los principios de investigación reproducible, representación y análisis de información espacial y la creación de mapas estáticos e interactivos. Esto permitirá la adquisiciónde herramientas para profundizar el conocimientos acerca del diseño y desarrollo de análisis de datos ambientales complejos y espacialmente explícitos.</p>
+<div id="objetivos" class="section level3" number="1.1.1">
+<h3>
+<span class="header-section-number">1.1.1</span> OBJETIVOS<a class="anchor" aria-label="anchor" href="#objetivos"><i class="fas fa-link"></i></a>
+</h3>
 <ol style="list-style-type: decimal">
-<li><p>Find the <strong>Build</strong> pane in the RStudio IDE, and</p></li>
-<li><p>Click on <strong>Build Book</strong>, then select your output format, or select “All formats” if you’d like to use multiple formats from the same book source files.</p></li>
+<li><p>Conocer y entender el concepto de Investigación Reproducible como una forma y filosofía de trabajo que permite que las investigaciones sean más ordenadas y replicables, desde la toma de datos hasta la escritura de resultados utilizando R</p></li>
+<li><p>Realizar análisis críticos de la naturaleza de los datos al realizar análisis exploratorios y reforzar conociminetos en estadística</p></li>
+<li><p>Realizar análisis de datos espaciales, poder hacer mapas y aplicar a preguntas de conservación y manejo de recursos naturales.</p></li>
+<li><p>Aprender a utilizar de forma proficiente el lenguaje de programación R y la plataforma GitHub en un ambiente de trabajo colaborativo.</p></li>
 </ol>
-<p>Or build the book from the R console:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html">render_book</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>To render this example to PDF as a <code><a href="https://pkgs.rstudio.com/bookdown/reference/pdf_book.html">bookdown::pdf_book</a></code>, you’ll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
 </div>
-<div id="preview-book" class="section level2" number="1.3">
+</div>
+<div id="evaluación" class="section level2" number="1.2">
 <h2>
-<span class="header-section-number">1.3</span> Preview book<a class="anchor" aria-label="anchor" href="#preview-book"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.2</span> Evaluación<a class="anchor" aria-label="anchor" href="#evaluaci%C3%B3n"><i class="fas fa-link"></i></a>
 </h2>
-<p>As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/serve_book.html">serve_book</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div id="tareas" class="section level3" number="1.2.1">
+<h3>
+<span class="header-section-number">1.2.1</span> tareas<a class="anchor" aria-label="anchor" href="#tareas"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Se entregarán ejercicios que deben resolverse semanales. La entrega se hará usando la plataforma GitHub. Cada estudiante será responsable de entregar su tarea y de corregir a tres compañeros al azar. Las correcciones ocurrirán en modalidad “doble ciego”, es decir, tanto el corrector como el autor de la tarea serán mantenido como anónimo. Esta modalidad de corrección por pares será moderada por el profesor y seguirá una pauta entregada para cada tarea. Los estudiantes recibirán un punto por cada tarea revisada, lo que se sumará para completar el puntaje de su propia tarea.</li>
+</ul>
+</div>
+<div id="proyecto" class="section level3" number="1.2.2">
+<h3>
+<span class="header-section-number">1.2.2</span> proyecto<a class="anchor" aria-label="anchor" href="#proyecto"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Se desarrollá un proyecto de análisis y de programación que será desarrollado durante el último mes de clases y presentado en las últimas dos sesiones del curso.</li>
+</ul>
+</div>
+<div id="calificaciones" class="section level3" number="1.2.3">
+<h3>
+<span class="header-section-number">1.2.3</span> calificaciones<a class="anchor" aria-label="anchor" href="#calificaciones"><i class="fas fa-link"></i></a>
+</h3>
+<style type="text/css">
+  .calificaciones {width: 35%; left: 50%}
+</style>
+<div class="calificaciones">
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="65%">
+<col width="34%">
+</colgroup>
+<thead><tr class="header">
+<th><em>Evaluación</em></th>
+<th><em>Ponderación</em></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Ejercicios &amp; Tareas <span class="math display">\[\frac{1}{n}\sum_i^n nota\, tarea_i\]</span>
+</td>
+<td>50%</td>
+</tr>
+<tr class="even">
+<td>Proyecto reporte</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>Proyecto código</td>
+<td>20%</td>
+</tr>
+<tr class="even">
+<td>Presentación</td>
+<td>15%</td>
+</tr>
+<tr class="odd">
+<td>Participación / Asistencia</td>
+<td>5%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div id="calendario" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Calendario<a class="anchor" aria-label="anchor" href="#calendario"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="14%">
+<col width="17%">
+<col width="67%">
+</colgroup>
+<thead><tr class="header">
+<th>Semana</th>
+<th>Fecha</th>
+<th>Actividad</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>10 Agosto</td>
+<td><ul>
+<li><p>Presentación del curso</p></li>
+<li><p>Procedimientos y reglas de evaluación.</p></li>
+<li><p>R, sus variables, objetos y funciones</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>17 Agosto</td>
+<td><ul>
+<li><p>Introducción a GitHub;</p></li>
+<li><p>Investigación reproducible</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>24 Agosto</td>
+<td>Markdown y Rmd avanzado</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>31 Agosto</td>
+<td>
+<p>Visualización I</p>
+<ul>
+<li><p>ggplot2</p></li>
+<li><p>otras librerías</p></li>
+</ul>
+</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>7 Septiembre</td>
+<td>Correlación y Regresión</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>14 Septiembre</td>
+<td>Intorducción a R como un Sistemas de Información Geográfica</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>21 Septiembre</td>
+<td>Rasters</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>28 Septiembre</td>
+<td>Modelos en rasters</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>5 Octubre</td>
+<td>Autocorrelación espacial</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>12 Octubre</td>
+<td>Visualización II (mapas)</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>19 Octubre</td>
+<td>Visualización III (interactiva)</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>26 Octubre</td>
+<td>Sensores Remotos</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>2 Noviembre</td>
+<td>Proyecto - Definición de Objetivos</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>9 Noviembre</td>
+<td>Proyecto - Modelo de Estudio e hipótesis de trabajo</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>16 Noviembre</td>
+<td>Proyecto - Resultados</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>23 Noviembre</td>
+<td>Proyecto - Presentación de Proyectos</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>30 Noviembre</td>
+<td>Epílogo &amp; Presentación de Proyectos</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="recursos-adicionales" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Recursos adicionales<a class="anchor" aria-label="anchor" href="#recursos-adicionales"><i class="fas fa-link"></i></a>
+</h2>
+<p>Si bien intentamos buscar ejemplos originales y sets de datos locales, gran parte del material con que trabajaremos ha sido ya
+trabajado elaborado por otros. Es por eso que se sugiere revisar algunos sitios claves como los siguientes:</p>
+<ul>
+<li><a href="https://r4ds.hadley.nz">R for Data Sciences</a></li>
+<li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
+<li><a href="https://gis.stackexchange.com/">GIS Stack Exchange</a></li>
+<li><a href="https://rspatial.org/index.html">Spatial Data Science</a></li>
+</ul>
+<!-- # El tidyverso {#tidy}
 
+En esta clase empezaremos a trabajar en r, puedes seguir la presentación en el siguiente [link](https://derek-corcoran-barrios.github.io/CursoProgrPres/Clase1/Clase1TidyData.html), y a continuación tienes el link de la clase online en youtube:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pr6dMwtto0w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
 </div>
 </div>
   <div class="chapter-nav">
 <div class="empty"></div>
-<div class="next"><a href="hello-bookdown.html"><span class="header-section-number">2</span> Hello bookdown</a></div>
+<div class="next"><a href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#about"><span class="header-section-number">1</span> About</a></li>
-<li><a class="nav-link" href="#usage"><span class="header-section-number">1.1</span> Usage</a></li>
-<li><a class="nav-link" href="#render-book"><span class="header-section-number">1.2</span> Render book</a></li>
-<li><a class="nav-link" href="#preview-book"><span class="header-section-number">1.3</span> Preview book</a></li>
+<li><a class="nav-link" href="#datos-del-curso"><span class="header-section-number">1</span> Datos del curso</a></li>
+<li>
+<a class="nav-link" href="#descripci%C3%B3n-del-curso"><span class="header-section-number">1.1</span> DESCRIPCIÓN DEL CURSO</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#objetivos"><span class="header-section-number">1.1.1</span> OBJETIVOS</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#evaluaci%C3%B3n"><span class="header-section-number">1.2</span> Evaluación</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#tareas"><span class="header-section-number">1.2.1</span> tareas</a></li>
+<li><a class="nav-link" href="#proyecto"><span class="header-section-number">1.2.2</span> proyecto</a></li>
+<li><a class="nav-link" href="#calificaciones"><span class="header-section-number">1.2.3</span> calificaciones</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#calendario"><span class="header-section-number">1.3</span> Calendario</a></li>
+<li><a class="nav-link" href="#recursos-adicionales"><span class="header-section-number">1.4</span> Recursos adicionales</a></li>
 </ul>
 
       <div class="book-extra">
@@ -150,7 +349,7 @@ set in the _output.yml file.&lt;/p&gt;">
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>A Minimal Book Example</strong>" was written by John Doe. It was last built on 2024-08-07.</p>
+    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

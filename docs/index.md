@@ -1,57 +1,136 @@
---- 
-title: "A Minimal Book Example"
-author: "John Doe"
-date: "2024-08-07"
+---
+title: "Programación y Análisis de Datos Geoespaciales"
+author: "Horacio Samaniego"
+date: "2024-08-08"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::bs4_book,
-  set in the _output.yml file.
+  Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
+  Universidad Austral de Chile
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
 
-# About
-
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
-
-## Usage 
-
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
-
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
-
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
-
-## Render book
-
-You can render the HTML version of this example book without changing anything:
-
-1. Find the **Build** pane in the RStudio IDE, and
-
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
-
-Or build the book from the R console:
 
 
-``` r
-bookdown::render_book()
+
+# Datos del curso
+
+-   **Universidad Austral de Chile:** [Laboratorio de Ecoinformatica](http://www.ecoinformatica.cl)
+-   **Nombre asignatura:** Introducción al Análisis de Datos Geoespaciales
+-   **Código asignatuta:** CBIT202
+-   **Docente responsable:** Horacio Samaniego
+-   **Correo electrónico:** [horaciosamaniego\@uach.cl](mailto:horaciosamaniego@uach.cl){.email}
+-   **Creadores:** [Derek Corcoran B.](https://derek-corcoran-barrios.github.io/) & Giorgia Graells C.
+-   **Modalidad de clases:**
+    -   Prácticas
+    -   Presenciales
+    -   Consultas por [Discord](https://discord.gg/ePVuEBBZ) (chat o video) -- link válido 7 días! - hasta 15/8/2024
+-   **Horario de clases:** Jueves 10:00 - 13:00 hrs
+-   **Lugar:** Sala de computación, Facultad de Ciencias Forestales y Recursos Naturales, Campus Isla Teja, Valdivia
+-   **Inicio clases:** 8 agosto 2024
+-   **Término clases:** 28 noviembre 2024 (puede modificarse según calendario académico)
+-   **Web del curso** [aqui](https://cbit202-18-analisis-de-datos-geo.github.io/CBIT202_libro/)
+
+## DESCRIPCIÓN DEL CURSO
+
+Este curso tiene como objetivo central adquirir herramientas para el manejo de datos con un énfasis en datos espaciales para el menejo de los recursos naturales y la aproximación y resolución de problemas ambientaleslos. Se busca la creación de competencias en los principios de investigación reproducible, representación y análisis de información espacial y la creación de mapas estáticos e interactivos. Esto permitirá la adquisiciónde herramientas para profundizar el conocimientos acerca del diseño y desarrollo de análisis de datos ambientales complejos y espacialmente explícitos.
+
+### OBJETIVOS
+
+1.  Conocer y entender el concepto de Investigación Reproducible como una forma y filosofía de trabajo que permite que las investigaciones sean más ordenadas y replicables, desde la toma de datos hasta la escritura de resultados utilizando R
+
+2.  Realizar análisis críticos de la naturaleza de los datos al realizar análisis exploratorios y reforzar conociminetos en estadística
+
+3.  Realizar análisis de datos espaciales, poder hacer mapas y aplicar a preguntas de conservación y manejo de recursos naturales.
+
+4.  Aprender a utilizar de forma proficiente el lenguaje de programación R y la plataforma GitHub en un ambiente de trabajo colaborativo.
+
+## Evaluación
+
+### tareas
+-   Se entregarán ejercicios que deben resolverse semanales. La entrega se hará usando la plataforma GitHub. Cada estudiante será responsable de entregar su tarea y de corregir a tres compañeros al azar. Las correcciones ocurrirán en modalidad "doble ciego", es decir, tanto el corrector como el autor de la tarea serán mantenido como anónimo. Esta modalidad de corrección por pares será moderada por el profesor y seguirá una pauta entregada para cada tarea. Los estudiantes recibirán un punto por cada tarea revisada, lo que se sumará para completar el puntaje de su propia tarea. 
+
+### proyecto
+-   Se desarrollá un proyecto de análisis y de programación que será desarrollado durante el último mes de clases y presentado en las últimas dos sesiones del curso.
+
+### calificaciones
+```{=html}
+<style type="text/css">
+  .calificaciones {width: 35%; left: 50%}
+</style>
 ```
+::: calificaciones
+| *Evaluación*               | *Ponderación* |
+|----------------------------|---------------|
+| Ejercicios \& Tareas  $$\frac{1}{n}\sum_i^n nota\, tarea_i$$       | 50%           |
+| Proyecto reporte           | 10%           |
+| Proyecto código            | 20%           |
+| Presentación               | 15%           |
+| Participación / Asistencia | 5%            |
+:::
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+## Calendario
 
-## Preview book
++------------+---------------+-------------------------------------------------------------+
+| Semana     | Fecha         | Actividad                                                   |
++============+===============+=============================================================+
+| 1          | 10 Agosto     | -   Presentación del curso                                  |
+|            |               |                                                             |
+|            |               | -   Procedimientos y reglas de evaluación.                  |
+|            |               |                                                             |
+|            |               | -   R, sus variables, objetos y funciones                   |
++------------+---------------+-------------------------------------------------------------+
+| 2          | 17 Agosto     | -   Introducción a GitHub;                                  |
+|            |               |                                                             |
+|            |               | -   Investigación reproducible                              |
++------------+---------------+-------------------------------------------------------------+
+| 3          | 24 Agosto     | Markdown y Rmd avanzado                                     |
++------------+---------------+-------------------------------------------------------------+
+| 4          | 31 Agosto     | Visualización I                                             |
+|            |               |                                                             |
+|            |               | -   ggplot2                                                 |
+|            |               |                                                             |
+|            |               | -   otras librerías                                         |
++------------+---------------+-------------------------------------------------------------+
+| 5          | 7 Septiembre  | Correlación y Regresión                                     |
++------------+---------------+-------------------------------------------------------------+
+| 6          | 14 Septiembre | Intorducción a R como un Sistemas de Información Geográfica |
++------------+---------------+-------------------------------------------------------------+
+| 7          | 21 Septiembre | Rasters                                                     |
++------------+---------------+-------------------------------------------------------------+
+| 8          | 28 Septiembre | Modelos en rasters                                          |
++------------+---------------+-------------------------------------------------------------+
+| 9          | 5 Octubre     | Autocorrelación espacial                                    |
++------------+---------------+-------------------------------------------------------------+
+| 10         | 12 Octubre    | Visualización II (mapas)                                    |
++------------+---------------+-------------------------------------------------------------+
+| 11         | 19 Octubre    | Visualización III (interactiva)                             |
++------------+---------------+-------------------------------------------------------------+
+| 12         | 26 Octubre    | Sensores Remotos                                            |
++------------+---------------+-------------------------------------------------------------+
+| 13         | 2 Noviembre   | Proyecto - Definición de Objetivos                          |
++------------+---------------+-------------------------------------------------------------+
+| 14         | 9 Noviembre   | Proyecto - Modelo de Estudio e hipótesis de trabajo         |
++------------+---------------+-------------------------------------------------------------+
+| 15         | 16 Noviembre  | Proyecto - Resultados                                       |
++------------+---------------+-------------------------------------------------------------+
+| 16         | 23 Noviembre  | Proyecto - Presentación de Proyectos                        |
++------------+---------------+-------------------------------------------------------------+
+| 17         | 30 Noviembre  | Epílogo & Presentación de Proyectos                         |
++------------+---------------+-------------------------------------------------------------+
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
 
+## Recursos adicionales
 
-``` r
-bookdown::serve_book()
-```
+Si bien intentamos buscar ejemplos originales y sets de datos locales, gran parte del material con que trabajaremos ha sido ya 
+trabajado  elaborado por otros. Es por eso que se sugiere revisar algunos sitios claves como los siguientes:
 
-
+- [R for Data Sciences](https://r4ds.hadley.nz)
+- [Stackoverflow](https://stackoverflow.com/)
+- [GIS Stack Exchange](https://gis.stackexchange.com/)
+- [Spatial Data Science](https://rspatial.org/index.html)
 
