@@ -170,4 +170,8 @@ trabajado  elaborado por otros. Es por eso que se sugiere revisar algunos sitios
 - [Stackoverflow](https://stackoverflow.com/)
 - [GIS Stack Exchange](https://gis.stackexchange.com/)
 - [Spatial Data Science](https://rspatial.org/index.html)
+- [R Graph Gallery](https://r-graph-gallery.com/)
+- [ggplot2 tips](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/)
+
+
 

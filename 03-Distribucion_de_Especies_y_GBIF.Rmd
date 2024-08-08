@@ -1,13 +1,3 @@
----
-title: "Uso de GBIF"
-author: "Horacio Samaniego"
-date: "`r Sys.Date()`"
-
-editor_options: 
-  markdown: 
-    wrap: 120
----
-
 # Ecoinformática y modelos de distribucion de especies
 
 ```{r setup, include=FALSE}
@@ -74,11 +64,11 @@ occ_count(georeferenced = TRUE)
 ```
 
 o bien el número de registros por país. Chile en este caso. Para eso debemos saber exactamente el código ISO. (Aunque es
-f[acil de inferir!]). Este es un vector que viene como parte de la librería `rgbif`, y se llama `isocodes`. Por eso
+fácil de inferir!). Este es un vector que viene como parte de la librería `rgbif`, y se llama `isocodes`. Por eso
 podemos recuperarlo de esta manera:
 
 ```{r ej-gbif-chile, echo=TRUE, warning=FALSE}
-cl_isocode <- isocodes[grep("Chile", isocodes$name), "code"]
+# cl_isocode <- rgbif::isocodes[grep("Chile", isocodes$name), "code"]
 ## Conteo para Chile
 occ_count(country="CL",georeferenced = TRUE)
 ```
@@ -342,8 +332,8 @@ usaremos las variables bioclimáticas.
     modelo 'AC' para el año 2070, respectivamente !\
 
 ```{r worldclim, echo=TRUE}
-Bioclim <- getData("worldclim", var = "bio", res = 2.5) |>
-    crop(od_sf)
+Bioclim <- geodata::worldclim_country(var = "bio", res = 2.5, country = "Chile") # |>
+    # terra::crop(od_sf)
 
 plot(Bioclim)
 ```

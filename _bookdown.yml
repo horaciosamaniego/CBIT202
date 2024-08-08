@@ -3,6 +3,12 @@ new_session: true
 before_chapter_script: _common.R
 delete_merged_file: true
 output_dir: "docs"
+rmd_files:  [
+            "index.Rmd",
+            "01-intro.Rmd",
+            "02-dplyr.Rmd",
+            #"03-Distribucion_de_Especies_y_GBIF.Rmd"
+            ]
 language:
   ui:
     chapter_name: "Capítulo "

@@ -1,9 +1,3 @@
----
-title: "Introduccion al Analisis de Datos Geoespaciales"
-editor_options: 
-  markdown: 
-    wrap: 72
----
 
 # Principios de Tidydata
 
