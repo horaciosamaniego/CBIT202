@@ -14,42 +14,486 @@ biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
 
-# url: your book url like https://bookdown.org/yihui/bookdown
 
-Placeholder
 
+
+# Datos del curso
+
+-   **Universidad Austral de Chile:** [Laboratorio de Ecoinformatica](http://www.ecoinformatica.cl)
+-   **Nombre asignatura:** Introducción al Análisis de Datos Geoespaciales
+-   **Código asignatuta:** CBIT202-18   
+-   **Docente responsable:** Horacio Samaniego
+-   **Correo electrónico:** [horaciosamaniego\@uach.cl](mailto:horaciosamaniego@uach.cl){.email}
+-   **Creadores:** [Derek Corcoran B.](https://derek-corcoran-barrios.github.io/) & Giorgia Graells C.
+-   **Modalidad de clases:**
+    -   Prácticas
+    -   Presenciales
+    -   Consultas por [Discord](https://discord.gg/CQPepwS4) (chat o video) -- link válido 7 días! - hasta 29/8/2024
+-   **Horario de clases:** Jueves 9:50 - 13:00 hrs
+-   **Lugar:** Sala de computación, Facultad de Ciencias Forestales y Recursos Naturales, Campus Isla Teja, Valdivia
+-   **Inicio clases:** 8 agosto 2024
+-   **Término clases:** 28 noviembre 2024 (puede modificarse según calendario académico)
+-   **Web del curso** [aqui](https://cbit202-18-analisis-de-datos-geo.github.io/CBIT202_libro/)
 
 ## DESCRIPCIÓN DEL CURSO
+
+Este curso tiene como objetivo central adquirir herramientas para el manejo de datos con un énfasis en datos espaciales para el menejo de los recursos naturales y la aproximación y resolución de problemas ambientaleslos. Se busca la creación de competencias en los principios de investigación reproducible, representación y análisis de información espacial y la creación de mapas estáticos e interactivos. Esto permitirá la adquisiciónde herramientas para profundizar el conocimientos acerca del diseño y desarrollo de análisis de datos ambientales complejos y espacialmente explícitos.
+
 ### OBJETIVOS
+
+1.  Conocer y entender el concepto de Investigación Reproducible como una forma y filosofía de trabajo que permite que las investigaciones sean más ordenadas y replicables, desde la toma de datos hasta la escritura de resultados utilizando R
+
+2.  Realizar análisis críticos de la naturaleza de los datos al realizar análisis exploratorios y reforzar conociminetos en estadística
+
+3.  Realizar análisis de datos espaciales, poder hacer mapas y aplicar a preguntas de conservación y manejo de recursos naturales.
+
+4.  Aprender a utilizar de forma proficiente el lenguaje de programación R y la plataforma GitHub en un ambiente de trabajo colaborativo.
+
 ## Evaluación
+
 ### tareas
+-   Se entregarán ejercicios que deben resolverse semanales. La entrega se hará usando la plataforma GitHub. Cada estudiante será responsable de entregar su tarea y de corregir a tres compañeros al azar. Las correcciones ocurrirán en modalidad "doble ciego", es decir, tanto el corrector como el autor de la tarea serán mantenido como anónimo. Esta modalidad de corrección por pares será moderada por el profesor y seguirá una pauta entregada para cada tarea. Los estudiantes recibirán un punto por cada tarea revisada, lo que se sumará para completar el puntaje de su propia tarea. 
+
 ### proyectos
+-   Se desarrollán proyectos de análisis y de programación que consistirán en la resolución de un problema o set de preguntas.
+
 ### calificaciones
+```{=html}
+<style type="text/css">
+  .calificaciones {width: 35%; left: 50%}
+</style>
+```
+::: calificaciones
+| *Evaluación*               | *Ponderación* |
+|----------------------------|---------------|
+| Ejercicios \& Tareas  $$\frac{1}{n}\sum_i^n nota\, tarea_i$$       | 50%           |
+| Proyecto código 1           | 15%           |
+| Proyecto código 2           | 10%           |
+| Proyecto código 3           | 15%           |
+| Participación / Asistencia | 10%            |
+:::
+
 ## Calendario
+
 ### Módulo 1: Introducción a R y RStudio
+
+1. 8 Agosto — Presentación del curso
+    - R como lenguaje de programación para análisis de datos
+    - Entorno de RStudio: navegación básica y gestión del espacio de trabajo
+    - Tipos y estructuras de datos: vectores, matrices, data frames y tibbles
+    - Operaciones aritméticas y lógicas básicas
+    - Introducción a paquetes y gestión de paquetes
+  
+(.) 15 Agosto - FERIADO (Asunción de la Virgen) 
+
 ### Módulo 2: R Markdown \& Github
+
+2.  22 Agosto — Introducción a Markdown y R Markdown
+    - Creación de informes reproducibles
+    - Sintaxis Markdown
+    - Incorporación de fragmentos de código R
+    - Formatos de salida (HTML, PDF, Word)
+    - Investigación reproducible
+
 ### Módulo 3: Manipulación de Datos con Tidyverse
+
+3. 29 Agosto — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
+    - Introducción al tidyverse
+    - Importación y Exportación de Datos
+    - Manejo de valores faltantes
+    - Limpieza y preprocesamiento de datos
+
+4. 5 Septiembre  — ****
+    - Manipulación de datos con dplyr: select, filter, arrange, mutate, group_by, summarize
+    - Tabulaciones
+    - Ordenación de datos con tidyr: gather, spread, separate, unite
+    - Transformación de datos con purrr: programación funcional para análisis de datos
+
 ### Modulo 5: Visualización de Datos
+
+5. 12 Septiembre — Introducción a ggplot2
+    - Creación de diversos tipos de gráficos (diagramas de dispersión, histogramas, diagramas de caja, gráficos de barras, gráficos de líneas)
+    - Personalización de gráficos con estética, escalas y temas
+    - Facetas y capas de gráficos
+    
+
+(.) 19 Septiembre - FERIADO (Fiestas patrias)
+
+6. 26 Septiembre — Visualización 
+    - Visualización interactiva
+    - Mapview
+    - 
+
 ### Módulo 6: Introducción al Análisis Geoespacial
+
+7. 3 Octubre — Introducción a los datos espaciales
+
+   - Lectura y escritura de datos espaciales (shapefiles, GeoJSON, etc.)
+   - Definir y transformar proyecciones
+   - Operaciones espaciales básicas (unión, intersección, búfer)
+   - Análisis de datos espaciales
+
+8. 10 Octubre — datos en grilla
+    - Fuentes y formatos
+    - filtros y procesamiento
+    - algebra de mapa
+    - mapas categóricos, clasificación y reclasificación
+
+9.  17 Octubre — Mapas
+    - Cartografía
+    - Mapas de distintas fuentes
+    - Mapas interactivos, mapview y leaflet
+  
+10. 24 Octubre — Operaciones de grillas
+    - Operaciones espaciales conjuntas: puntos, vectores y grillas
+    - Tabular informacion raster
+    - interpolaciones
+
+(.) 31 Octubre — FERIADO (Día de las Iglesias Evangélicas)
+
+11. 7 Noviembre —
+
+12. 14 Noviembre —
+
+13. 21 Noviembre —
+
+14. 28 Noviembre —
+
+
+
 ## Recursos adicionales
+
+Si bien intentamos buscar ejemplos originales y sets de datos locales, gran parte del material con que trabajaremos ha sido ya 
+trabajado  elaborado por otros. Es por eso que se sugiere revisar algunos sitios claves como los siguientes:
+
+- [R for Data Sciences](https://r4ds.hadley.nz)
+- [Stackoverflow](https://stackoverflow.com/)
+- [GIS Stack Exchange](https://gis.stackexchange.com/)
+- [Spatial Data Science](https://rspatial.org/index.html)
+- [R Graph Gallery](https://r-graph-gallery.com/)
+- [ggplot2 tips](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/)
+
+
+
 
 <!--chapter:end:index.Rmd-->
 
 
+
+```{=html}
+<!-- # El tidyverso {#tidy}
+
+En esta clase empezaremos a trabajar en r, puedes seguir la presentación en el siguiente [link](https://derek-corcoran-barrios.github.io/CursoProgrPres/Clase1/Clase1TidyData.html), y a continuación tienes el link de la clase online en youtube:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pr6dMwtto0w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
+```
 # Introducción
 
-Placeholder
+R es un entorno y lenguaje de programación con un enfoque al análisis
+estadístico. Permite hacer todos los análisis numéricos que requieras en
+tu vida profesional. Es una implementación de libre distribución de otro
+programa estadístico de uso comercial, S. Al ser software libre, es la
+comunidad de usuarios la que guía su desarrollo, transformándolo en uno
+de los programas más versátiles para trabajos cuantitativos existentes
+hoy en día. La página principal desde la que se puede acceder a los
+archivos y documentación necesarias para su utilización es:
 
+[www.r-project.org](http://www.r-project.org)
+
+Si bien R es un software que puede usarse desde la línea de comando,
+para trabajar utilizaremos [http://www.rstudio.org](%60R%20Studio%60).
+
+Este es un Entorno de Desarrollo Integrado (IDE, por su sigla en inglés)
+que, al igual que R, es software libre y permite integrar herramientas
+necesarias para el desarrollo y así facilitarlo. La página oficial para
+descargarlo es:
+
+[www.rstudio.com](http://www.rstudio.com)
 
 ## Objetos
+
+En términos genéricos, todos los elementos que R maneja son objetos. Un
+objeto tiene ciertas propiedades y en ocasiones es capaz de llevar a
+cabo ciertas tareas si se le dan los argumentos necesarios. Por ejemplo,
+un teléfono es capaz de realizar llamadas siempre que le demos el número
+a marcar.
+
 ## Variables
+
+Al momento de trabajar, es probable que necesitemos guardar valores o
+cálculos, de manera que no necesitemos escribirlos cada vez que los
+usemos, para esto utilizamos variables.
+
+Para realizar una asignación de variable:
+
+
+``` r
+a = 200
+```
+
+Luego, podemos utilizar el valor contenido en la variable, utilizando su
+nombre:
+
+
+``` r
+print(a)
+#> [1] 200
+```
+
 ### Tipos de variables
+
+Existen diversos tipos o clases de variables, dependiendo de las
+características del objeto que les es asignado. Para conocer a qué tipo
+corresponde un objeto usamos class:
+
+
+``` r
+x=7
+x
+#> [1] 7
+class (x)
+#> [1] "numeric"
+```
+
+
+``` r
+x=5/3
+x
+#> [1] 1.666667
+class (x)
+#> [1] "numeric"
+```
+
+
+``` r
+x="Trece"
+x
+#> [1] "Trece"
+class (x)
+#> [1] "character"
+```
+
 ## Funciones
+
+Muchas cosas en R pueden hacerse a través del uso de funciones, estas
+permiten realizar operaciones típicas sin necesidad de escribir grandes
+cantidades de código. Por ejemplo:
+
+
+``` r
+sqrt(10)
+#> [1] 3.162278
+round(1.9)
+#> [1] 2
+seq(0,10)
+#>  [1]  0  1  2  3  4  5  6  7  8  9 10
+seq(0,10,2)
+#> [1]  0  2  4  6  8 10
+rep(5,10)
+#>  [1] 5 5 5 5 5 5 5 5 5 5
+paste(seq(5,10), "elefantes")
+#> [1] "5 elefantes"  "6 elefantes"  "7 elefantes" 
+#> [4] "8 elefantes"  "9 elefantes"  "10 elefantes"
+```
+
+Los datos o variables que van dentro de las funciones, se denominan
+*argumentos* y cada función requiere que se le entreguen los argumentos
+apropiados para ejecutar la acción prevista.
+
+Por ejemplo, la función mean() no puede calcular el promedio si como
+argumentos se le pasan letras.
+
+
+``` r
+mean(c("a","b","c"))
+#> Warning in mean.default(c("a", "b", "c")): argument is not
+#> numeric or logical: returning NA
+#> [1] NA
+```
+
+Esto es importante, porque al introducir datos podemos estar utilizando
+números como palabras:
+
+1, 2, 3 ≠ "1", "2", "3"
+
+Si nos encontramos con este problema, debemos transformar los datos al
+tipo o clase adecuada, con las funciones:
+
+`as.numeric()` y `as. character()`x\`
+
 ## Vectores
+
+Conjunto ordenado de valores del mismo tipo, agrupados en un único
+objeto. Para crear una variable vector utilizamos:
+
+
+``` r
+v = c(1,1,2,3)
+vector = c("mi", "primer", "vector")
+vector
+#> [1] "mi"     "primer" "vector"
+```
+
+Cada objeto dentro de un vector posee un índice, el cual indica la
+posición que ocupa dentro del vector, para acceder a una posición
+específica usamos:
+
+
+``` r
+vector[1]
+#> [1] "mi"
+vector[2]
+#> [1] "primer"
+vector[3] 
+#> [1] "vector"
+```
+
+y si queremos reemplazar alguno de esos objetos:
+
+
+``` r
+vector[2]="segundo"
+vector
+#> [1] "mi"      "segundo" "vector"
+```
+
+Un vector permite almacenar varios valores en una única variable y
+permite ejecutar operaciones o funciones a un conjunto de datos:
+
+
+``` r
+vector = c(1,2,3,4,5)
+vector*2
+#> [1]  2  4  6  8 10
+vector^2
+#> [1]  1  4  9 16 25
+```
+
+o incluso realizar operaciones entre vectores:
+
+
+``` r
+v1=c(1:3)
+v2=c(6,8,10)
+```
+
+
+``` r
+v1
+#> [1] 1 2 3
+v2
+#> [1]  6  8 10
+```
+
+
+``` r
+v1 + v2
+#> [1]  7 10 13
+```
+
+
+``` r
+v1*v2
+#> [1]  6 16 30
+```
+
+
+``` r
+v3=c("a","b","c")
+v1 * v3
+#> Error in v1 * v3: non-numeric argument to binary operator
+```
+
+
 ## Instalar librerías
+
+Muchas veces las funciones incorporadas en R son insuficientes para
+nuestros fines, por lo que es necesario instalar paquetes o "packages"
+de herramientas hechas por la comunidad. En este caso, usaremos el
+paquete "openxlsx", que nos permite leer archivos Excel. Para
+instalarlo:
+
+
+``` r
+install.packages("openxlsx")
+```
+
+Debe hacerse una única vez, los paquetes quedan instalados en nuestra
+versión de R. Y para usarlo dentro de nuestro proyecto:
+
+
+``` r
+library(openxlsx)
+```
+
+Debe incluirse en cada proyecto donde queramos usarlo y ejecutarse cada
+vez que abrimos R.
+
 ## R Notebook
+
+Un Notebook en R es un documento con bloques o "chunks" que pueden ser
+ejecutados directa e interactivamente, para así visualizar los
+resultados directamente bajo el código.
+
+Para instalar esta librería:
+
+
+``` r
+install.packages("rmarkdown")
+```
+
+Una vez instalada, puedes crear un nuevo notebook en RStudio llendo a
+*File -\> new file -\> R notebook*.
+
+Agrega un nuevo chunk haciendo click en el botón *Insert Chunk* en la
+barra de herramientas o presionando *Ctrl+Alt+I*
+
+Un chunk puede ser ejecutado usando:
+
+1.  Haciendo click en el triángulo verde o "Run Current Chunk" en la
+    esquina superior derecha de cada chunk.
+
+2.  Clickeando al interior de un chunk y presionando *Ctrl + Enter*.
+
+De ambas formas se ejecutará todo el código contenido dentro de el
+chunk.
+
+Cuando guardas ul notebook, un archivo HTML que contiene el código y los
+resultados se guardará junto a él (Click en el botón de *Preview* o
+presiona *Ctrl+Shift+K* para previsualizar el archivo HMTL)
+
 ## Leer datos
+
+Delimitados por coma: read_csv("file.csv")
+
+Con cualquier delimitador: read_delim("file.txt", delim = "\|")
+
+
 ## Ejercicios
+
+
+1. Cree una nueva variable que contenga un vector con 10 números aleatorios
+2. multiplíquela por seis.
+3. cree una segunda variable que contenga una secuencia de 5 caracteres
+4. combine las dos variable en una sola variable
+5. ¿cuál es el largo de esta última variable creada?
+6. ¿de qué tipo es esta variable?
+7. ¿qué sucede si divie esta última variable por 3?
+8. cree un vector con los elementos 1 2 3 4 5 6 y llámelo `x`
+9. cree un nuevo vector con los elementos 10 20 30 40 50 y llámelo `y`
+10. ¿qué ocurre si intenta sumar `x` e `y`? explique
+11. agregue el valor 60 al vector `y` (ayuda: puedes usar la función `c()`)
+12. sume `x` e `y`
+13. multiplique `x` e `y`
+14. cree un `data.frame`  con el mímimo código posible usando los datos de la siguiente imagen y llámelo `z`:
+
+![](df.jpg)<!-- -->
+
+15. cree un dataframe de datos ficticios que represente una muestra de 100 individuos de aves y su tamaño corporal. Use 4 tipos de aves: un paseriforme, un columbiforme, un rapaz y trochiliformes en aproximadamente las mismas proporciones. (Averigue el real tamaño promedio de cada grupo)
+16. grafique los pesos corporales de cada grupo (ayuda: puede usar graficos de distribuciones, caja y bigote o bien de violín)
+
+<!-- ![¿Cuál es el código mas corto para crear este df?](df.JPG) -->
 
 <!--chapter:end:01-intro.Rmd-->
 
@@ -110,11 +554,11 @@ kableExtra::kable(head(iris,7))
 |------------:|-----------:|------------:|-----------:|:-------|:----|
 |          5.1|         3.5|          1.4|         0.2|setosa  |2023 |
 |          4.9|         3.0|          1.4|         0.2|setosa  |2003 |
-|          4.7|         3.2|          1.3|         0.2|setosa  |2023 |
-|          4.6|         3.1|          1.5|         0.2|setosa  |2013 |
-|          5.0|         3.6|          1.4|         0.2|setosa  |2013 |
-|          5.4|         3.9|          1.7|         0.4|setosa  |2023 |
-|          4.6|         3.4|          1.4|         0.3|setosa  |2023 |
+|          4.7|         3.2|          1.3|         0.2|setosa  |2013 |
+|          4.6|         3.1|          1.5|         0.2|setosa  |2003 |
+|          5.0|         3.6|          1.4|         0.2|setosa  |2003 |
+|          5.4|         3.9|          1.7|         0.4|setosa  |2013 |
+|          4.6|         3.4|          1.4|         0.3|setosa  |2013 |
 
 
 
@@ -254,7 +698,7 @@ iris |>
    <td style="text-align:right;"> 6.0 </td>
    <td style="text-align:right;"> 2.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -286,7 +730,7 @@ iris |>
    <td style="text-align:right;"> 5.8 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.6 </td>
@@ -294,7 +738,7 @@ iris |>
    <td style="text-align:right;"> 6.6 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4.9 </td>
@@ -310,7 +754,7 @@ iris |>
    <td style="text-align:right;"> 6.3 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -318,7 +762,7 @@ iris |>
    <td style="text-align:right;"> 5.8 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -342,7 +786,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -358,7 +802,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -374,7 +818,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -382,7 +826,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -390,7 +834,7 @@ iris |>
    <td style="text-align:right;"> 6.7 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -414,7 +858,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.6 </td>
@@ -422,7 +866,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -438,7 +882,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -446,7 +890,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -470,7 +914,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -494,7 +938,7 @@ iris |>
    <td style="text-align:right;"> 6.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.9 </td>
@@ -510,7 +954,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -518,7 +962,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.1 </td>
@@ -526,7 +970,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -550,7 +994,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -566,7 +1010,7 @@ iris |>
    <td style="text-align:right;"> 5.4 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -574,7 +1018,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -590,7 +1034,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -622,7 +1066,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -630,7 +1074,7 @@ iris |>
    <td style="text-align:right;"> 5.2 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.2 </td>
@@ -638,7 +1082,7 @@ iris |>
    <td style="text-align:right;"> 5.4 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.9 </td>
@@ -646,7 +1090,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
 </tbody>
 </table></div>
@@ -686,7 +1130,7 @@ iris |>
    <td style="text-align:right;"> 4.7 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -694,7 +1138,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -710,7 +1154,7 @@ iris |>
    <td style="text-align:right;"> 4.7 </td>
    <td style="text-align:right;"> 1.6 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.6 </td>
@@ -718,7 +1162,7 @@ iris |>
    <td style="text-align:right;"> 4.6 </td>
    <td style="text-align:right;"> 1.3 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.1 </td>
@@ -726,7 +1170,7 @@ iris |>
    <td style="text-align:right;"> 4.7 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.9 </td>
@@ -734,7 +1178,7 @@ iris |>
    <td style="text-align:right;"> 4.8 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -742,7 +1186,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.1 </td>
@@ -750,7 +1194,7 @@ iris |>
    <td style="text-align:right;"> 4.7 </td>
    <td style="text-align:right;"> 1.2 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -758,7 +1202,7 @@ iris |>
    <td style="text-align:right;"> 4.8 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -766,7 +1210,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 1.7 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -782,7 +1226,7 @@ iris |>
    <td style="text-align:right;"> 4.7 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.1 </td>
@@ -798,7 +1242,7 @@ iris |>
    <td style="text-align:right;"> 6.0 </td>
    <td style="text-align:right;"> 2.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -830,7 +1274,7 @@ iris |>
    <td style="text-align:right;"> 5.8 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.6 </td>
@@ -838,7 +1282,7 @@ iris |>
    <td style="text-align:right;"> 6.6 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.3 </td>
@@ -846,7 +1290,7 @@ iris |>
    <td style="text-align:right;"> 6.3 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -854,7 +1298,7 @@ iris |>
    <td style="text-align:right;"> 5.8 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -878,7 +1322,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -894,7 +1338,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -910,7 +1354,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -918,7 +1362,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -926,7 +1370,7 @@ iris |>
    <td style="text-align:right;"> 6.7 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -950,7 +1394,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.6 </td>
@@ -958,7 +1402,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -974,7 +1418,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -982,7 +1426,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -1006,7 +1450,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -1030,7 +1474,7 @@ iris |>
    <td style="text-align:right;"> 6.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.9 </td>
@@ -1046,7 +1490,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -1054,7 +1498,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.1 </td>
@@ -1062,7 +1506,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -1086,7 +1530,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -1102,7 +1546,7 @@ iris |>
    <td style="text-align:right;"> 5.4 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -1110,7 +1554,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -1126,7 +1570,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -1158,7 +1602,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -1166,7 +1610,7 @@ iris |>
    <td style="text-align:right;"> 5.2 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.2 </td>
@@ -1174,7 +1618,7 @@ iris |>
    <td style="text-align:right;"> 5.4 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.9 </td>
@@ -1182,7 +1626,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
 </tbody>
 </table></div>
@@ -1209,9 +1653,9 @@ iris |>
 #> # Groups:   Species [3]
 #>   Species    Año   Petal.Ratio.Mean
 #>   <fct>      <chr>            <dbl>
-#> 1 setosa     2013              7.38
-#> 2 versicolor 2003              3.30
-#> 3 virginica  2003              3.01
+#> 1 setosa     2023              7.47
+#> 2 versicolor 2023              3.26
+#> 3 virginica  2003              2.92
 ```
 
 ### Responder:
@@ -1251,15 +1695,15 @@ miIris |>
 
 |Species    |Año  |     bajo|    medio|     alto|
 |:----------|:----|--------:|--------:|--------:|
-|setosa     |2023 | 3.473684|       NA|       NA|
-|setosa     |2003 | 3.353333| 3.900000|       NA|
-|setosa     |2013 | 3.333333| 3.850000| 3.500000|
-|versicolor |2003 | 2.500000| 2.728571| 2.960000|
-|versicolor |2023 | 2.700000| 2.762500| 3.180000|
-|versicolor |2013 |       NA| 2.683333| 2.533333|
-|virginica  |2013 |       NA| 2.900000| 3.052941|
-|virginica  |2003 | 2.600000| 3.080000| 2.928571|
-|virginica  |2023 |       NA| 2.780000| 2.975000|
+|setosa     |2023 | 3.392857| 3.900000|       NA|
+|setosa     |2003 | 3.365000| 3.300000| 3.500000|
+|setosa     |2013 | 3.458333| 4.400000|       NA|
+|versicolor |2023 | 2.800000| 2.778571| 3.033333|
+|versicolor |2013 | 2.450000| 2.672727| 2.950000|
+|versicolor |2003 |       NA| 2.688889| 2.875000|
+|virginica  |2023 |       NA| 2.725000| 3.061539|
+|virginica  |2013 | 2.600000| 3.050000| 3.006667|
+|virginica  |2003 |       NA| 3.000000| 2.900000|
 
 
 
