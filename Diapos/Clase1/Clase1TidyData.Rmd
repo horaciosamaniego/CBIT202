@@ -39,13 +39,15 @@ __Cambio de nombre__: Introducción al análisis (y manipulación) de datos geoe
 
 
 
+::: calificaciones
 | *Evaluación*               | *Ponderación* |
 |----------------------------|---------------|
 | Ejercicios \& Tareas  $$\frac{1}{n}\sum_i^n nota\, tarea_i$$       | 50%           |
-| Proyecto reporte           | 10%           |
-| Proyecto código            | 20%           |
-| Presentación               | 15%           |
-| Participación / Asistencia | 5%            |
+| Proyecto código 1           | 15%           |
+| Proyecto código 2           | 10%           |
+| Proyecto código 3           | 15%           |
+| Participación / Asistencia | 10%            |
+:::
 
 
 ## Primeros pasos  {.build}
@@ -57,7 +59,7 @@ __Cambio de nombre__: Introducción al análisis (y manipulación) de datos geoe
 
 - Hacer:
 <ol>
-<li> suscribirse a [servidor Discord](https://discord.gg/TWGvq53tm)
+<li> suscribirse a [servidor Discord](https://discord.gg/5casv2hz)
 <li> hacerse usuario de [GitHub](http://www.github.com)
 </ol>
 
@@ -73,7 +75,7 @@ Todo en R es un objeto
 - Estado -- _Característica_
   * e.g. verde, = '3', etc...
 - Comportamiento -- _Método_
-  * e.g. riiing, uso$$^2$$ 
+  * e.g. riiing, uso$$^2$$ gith
 </div>
 
 <div style="float: right; width: 50%;">

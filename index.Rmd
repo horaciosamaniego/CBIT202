@@ -28,7 +28,7 @@ csl: chicago-fullnote-bibliography.csl
 -   **Modalidad de clases:**
     -   Prácticas
     -   Presenciales
-    -   Consultas por [Discord](https://discord.gg/CQPepwS4) (chat o video) -- link válido 7 días! - hasta 15/8/2024
+    -   Consultas por [Discord](https://discord.gg/CQPepwS4) (chat o video) -- link válido 7 días! - hasta 29/8/2024
 -   **Horario de clases:** Jueves 9:50 - 13:00 hrs
 -   **Lugar:** Sala de computación, Facultad de Ciencias Forestales y Recursos Naturales, Campus Isla Teja, Valdivia
 -   **Inicio clases:** 8 agosto 2024
