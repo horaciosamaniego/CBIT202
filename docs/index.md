@@ -1,10 +1,10 @@
 ---
 title: "Programación y Análisis de Datos Geoespaciales"
 author: "Horacio Samaniego"
-date: "2024-08-22"
+date: "2024-08-27"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
+# bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
@@ -122,7 +122,7 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 6. 26 Septiembre — Visualización 
     - Visualización interactiva
     - Mapview
-    - 
+    
 
 ### Módulo 6: Introducción al Análisis Geoespacial
 
@@ -151,13 +151,13 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 (.) 31 Octubre — FERIADO (Día de las Iglesias Evangélicas)
 
-11. 7 Noviembre —
+11. 7 Noviembre — Proyectos
 
-12. 14 Noviembre —
+12. 14 Noviembre — Proyectos
 
-13. 21 Noviembre —
+13. 21 Noviembre — Proyectos
 
-14. 28 Noviembre —
+14. 28 Noviembre — Proyectos
 
 
 
