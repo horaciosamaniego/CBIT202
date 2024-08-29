@@ -1,5 +1,15 @@
-h1:about About
-h2:usage Usage
-h2:render-book Render book
-h2:preview-book Preview book
+h1:datos-del-curso Datos del curso
+h2:descripción-del-curso DESCRIPCIÓN DEL CURSO
+h3:objetivos OBJETIVOS
+h2:evaluación Evaluación
+h3:tareas tareas
+h3:proyectos proyectos
+h3:calificaciones calificaciones
+h2:calendario Calendario
+h3:módulo-1-introducción-a-r-y-rstudio Módulo 1: Introducción a R y RStudio
+h3:módulo-2-r-markdown-github Módulo 2: R Markdown & Github
+h3:módulo-3-manipulación-de-datos-con-tidyverse Módulo 3: Manipulación de Datos con Tidyverse
+h3:modulo-5-visualización-de-datos Modulo 5: Visualización de Datos
+h3:módulo-6-introducción-al-análisis-geoespacial Módulo 6: Introducción al Análisis Geoespacial
+h2:recursos-adicionales Recursos adicionales
 

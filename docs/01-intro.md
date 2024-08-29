@@ -308,7 +308,7 @@ Con cualquier delimitador: read_delim("file.txt", delim = "\|")
 13. multiplique `x` e `y`
 14. cree un `data.frame`  con el mímimo código posible usando los datos de la siguiente imagen y llámelo `z`:
 
-![](df.jpg)<!-- -->
+<img src="df.jpg" width="300" />
 
 15. cree un dataframe de datos ficticios que represente una muestra de 100 individuos de aves y su tamaño corporal. Use 4 tipos de aves: un paseriforme, un columbiforme, un rapaz y trochiliformes en aproximadamente las mismas proporciones. (Averigue el real tamaño promedio de cada grupo)
 16. grafique los pesos corporales de cada grupo (ayuda: puede usar graficos de distribuciones, caja y bigote o bien de violín)

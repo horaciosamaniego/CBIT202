@@ -1,4 +1,11 @@
-h1:hello-bookdown Hello bookdown
-h2:a-section A section
-h3:an-unnumbered-section An unnumbered section
+h1:introducción Introducción
+h2:objetos Objetos
+h2:variables Variables
+h3:tipos-de-variables Tipos de variables
+h2:funciones Funciones
+h2:vectores Vectores
+h2:instalar-librerías Instalar librerías
+h2:r-notebook R Notebook
+h2:leer-datos Leer datos
+h2:ejercicios Ejercicios
 
