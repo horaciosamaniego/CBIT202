@@ -36,4 +36,14 @@ podemos-explicar-que-sucedió-aquí
 ejercicio
 bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos
 recursos
-bibliography-book.bib-packages.bib
+rmarkdown
+qué-es-r-markdown
+librerías
+crear-un-r-markdown
+encabezado-yaml
+sintáxis-de-markdown
+lo-esencial
+listas
+código
+md---html
+recursos-1

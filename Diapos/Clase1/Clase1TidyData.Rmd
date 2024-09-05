@@ -1,5 +1,5 @@
 ---
-title: "CBIT200 - Introducción al análisis geoespacial"
+title: "Programación y Análisis de Datos Geoespaciales"
 author: "Horacio Samaniego"
 date: "`r format(Sys.time(), '%d/%m, %Y')`"
 output:

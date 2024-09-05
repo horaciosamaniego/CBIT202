@@ -53,4 +53,4 @@ _bookdown_files
 .Rdata
 .DS_Store
 .quarto
-.RProj*
+.RProj.user/*

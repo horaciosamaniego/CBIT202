@@ -1,5 +1,5 @@
 ---
-title: "CBIT200 - Introducción al análisis geoespacial"
+title: "Programación y Análisis de Datos Geoespaciales"
 author: "Horacio Samaniego"
 date: "`r format(Sys.time(), '%d/%m, %Y')`"
 output:
@@ -121,7 +121,7 @@ DF <- mutate(iris, Petal.Sepal.Ratio = round((Petal.Length/Sepal.Length),2))
 kable(DF[seq(from = 15, to = 150, length.out = 10),], row.names = FALSE) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F) |> scroll_box(width = "900px", height = "200px")
 ```
 
-## Pipeline ( |> ) {.small .build}
+## Pipeline "|>" {.small .build}
 
 - Para realizar varias operaciones de forma secuencial 
 - sin recurrir a parentesis anidados 
@@ -144,7 +144,7 @@ x <- c(1,4,6,8)
 x |> log() |> sqrt() |> mean() |> round(2)
 ```
 
-## Pipeline ( |> ) {.small .build}
+## Pipeline {.small .build}
 
 * Muchos objetos intermedios
 
@@ -162,7 +162,7 @@ Summary.Byspecies <- summarize(BySpecies, MEAN = mean(Petal.Sepal.Ratio), SD = s
 kable(Summary.Byspecies) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
 ```
 
-## Pipeline ( |> ) {.small .build}
+## Pipeline {.small .build}
 
 * Con pipe
 
@@ -172,13 +172,18 @@ Summary.Byspecies <- summarize(group_by(mutate(iris, Petal.Sepal.Ratio = Petal.L
 
 
 ```{r, echo=FALSE}
-Summary.Byspecies <- summarize(group_by(mutate(iris, Petal.Sepal.Ratio = Petal.Length/Sepal.Length), Species), MEAN = mean(Petal.Sepal.Ratio), SD = sd(Petal.Sepal.Ratio))
+Summary.Byspecies <- summarize(
+  group_by(
+    mutate(iris, 
+           Petal.Sepal.Ratio = Petal.Length/Sepal.Length), Species), 
+           MEAN = mean(Petal.Sepal.Ratio), 
+           SD = sd(Petal.Sepal.Ratio))
 
 kable(Summary.Byspecies) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
 ```
 
 
-## Pipeline ( |> ) otro ejemplo
+## Pipeline, otro ejemplo
 
 ```{r, eval=FALSE}
 library(tidyverse)
@@ -278,8 +283,12 @@ kable(DF) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed"
 
 ## Ejercicios {.build .small}
 
-```{r}
-Casos_Activos <- read_csv("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto19/CasosActivosPorComuna_std.csv")
+```{r casos COVID}
+# Casos_Activos <- read_csv("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto19/CasosActivosPorComuna_std.csv")
+
+fname <- "https://raw.githubusercontent.com/jorgeperezrojas/covid19-data/master/csv/confirmados_comunas.csv"
+Casos_Activos <- read.csv(fname)
+
 ```
 
 
