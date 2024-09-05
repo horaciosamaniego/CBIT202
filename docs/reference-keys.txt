@@ -44,6 +44,8 @@ encabezado-yaml
 sintáxis-de-markdown
 lo-esencial
 listas
-código
+mostrar-ejemplos-de-de-código-sin-ejecutarlos
+figuras
 md---html
+código-r
 recursos-1
