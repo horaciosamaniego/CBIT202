@@ -7,8 +7,8 @@ rmd_files:  [
             "index.Rmd",
             "01-intro.Rmd",
             "02-dplyr.Rmd",
-            "RMarkdown.Rmd"
-            "Clasificación de Uso de suelo.Rmd"
+            "RMarkdown.Rmd",
+            "Clasificacion-de-Uso-de-suelo.Rmd"
             #"03-Distribucion_de_Especies_y_GBIF.Rmd"
             ]
 language:

@@ -18,6 +18,13 @@
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.2.2/leaflet.js"></script><script src="libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script><script src="libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
+<script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
+<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -48,6 +55,7 @@
 <li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></li>
 <li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></li>
 <li><a class="active" href="rmarkdown.html"><span class="header-section-number">4</span> RMarkdown</a></li>
+<li><a class="" href="uso-de-r-como-sistema-de-informaci%C3%B3n-geogr%C3%A1fico.html"><span class="header-section-number">5</span> Uso de R como Sistema de Información Geográfico</a></li>
 </ul>
 
         <div class="book-extra">
@@ -147,7 +155,7 @@
 <h3>
 <span class="header-section-number">4.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)<a class="anchor" aria-label="anchor" href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><i class="fas fa-link"></i></a>
 </h3>
-<p>Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por <em>cremilla inversa</em> <code>`</code>. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo <code>2024-10-02</code> imprime la fecha actual en R: 2024-10-02</p>
+<p>Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por <em>cremilla inversa</em> <code>`</code>. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo <code>2024-10-03</code> imprime la fecha actual en R: 2024-10-03</p>
 <p>Usaremos un TAB, o 4 espacios para insertar un bloque de código</p>
 <p>Además de las imágenes quepodemos generar durante el uso mismo de R, podemos incrustar imágenes.</p>
 <ul>
@@ -179,49 +187,62 @@ Debemos tener super claro el espacio de trabajo desde donde se ejecuta este <cod
 <span id="cb32-3"><a href="rmarkdown.html#cb32-3" tabindex="-1"></a>  ```{r chunk de imagen, echo=FALSE, out.width="50%", fig.cap="A nice image."}</span>
 <span id="cb32-4"><a href="rmarkdown.html#cb32-4" tabindex="-1"></a>    knitr::include_graphics("foo/bar.png")</span></code></pre></div>
 <p>Ojo, con la ruta de acceso a la imágen!</p>
-<p>```</p>
+<pre><code>
+
+## MD -\&gt; HTML
+
+Cuando escribimos en markdown, la gran mayoría de las veces, el interpretador hará una transformación del documento a HTML. Esto ocurre de forma interna, no tienes nada que hacer. Un ejemplo de ello es pinchar en la opcion `Visual`, para verlo en HTML, o seguir usando la opción `Source` en la esquina superior izquierda de RStudio. 
+![Botón Visual/Source en RStudio](Source-Visual%20button.png)
+
+## Código R
+
+En un `.Rmd`, vamos a confinar el código que queremos que R procese un un *chunk*.
+
+Usaremos tres (3) *cremillas inversas*. Se pone entre corchetes `{}` el lenguaje que queremos que RStudio interprete. En general, este será `R`, pero podría ser otros que tu instalacion permita, como python, o bash.
+
+Dentro de los corchetes podemos incluir distintos parámetros con los que se ejecutara (o no) el código. Pero es mas sencillo usar el botón del engranaje: 
+![parámetros del chunk](./Chunk_gear_button.png)
+
+Pinchando en él, puedes ver que se permite ajustar los parámetros básicos, como título del chunk, si es que quieres que se ejecute o si quieres que no muestre los Warnings, etc...
+
+![parámtros de chunk 2](./Chunk_gear_button2.png){width=95%}
+
+**OJO QUE FINALMENTE:** 
+
+&gt; Es dentro del estos chunks donde ocurre la magia, RStudio los interpreta enviándolos a `R` para que los ejecute. Todo el resto es intepretado como un archivo Markdown que, al ser compilado es enviado a un HTML, PDF o DOCX para poder ser distribuido. 
+
+
+## Recursos
+
+-   [Torpedo / CheatSheet](https://rstudio.github.io/cheatsheets/html/rmarkdown.html)
+-   [R Markdown for scientists](https://rmd4sci.njtierney.com/)
+-   [data wrangling cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+-   [tablas "bonitinhas" con Kable](https://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
+
+&lt;!--chapter:end:RMarkdown.Rmd--&gt;
+
+
+
+``` r
+# load libraries
+list.of.packages &lt;- c("sf","mapview","terra","dplyr","RColorBrewer")
+new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages,dep=TRUE,repos = "http://cran.us.r-project.org")</code></pre>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># library(landscapemetrics)</span></span>
+<span><span class="co">#library(raster)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rspatial.org/">terra</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/mapview">mapview</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-</div>
-<div id="md---html" class="section level2" number="4.6">
-<h2>
-<span class="header-section-number">4.6</span> MD -&gt; HTML<a class="anchor" aria-label="anchor" href="#md---html"><i class="fas fa-link"></i></a>
-</h2>
-<p>Cuando escribimos en markdown, la gran mayoría de las veces, el interpretador hará una transformación del documento a HTML. Esto ocurre de forma interna, no tienes nada que hacer. Un ejemplo de ello es pinchar en la opcion <code>Visual</code>, para verlo en HTML, o seguir usando la opción <code>Source</code> en la esquina superior izquierda de RStudio.
-<img src="Source-Visual%20button.png" alt="Botón Visual/Source en RStudio"></p>
-</div>
-<div id="código-r" class="section level2" number="4.7">
-<h2>
-<span class="header-section-number">4.7</span> Código R<a class="anchor" aria-label="anchor" href="#c%C3%B3digo-r"><i class="fas fa-link"></i></a>
-</h2>
-<p>En un <code>.Rmd</code>, vamos a confinar el código que queremos que R procese un un <em>chunk</em>.</p>
-<p>Usaremos tres (3) <em>cremillas inversas</em>. Se pone entre corchetes <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code> el lenguaje que queremos que RStudio interprete. En general, este será <code>R</code>, pero podría ser otros que tu instalacion permita, como python, o bash.</p>
-<div class="inline-figure">Dentro de los corchetes podemos incluir distintos parámetros con los que se ejecutara (o no) el código. Pero es mas sencillo usar el botón del engranaje:
-<img src="Chunk_gear_button.png" alt="parámetros del chunk">
-</div>
-<p>Pinchando en él, puedes ver que se permite ajustar los parámetros básicos, como título del chunk, si es que quieres que se ejecute o si quieres que no muestre los Warnings, etc…</p>
-<div class="float">
-<img src="Chunk_gear_button2.png" style="width:95.0%" alt="parámtros de chunk 2"><div class="figcaption">parámtros de chunk 2</div>
-</div>
-<p><strong>OJO QUE FINALMENTE:</strong></p>
-<blockquote>
-<p>Es dentro del estos chunks donde ocurre la magia, RStudio los interpreta enviándolos a <code>R</code> para que los ejecute. Todo el resto es intepretado como un archivo Markdown que, al ser compilado es enviado a un HTML, PDF o DOCX para poder ser distribuido.</p>
-</blockquote>
-</div>
-<div id="recursos-1" class="section level2" number="4.8">
-<h2>
-<span class="header-section-number">4.8</span> Recursos<a class="anchor" aria-label="anchor" href="#recursos-1"><i class="fas fa-link"></i></a>
-</h2>
-<ul>
-<li><a href="https://rstudio.github.io/cheatsheets/html/rmarkdown.html">Torpedo / CheatSheet</a></li>
-<li><a href="https://rmd4sci.njtierney.com/">R Markdown for scientists</a></li>
-<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">data wrangling cheatsheet</a></li>
-<li><a href="https://haozhu233.github.io/kableExtra/awesome_table_in_html.html">tablas “bonitinhas” con Kable</a></li>
-</ul>
 </div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></div>
-<div class="empty"></div>
+<div class="next"><a href="uso-de-r-como-sistema-de-informaci%C3%B3n-geogr%C3%A1fico.html"><span class="header-section-number">5</span> Uso de R como Sistema de Información Geográfico</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -238,9 +259,6 @@ Debemos tener super claro el espacio de trabajo desde donde se ejecuta este <cod
 <li><a class="nav-link" href="#figuras"><span class="header-section-number">4.5.4</span> Figuras</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#md---html"><span class="header-section-number">4.6</span> MD -&gt; HTML</a></li>
-<li><a class="nav-link" href="#c%C3%B3digo-r"><span class="header-section-number">4.7</span> Código R</a></li>
-<li><a class="nav-link" href="#recursos-1"><span class="header-section-number">4.8</span> Recursos</a></li>
 </ul>
 
       <div class="book-extra">
@@ -257,7 +275,7 @@ Debemos tener super claro el espacio de trabajo desde donde se ejecuta este <cod
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-02.</p>
+    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

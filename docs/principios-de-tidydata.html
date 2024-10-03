@@ -18,6 +18,13 @@
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.2.2/leaflet.js"></script><script src="libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script><script src="libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
+<script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
+<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -48,6 +55,7 @@
 <li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></li>
 <li><a class="active" href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></li>
 <li><a class="" href="rmarkdown.html"><span class="header-section-number">4</span> RMarkdown</a></li>
+<li><a class="" href="uso-de-r-como-sistema-de-informaci%C3%B3n-geogr%C3%A1fico.html"><span class="header-section-number">5</span> Uso de R como Sistema de Información Geográfico</a></li>
 </ul>
 
         <div class="book-extra">
@@ -120,7 +128,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.4</td>
 <td align="right">0.2</td>
 <td align="left">setosa</td>
-<td align="left">2003</td>
+<td align="left">2023</td>
 </tr>
 <tr class="even">
 <td align="right">4.9</td>
@@ -128,7 +136,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.4</td>
 <td align="right">0.2</td>
 <td align="left">setosa</td>
-<td align="left">2013</td>
+<td align="left">2023</td>
 </tr>
 <tr class="odd">
 <td align="right">4.7</td>
@@ -136,7 +144,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.3</td>
 <td align="right">0.2</td>
 <td align="left">setosa</td>
-<td align="left">2023</td>
+<td align="left">2003</td>
 </tr>
 <tr class="even">
 <td align="right">4.6</td>
@@ -160,7 +168,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.7</td>
 <td align="right">0.4</td>
 <td align="left">setosa</td>
-<td align="left">2013</td>
+<td align="left">2023</td>
 </tr>
 <tr class="odd">
 <td align="right">4.6</td>
@@ -168,7 +176,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.4</td>
 <td align="right">0.3</td>
 <td align="left">setosa</td>
-<td align="left">2003</td>
+<td align="left">2023</td>
 </tr>
 </tbody>
 </table></div>
@@ -382,7 +390,7 @@ Año
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -442,7 +450,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -462,7 +470,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -482,7 +490,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -562,7 +570,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -602,7 +610,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -622,7 +630,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -662,7 +670,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -742,7 +750,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -782,7 +790,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -802,7 +810,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -842,7 +850,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -882,7 +890,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -902,7 +910,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -962,7 +970,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -982,7 +990,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1002,7 +1010,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1022,7 +1030,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1042,7 +1050,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1062,7 +1070,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1102,7 +1110,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1122,7 +1130,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1142,7 +1150,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1162,7 +1170,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1182,7 +1190,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1202,7 +1210,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1222,7 +1230,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1242,7 +1250,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1262,7 +1270,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1282,7 +1290,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1302,7 +1310,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1322,7 +1330,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1362,7 +1370,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 </tbody>
@@ -1419,7 +1427,7 @@ Año
 versicolor
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1439,7 +1447,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1459,7 +1467,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1479,7 +1487,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1499,7 +1507,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1519,7 +1527,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1539,7 +1547,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1559,7 +1567,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1579,7 +1587,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1599,7 +1607,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1619,7 +1627,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1639,7 +1647,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1659,7 +1667,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1699,7 +1707,7 @@ versicolor
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1759,7 +1767,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1779,7 +1787,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1799,7 +1807,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1859,7 +1867,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1899,7 +1907,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1919,7 +1927,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1959,7 +1967,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -2039,7 +2047,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2079,7 +2087,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2099,7 +2107,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -2139,7 +2147,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2179,7 +2187,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2199,7 +2207,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2259,7 +2267,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2279,7 +2287,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2299,7 +2307,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2319,7 +2327,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2339,7 +2347,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -2359,7 +2367,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2399,7 +2407,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2419,7 +2427,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2439,7 +2447,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2459,7 +2467,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2479,7 +2487,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2499,7 +2507,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2519,7 +2527,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -2539,7 +2547,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2559,7 +2567,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2579,7 +2587,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2599,7 +2607,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2619,7 +2627,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2659,7 +2667,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 </tbody>
@@ -2686,9 +2694,9 @@ colectaron especies con una razon largo/ancho determinado.</p>
 <span><span class="co">#&gt; # Groups:   Species [3]</span></span>
 <span><span class="co">#&gt;   Species    Año   Petal.Ratio.Mean</span></span>
 <span><span class="co">#&gt;   &lt;fct&gt;      &lt;chr&gt;            &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1 setosa     2013              7.22</span></span>
-<span><span class="co">#&gt; 2 versicolor 2023              3.26</span></span>
-<span><span class="co">#&gt; 3 virginica  2003              2.96</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 setosa     2003              7.38</span></span>
+<span><span class="co">#&gt; 2 versicolor 2013              3.33</span></span>
+<span><span class="co">#&gt; 3 virginica  2023              2.85</span></span></code></pre></div>
 </div>
 <div id="responder" class="section level3" number="3.2.6">
 <h3>
@@ -2732,66 +2740,66 @@ diferencia entre especies respecto de la característica <code>Tamaño</code></p
 <tbody>
 <tr class="odd">
 <td align="left">setosa</td>
-<td align="left">2003</td>
-<td align="right">3.466667</td>
-<td align="right">4.400000</td>
+<td align="left">2023</td>
+<td align="right">3.28000</td>
+<td align="right">3.900000</td>
 <td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">setosa</td>
-<td align="left">2013</td>
-<td align="right">3.286667</td>
-<td align="right">3.900000</td>
+<td align="left">2003</td>
+<td align="right">3.35625</td>
+<td align="right">4.400000</td>
 <td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">setosa</td>
-<td align="left">2023</td>
-<td align="right">3.437500</td>
+<td align="left">2013</td>
+<td align="right">3.56000</td>
 <td align="right">3.300000</td>
 <td align="right">3.500000</td>
 </tr>
 <tr class="even">
 <td align="left">versicolor</td>
-<td align="left">2013</td>
-<td align="right">2.700000</td>
-<td align="right">2.733333</td>
-<td align="right">2.820000</td>
+<td align="left">2003</td>
+<td align="right">2.20000</td>
+<td align="right">2.855556</td>
+<td align="right">2.775000</td>
 </tr>
 <tr class="odd">
 <td align="left">versicolor</td>
+<td align="left">2013</td>
+<td align="right">2.75000</td>
+<td align="right">2.808333</td>
+<td align="right">3.100000</td>
+</tr>
+<tr class="even">
+<td align="left">versicolor</td>
 <td align="left">2023</td>
-<td align="right">2.200000</td>
-<td align="right">2.727273</td>
+<td align="right">NA</td>
+<td align="right">2.546154</td>
+<td align="right">3.000000</td>
+</tr>
+<tr class="odd">
+<td align="left">virginica</td>
+<td align="left">2023</td>
+<td align="right">2.60000</td>
 <td align="right">2.900000</td>
-</tr>
-<tr class="even">
-<td align="left">versicolor</td>
-<td align="left">2003</td>
-<td align="right">2.800000</td>
-<td align="right">2.707143</td>
-<td align="right">3.150000</td>
-</tr>
-<tr class="odd">
-<td align="left">virginica</td>
-<td align="left">2003</td>
-<td align="right">2.600000</td>
-<td align="right">3.033333</td>
-<td align="right">2.927273</td>
+<td align="right">2.933333</td>
 </tr>
 <tr class="even">
 <td align="left">virginica</td>
-<td align="left">2023</td>
+<td align="left">2003</td>
 <td align="right">NA</td>
-<td align="right">3.133333</td>
-<td align="right">3.076923</td>
+<td align="right">2.966667</td>
+<td align="right">2.993750</td>
 </tr>
 <tr class="odd">
 <td align="left">virginica</td>
 <td align="left">2013</td>
 <td align="right">NA</td>
-<td align="right">2.785714</td>
-<td align="right">2.991667</td>
+<td align="right">2.916667</td>
+<td align="right">3.072727</td>
 </tr>
 </tbody>
 </table></div>
@@ -2880,7 +2888,7 @@ largo:ancho del pétalo y el ancho del sépalo?</li>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-02.</p>
+    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
