@@ -1,7 +1,7 @@
 ---
 title: "Programación y Análisis de Datos Geoespaciales"
 author: "Horacio Samaniego"
-date: "2024-09-05"
+date: "2024-10-02"
 site: bookdown::bookdown_site
 documentclass: book
 # bibliography: [book.bib, packages.bib]

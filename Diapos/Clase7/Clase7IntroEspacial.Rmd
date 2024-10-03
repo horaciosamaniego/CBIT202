@@ -106,7 +106,7 @@ ggplot() + geom_sf(data = Africa2, aes(fill = GLOCAF)) + theme_dark()
 
 -   En raster función `getData("GADM")`
 
-```{r, echo = T}
+```{r getdata(), echo = T}
 Peru <- getData(name = "GADM", country = "PER", level = 1) %>% st_as_sf()
 ggplot() + geom_sf(data = Peru) + theme(legend.position = "none")
 ```
