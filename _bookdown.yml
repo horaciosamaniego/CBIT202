@@ -1,4 +1,5 @@
-book_filename: "CBIT202_libro"
+
+.book_filename: "CBIT202_libro"
 new_session: true
 before_chapter_script: _common.R
 delete_merged_file: true

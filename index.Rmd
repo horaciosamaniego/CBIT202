@@ -133,7 +133,10 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
    - Operaciones espaciales básicas (unión, intersección, búfer)
    - Análisis de datos espaciales
 
-8. 10 Octubre — datos en grilla
+8. 10 Octubre (Semana de receso)
+
+
+8.1 — datos en grilla
     - Fuentes y formatos
     - filtros y procesamiento
     - algebra de mapa
