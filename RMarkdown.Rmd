@@ -5,7 +5,7 @@
 ## Librerías
 
 ```{r librerias basicas, message=FALSE, warning=FALSE, include=TRUE}
-install.packages("rmarkdown")
+# install.packages("rmarkdown")
 library(rmarkdown)
 ```
 
