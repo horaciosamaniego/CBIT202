@@ -20,7 +20,7 @@ Los archivos que esten en formato Rmd se desplegaran como un archivo de texto, c
 
 [LINK TAREA 3 RMD](https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_3_CBIT202_R.Rmd?raw=true)
 
-O Ejecute el siguiente ccódigo para descargarlo en su working directory
+O ejecute el siguiente código para descargar el archivo en su working directory
 
 ```{r tarea3 , eval=FALSE, echo=TRUE}
 githubURL <- 'https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_3_CBIT202_R.Rmd'
@@ -35,7 +35,7 @@ download.file(githubURL, "Ejercicios_3_CBIT202_R.Rmd")
 
 [LINK TAREA 4 RMD](https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_4_CBIT202_R.Rmd?raw=true)
 
-O Ejecute el siguiente ccódigo para descargarlo en su working directory
+O ejecute el siguiente código para descargar el archivo en su working directory
 
 # ```{r tarea4 , eval=FALSE, echo=TRUE}
 githubURL <- 'https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_4_CBIT202_R.Rmd'

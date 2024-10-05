@@ -6,10 +6,11 @@ delete_merged_file: true
 output_dir: "docs"
 rmd_files:  [
             "index.Rmd",
+            "00-ejercicios_proyectos.Rmd",
             "01-intro.Rmd",
             "02-dplyr.Rmd",
             "RMarkdown.Rmd",
-            "Clasificacion-de-Uso-de-suelo.Rmd"
+            # "Clasificacion-de-Uso-de-suelo.Rmd"
             #"03-Distribucion_de_Especies_y_GBIF.Rmd"
             ]
 language:
