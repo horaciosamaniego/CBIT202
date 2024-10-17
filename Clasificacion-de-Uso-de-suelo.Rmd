@@ -1,4 +1,3 @@
-
 ```{r}
 # load libraries
 list.of.packages <- c("sf","mapview","terra","dplyr","RColorBrewer")
@@ -17,15 +16,9 @@ library(dplyr)
 library(mapview)
 ```
 
-
-
-
-
 # Uso de R como Sistema de Información Geográfico
 
-
-## Clasificación de mapas y manejo de cartografía 
-
+## Clasificación de mapas y manejo de cartografía
 
 Algunos insumos para manejo de cartografía que usaremos:
 

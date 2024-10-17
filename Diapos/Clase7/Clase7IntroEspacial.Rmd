@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Sistemas de Información Geográfica"
-author: "Derek Corcoran"
+author: "Horacio"
 date: "`r format(Sys.time(), '%d/%m, %Y')`"
 output:
   ioslides_presentation:
@@ -59,6 +59,17 @@ Mundo <- st_as_sf(countriesHigh)
 Mundo <- Mundo |>
   mutate(gdp_cap = GDP_MD_EST/POP_EST)
 ggplot() + geom_sf(data = Mundo, aes(fill = gdp_cap))
+```
+
+
+
+
+```{r}
+Mundo |>
+  as.data.frame() |>
+  group_by(continent) |>
+  summarise(max = max(POP_EST,na.rm=T))
+  
 ```
 
 ## Ejemplos datos vectoriales (cont.)
