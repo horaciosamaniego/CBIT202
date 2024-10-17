@@ -4,27 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 2 Introducción | Programación y Análisis de Datos Geoespaciales</title>
+<title>Capítulo 3 Introducción | Programación y Análisis de Datos Geoespaciales</title>
 <meta name="author" content="Horacio Samaniego">
 <meta name="description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
-<meta property="og:title" content="Capítulo 2 Introducción | Programación y Análisis de Datos Geoespaciales">
+<meta property="og:title" content="Capítulo 3 Introducción | Programación y Análisis de Datos Geoespaciales">
 <meta property="og:type" content="book">
 <meta property="og:description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 2 Introducción | Programación y Análisis de Datos Geoespaciales">
+<meta name="twitter:title" content="Capítulo 3 Introducción | Programación y Análisis de Datos Geoespaciales">
 <meta name="twitter:description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-binding-2.2.2/leaflet.js"></script><script src="libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script><script src="libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
-<script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
-<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -52,10 +45,10 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html"><span class="header-section-number">1</span> Datos del curso</a></li>
-<li><a class="active" href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></li>
-<li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></li>
-<li><a class="" href="rmarkdown.html"><span class="header-section-number">4</span> RMarkdown</a></li>
-<li><a class="" href="uso-de-r-como-sistema-de-informaci%C3%B3n-geogr%C3%A1fico.html"><span class="header-section-number">5</span> Uso de R como Sistema de Información Geográfico</a></li>
+<li><a class="" href="ejercicios-y-proyectos.html"><span class="header-section-number">2</span> Ejercicios y Proyectos</a></li>
+<li><a class="active" href="introducci%C3%B3n.html"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></li>
+<li><a class="" href="rmarkdown.html"><span class="header-section-number">5</span> RMarkdown</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,9 +56,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introducción" class="section level1" number="2">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introducción" class="section level1" number="3">
 <h1>
-<span class="header-section-number">Capítulo 2</span> Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 3</span> Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"><i class="fas fa-link"></i></a>
 </h1>
 <p>R es un entorno y lenguaje de programación con un enfoque al análisis
 estadístico. Permite hacer todos los análisis numéricos que requieras en
@@ -83,9 +76,9 @@ que, al igual que R, es software libre y permite integrar herramientas
 necesarias para el desarrollo y así facilitarlo. La página oficial para
 descargarlo es:</p>
 <p><a href="http://www.rstudio.com">www.rstudio.com</a></p>
-<div id="objetos" class="section level2" number="2.1">
+<div id="objetos" class="section level2" number="3.1">
 <h2>
-<span class="header-section-number">2.1</span> Objetos<a class="anchor" aria-label="anchor" href="#objetos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.1</span> Objetos<a class="anchor" aria-label="anchor" href="#objetos"><i class="fas fa-link"></i></a>
 </h2>
 <p>En términos genéricos, todos los elementos que R maneja son objetos. Un
 objeto tiene ciertas propiedades y en ocasiones es capaz de llevar a
@@ -93,41 +86,41 @@ cabo ciertas tareas si se le dan los argumentos necesarios. Por ejemplo,
 un teléfono es capaz de realizar llamadas siempre que le demos el número
 a marcar.</p>
 </div>
-<div id="variables" class="section level2" number="2.2">
+<div id="variables" class="section level2" number="3.2">
 <h2>
-<span class="header-section-number">2.2</span> Variables<a class="anchor" aria-label="anchor" href="#variables"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.2</span> Variables<a class="anchor" aria-label="anchor" href="#variables"><i class="fas fa-link"></i></a>
 </h2>
 <p>Al momento de trabajar, es probable que necesitemos guardar valores o
 cálculos, de manera que no necesitemos escribirlos cada vez que los
 usemos, para esto utilizamos variables.</p>
 <p>Para realizar una asignación de variable:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">a</span> <span class="op">=</span> <span class="fl">200</span></span></code></pre></div>
 <p>Luego, podemos utilizar el valor contenido en la variable, utilizando su
 nombre:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 200</span></span></code></pre></div>
-<div id="tipos-de-variables" class="section level3" number="2.2.1">
+<div id="tipos-de-variables" class="section level3" number="3.2.1">
 <h3>
-<span class="header-section-number">2.2.1</span> Tipos de variables<a class="anchor" aria-label="anchor" href="#tipos-de-variables"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.2.1</span> Tipos de variables<a class="anchor" aria-label="anchor" href="#tipos-de-variables"><i class="fas fa-link"></i></a>
 </h3>
 <p>Existen diversos tipos o clases de variables, dependiendo de las
 características del objeto que les es asignado. Para conocer a qué tipo
 corresponde un objeto usamos class:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="fl">7</span></span>
 <span><span class="va">x</span></span>
 <span><span class="co">#&gt; [1] 7</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span> <span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "numeric"</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="fl">5</span><span class="op">/</span><span class="fl">3</span></span>
 <span><span class="va">x</span></span>
 <span><span class="co">#&gt; [1] 1.666667</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span> <span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "numeric"</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="st">"Trece"</span></span>
 <span><span class="va">x</span></span>
 <span><span class="co">#&gt; [1] "Trece"</span></span>
@@ -135,14 +128,14 @@ corresponde un objeto usamos class:</p>
 <span><span class="co">#&gt; [1] "character"</span></span></code></pre></div>
 </div>
 </div>
-<div id="funciones" class="section level2" number="2.3">
+<div id="funciones" class="section level2" number="3.3">
 <h2>
-<span class="header-section-number">2.3</span> Funciones<a class="anchor" aria-label="anchor" href="#funciones"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3</span> Funciones<a class="anchor" aria-label="anchor" href="#funciones"><i class="fas fa-link"></i></a>
 </h2>
 <p>Muchas cosas en R pueden hacerse a través del uso de funciones, estas
 permiten realizar operaciones típicas sin necesidad de escribir grandes
 cantidades de código. Por ejemplo:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 3.162278</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">1.9</span><span class="op">)</span></span>
@@ -161,7 +154,7 @@ cantidades de código. Por ejemplo:</p>
 apropiados para ejecutar la acción prevista.</p>
 <p>Por ejemplo, la función mean() no puede calcular el promedio si como
 argumentos se le pasan letras.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in mean.default(c("a", "b", "c")): argument is not</span></span>
 <span><span class="co">#&gt; numeric or logical: returning NA</span></span>
@@ -173,13 +166,13 @@ números como palabras:</p>
 tipo o clase adecuada, con las funciones:</p>
 <p><code><a href="https://rdrr.io/r/base/numeric.html">as.numeric()</a></code> y <code>as. character()</code>x`</p>
 </div>
-<div id="vectores" class="section level2" number="2.4">
+<div id="vectores" class="section level2" number="3.4">
 <h2>
-<span class="header-section-number">2.4</span> Vectores<a class="anchor" aria-label="anchor" href="#vectores"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.4</span> Vectores<a class="anchor" aria-label="anchor" href="#vectores"><i class="fas fa-link"></i></a>
 </h2>
 <p>Conjunto ordenado de valores del mismo tipo, agrupados en un único
 objeto. Para crear una variable vector utilizamos:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">v</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span></span>
 <span><span class="va">vector</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mi"</span>, <span class="st">"primer"</span>, <span class="st">"vector"</span><span class="op">)</span></span>
 <span><span class="va">vector</span></span>
@@ -187,7 +180,7 @@ objeto. Para crear una variable vector utilizamos:</p>
 <p>Cada objeto dentro de un vector posee un índice, el cual indica la
 posición que ocupa dentro del vector, para acceder a una posición
 específica usamos:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vector</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
 <span><span class="co">#&gt; [1] "mi"</span></span>
 <span><span class="va">vector</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
@@ -195,65 +188,65 @@ específica usamos:</p>
 <span><span class="va">vector</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> </span>
 <span><span class="co">#&gt; [1] "vector"</span></span></code></pre></div>
 <p>y si queremos reemplazar alguno de esos objetos:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vector</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">=</span><span class="st">"segundo"</span></span>
 <span><span class="va">vector</span></span>
 <span><span class="co">#&gt; [1] "mi"      "segundo" "vector"</span></span></code></pre></div>
 <p>Un vector permite almacenar varios valores en una única variable y
 permite ejecutar operaciones o funciones a un conjunto de datos:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vector</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span><span class="op">)</span></span>
 <span><span class="va">vector</span><span class="op">*</span><span class="fl">2</span></span>
 <span><span class="co">#&gt; [1]  2  4  6  8 10</span></span>
 <span><span class="va">vector</span><span class="op">^</span><span class="fl">2</span></span>
 <span><span class="co">#&gt; [1]  1  4  9 16 25</span></span></code></pre></div>
 <p>o incluso realizar operaciones entre vectores:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">v1</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span>
 <span><span class="va">v2</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span>,<span class="fl">8</span>,<span class="fl">10</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">v1</span></span>
 <span><span class="co">#&gt; [1] 1 2 3</span></span>
 <span><span class="va">v2</span></span>
 <span><span class="co">#&gt; [1]  6  8 10</span></span></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">v1</span> <span class="op">+</span> <span class="va">v2</span></span>
 <span><span class="co">#&gt; [1]  7 10 13</span></span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">v1</span><span class="op">*</span><span class="va">v2</span></span>
 <span><span class="co">#&gt; [1]  6 16 30</span></span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">v3</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span><span class="op">)</span></span>
 <span><span class="va">v1</span> <span class="op">*</span> <span class="va">v3</span></span>
-<span><span class="co">#&gt; Error in v1 * v3: non-numeric argument to binary operator</span></span></code></pre></div>
+<span><span class="co">#&gt; Error in v1 * v3: argumento no-numérico para operador binario</span></span></code></pre></div>
 </div>
-<div id="instalar-librerías" class="section level2" number="2.5">
+<div id="instalar-librerías" class="section level2" number="3.5">
 <h2>
-<span class="header-section-number">2.5</span> Instalar librerías<a class="anchor" aria-label="anchor" href="#instalar-librer%C3%ADas"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5</span> Instalar librerías<a class="anchor" aria-label="anchor" href="#instalar-librer%C3%ADas"><i class="fas fa-link"></i></a>
 </h2>
 <p>Muchas veces las funciones incorporadas en R son insuficientes para
 nuestros fines, por lo que es necesario instalar paquetes o “packages”
 de herramientas hechas por la comunidad. En este caso, usaremos el
 paquete “openxlsx”, que nos permite leer archivos Excel. Para
 instalarlo:</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"openxlsx"</span><span class="op">)</span></span></code></pre></div>
 <p>Debe hacerse una única vez, los paquetes quedan instalados en nuestra
 versión de R. Y para usarlo dentro de nuestro proyecto:</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ycphs.github.io/openxlsx/index.html">openxlsx</a></span><span class="op">)</span></span></code></pre></div>
 <p>Debe incluirse en cada proyecto donde queramos usarlo y ejecutarse cada
 vez que abrimos R.</p>
 </div>
-<div id="r-notebook" class="section level2" number="2.6">
+<div id="r-notebook" class="section level2" number="3.6">
 <h2>
-<span class="header-section-number">2.6</span> R Notebook<a class="anchor" aria-label="anchor" href="#r-notebook"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.6</span> R Notebook<a class="anchor" aria-label="anchor" href="#r-notebook"><i class="fas fa-link"></i></a>
 </h2>
 <p>Un Notebook en R es un documento con bloques o “chunks” que pueden ser
 ejecutados directa e interactivamente, para así visualizar los
 resultados directamente bajo el código.</p>
 <p>Para instalar esta librería:</p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"rmarkdown"</span><span class="op">)</span></span></code></pre></div>
 <p>Una vez instalada, puedes crear un nuevo notebook en RStudio llendo a
 <em>File -&gt; new file -&gt; R notebook</em>.</p>
@@ -271,16 +264,16 @@ chunk.</p>
 resultados se guardará junto a él (Click en el botón de <em>Preview</em> o
 presiona <em>Ctrl+Shift+K</em> para previsualizar el archivo HMTL)</p>
 </div>
-<div id="leer-datos" class="section level2" number="2.7">
+<div id="leer-datos" class="section level2" number="3.7">
 <h2>
-<span class="header-section-number">2.7</span> Leer datos<a class="anchor" aria-label="anchor" href="#leer-datos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.7</span> Leer datos<a class="anchor" aria-label="anchor" href="#leer-datos"><i class="fas fa-link"></i></a>
 </h2>
 <p>Delimitados por coma: read_csv(“file.csv”)</p>
 <p>Con cualquier delimitador: read_delim(“file.txt”, delim = “|”)</p>
 </div>
-<div id="ejercicios" class="section level2" number="2.8">
+<div id="ejercicios" class="section level2" number="3.8">
 <h2>
-<span class="header-section-number">2.8</span> Ejercicios<a class="anchor" aria-label="anchor" href="#ejercicios"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.8</span> Ejercicios<a class="anchor" aria-label="anchor" href="#ejercicios"><i class="fas fa-link"></i></a>
 </h2>
 <ol style="list-style-type: decimal">
 <li>Cree una nueva variable que contenga un vector con 10 números aleatorios</li>
@@ -311,22 +304,22 @@ presiona <em>Ctrl+Shift+K</em> para previsualizar el archivo HMTL)</p>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="index.html"><span class="header-section-number">1</span> Datos del curso</a></div>
-<div class="next"><a href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></div>
+<div class="prev"><a href="ejercicios-y-proyectos.html"><span class="header-section-number">2</span> Ejercicios y Proyectos</a></div>
+<div class="next"><a href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#introducci%C3%B3n"><span class="header-section-number">2</span> Introducción</a></li>
-<li><a class="nav-link" href="#objetos"><span class="header-section-number">2.1</span> Objetos</a></li>
+<li><a class="nav-link" href="#introducci%C3%B3n"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="nav-link" href="#objetos"><span class="header-section-number">3.1</span> Objetos</a></li>
 <li>
-<a class="nav-link" href="#variables"><span class="header-section-number">2.2</span> Variables</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#tipos-de-variables"><span class="header-section-number">2.2.1</span> Tipos de variables</a></li></ul>
+<a class="nav-link" href="#variables"><span class="header-section-number">3.2</span> Variables</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#tipos-de-variables"><span class="header-section-number">3.2.1</span> Tipos de variables</a></li></ul>
 </li>
-<li><a class="nav-link" href="#funciones"><span class="header-section-number">2.3</span> Funciones</a></li>
-<li><a class="nav-link" href="#vectores"><span class="header-section-number">2.4</span> Vectores</a></li>
-<li><a class="nav-link" href="#instalar-librer%C3%ADas"><span class="header-section-number">2.5</span> Instalar librerías</a></li>
-<li><a class="nav-link" href="#r-notebook"><span class="header-section-number">2.6</span> R Notebook</a></li>
-<li><a class="nav-link" href="#leer-datos"><span class="header-section-number">2.7</span> Leer datos</a></li>
-<li><a class="nav-link" href="#ejercicios"><span class="header-section-number">2.8</span> Ejercicios</a></li>
+<li><a class="nav-link" href="#funciones"><span class="header-section-number">3.3</span> Funciones</a></li>
+<li><a class="nav-link" href="#vectores"><span class="header-section-number">3.4</span> Vectores</a></li>
+<li><a class="nav-link" href="#instalar-librer%C3%ADas"><span class="header-section-number">3.5</span> Instalar librerías</a></li>
+<li><a class="nav-link" href="#r-notebook"><span class="header-section-number">3.6</span> R Notebook</a></li>
+<li><a class="nav-link" href="#leer-datos"><span class="header-section-number">3.7</span> Leer datos</a></li>
+<li><a class="nav-link" href="#ejercicios"><span class="header-section-number">3.8</span> Ejercicios</a></li>
 </ul>
 
       <div class="book-extra">
@@ -343,7 +336,7 @@ presiona <em>Ctrl+Shift+K</em> para previsualizar el archivo HMTL)</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-03.</p>
+    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-17.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

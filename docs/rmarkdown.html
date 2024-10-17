@@ -4,27 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 4 RMarkdown | Programación y Análisis de Datos Geoespaciales</title>
+<title>Capítulo 5 RMarkdown | Programación y Análisis de Datos Geoespaciales</title>
 <meta name="author" content="Horacio Samaniego">
-<meta name="description" content='4.1 ¿Qué es R Markdown?   4.2 Librerías install.packages("rmarkdown") library(rmarkdown)  4.3 Crear un R Markdown   4.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
+<meta name="description" content='5.1 ¿Qué es R Markdown?   5.2 Librerías # install.packages("rmarkdown") library(rmarkdown)  5.3 Crear un R Markdown   5.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
-<meta property="og:title" content="Capítulo 4 RMarkdown | Programación y Análisis de Datos Geoespaciales">
+<meta property="og:title" content="Capítulo 5 RMarkdown | Programación y Análisis de Datos Geoespaciales">
 <meta property="og:type" content="book">
-<meta property="og:description" content='4.1 ¿Qué es R Markdown?   4.2 Librerías install.packages("rmarkdown") library(rmarkdown)  4.3 Crear un R Markdown   4.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
+<meta property="og:description" content='5.1 ¿Qué es R Markdown?   5.2 Librerías # install.packages("rmarkdown") library(rmarkdown)  5.3 Crear un R Markdown   5.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 4 RMarkdown | Programación y Análisis de Datos Geoespaciales">
-<meta name="twitter:description" content='4.1 ¿Qué es R Markdown?   4.2 Librerías install.packages("rmarkdown") library(rmarkdown)  4.3 Crear un R Markdown   4.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
+<meta name="twitter:title" content="Capítulo 5 RMarkdown | Programación y Análisis de Datos Geoespaciales">
+<meta name="twitter:description" content='5.1 ¿Qué es R Markdown?   5.2 Librerías # install.packages("rmarkdown") library(rmarkdown)  5.3 Crear un R Markdown   5.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-binding-2.2.2/leaflet.js"></script><script src="libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script><script src="libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
-<script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
-<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -52,10 +45,10 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html"><span class="header-section-number">1</span> Datos del curso</a></li>
-<li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></li>
-<li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></li>
-<li><a class="active" href="rmarkdown.html"><span class="header-section-number">4</span> RMarkdown</a></li>
-<li><a class="" href="uso-de-r-como-sistema-de-informaci%C3%B3n-geogr%C3%A1fico.html"><span class="header-section-number">5</span> Uso de R como Sistema de Información Geográfico</a></li>
+<li><a class="" href="ejercicios-y-proyectos.html"><span class="header-section-number">2</span> Ejercicios y Proyectos</a></li>
+<li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></li>
+<li><a class="active" href="rmarkdown.html"><span class="header-section-number">5</span> RMarkdown</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,52 +56,52 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rmarkdown" class="section level1" number="4">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rmarkdown" class="section level1" number="5">
 <h1>
-<span class="header-section-number">Capítulo 4</span> RMarkdown<a class="anchor" aria-label="anchor" href="#rmarkdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 5</span> RMarkdown<a class="anchor" aria-label="anchor" href="#rmarkdown"><i class="fas fa-link"></i></a>
 </h1>
-<div id="qué-es-r-markdown" class="section level2" number="4.1">
+<div id="qué-es-r-markdown" class="section level2" number="5.1">
 <h2>
-<span class="header-section-number">4.1</span> ¿Qué es R Markdown?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-es-r-markdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1</span> ¿Qué es R Markdown?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-es-r-markdown"><i class="fas fa-link"></i></a>
 </h2>
 </div>
-<div id="librerías" class="section level2" number="4.2">
+<div id="librerías" class="section level2" number="5.2">
 <h2>
-<span class="header-section-number">4.2</span> Librerías<a class="anchor" aria-label="anchor" href="#librer%C3%ADas"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2</span> Librerías<a class="anchor" aria-label="anchor" href="#librer%C3%ADas"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"rmarkdown"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("rmarkdown")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown">rmarkdown</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="crear-un-r-markdown" class="section level2" number="4.3">
+<div id="crear-un-r-markdown" class="section level2" number="5.3">
 <h2>
-<span class="header-section-number">4.3</span> Crear un R Markdown<a class="anchor" aria-label="anchor" href="#crear-un-r-markdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3</span> Crear un R Markdown<a class="anchor" aria-label="anchor" href="#crear-un-r-markdown"><i class="fas fa-link"></i></a>
 </h2>
 </div>
-<div id="encabezado-yaml" class="section level2" number="4.4">
+<div id="encabezado-yaml" class="section level2" number="5.4">
 <h2>
-<span class="header-section-number">4.4</span> Encabezado YAML<a class="anchor" aria-label="anchor" href="#encabezado-yaml"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4</span> Encabezado YAML<a class="anchor" aria-label="anchor" href="#encabezado-yaml"><i class="fas fa-link"></i></a>
 </h2>
 <p>El archivo <code>.Rmd</code> comienza con una sección que definie los parámetros con que se va a compilar este <code>.Rmd</code>. En general, usa un lenguaje de serialización que sirve para definir configuraciones.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb30-1"><a href="rmarkdown.html#cb30-1" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb30-2"><a href="rmarkdown.html#cb30-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Informe de Biodiversity"</span></span>
-<span id="cb30-3"><a href="rmarkdown.html#cb30-3" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Juan Pérez</span></span>
-<span id="cb30-4"><a href="rmarkdown.html#cb30-4" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 21/Oct/2024</span></span>
-<span id="cb30-5"><a href="rmarkdown.html#cb30-5" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
-<span id="cb30-6"><a href="rmarkdown.html#cb30-6" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb32-1"><a href="rmarkdown.html#cb32-1" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb32-2"><a href="rmarkdown.html#cb32-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Informe de Biodiversity"</span></span>
+<span id="cb32-3"><a href="rmarkdown.html#cb32-3" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Juan Pérez</span></span>
+<span id="cb32-4"><a href="rmarkdown.html#cb32-4" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 21/Oct/2024</span></span>
+<span id="cb32-5"><a href="rmarkdown.html#cb32-5" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
+<span id="cb32-6"><a href="rmarkdown.html#cb32-6" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p>La línea importante es la del <code>output</code>, pues indica el tipo de archivo que se producirá al compilar este <code>.Rmd</code>. Intentaremos usar HTML como output en cuánto se pueda. Es lo mas sencillo y liviano, puede verse en el navegador. Otra posibildad es usar PDF, pero eso requiere tener instaladas librerías que compilen un archivo LaTeX.</p>
 </div>
-<div id="sintáxis-de-markdown" class="section level2" number="4.5">
+<div id="sintáxis-de-markdown" class="section level2" number="5.5">
 <h2>
-<span class="header-section-number">4.5</span> Sintáxis de Markdown<a class="anchor" aria-label="anchor" href="#sint%C3%A1xis-de-markdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.5</span> Sintáxis de Markdown<a class="anchor" aria-label="anchor" href="#sint%C3%A1xis-de-markdown"><i class="fas fa-link"></i></a>
 </h2>
 <p>Markdown es un lenguaje parecido a html que permite dar un ormato simplificado a documentos de texto. Puedes encontrar distintos recursos con ayudas para recordar como usarlo.</p>
 <ul>
 <li><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheatsheet</a></li>
 </ul>
-<div id="lo-esencial" class="section level3" number="4.5.1">
+<div id="lo-esencial" class="section level3" number="5.5.1">
 <h3>
-<span class="header-section-number">4.5.1</span> Lo esencial<a class="anchor" aria-label="anchor" href="#lo-esencial"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.5.1</span> Lo esencial<a class="anchor" aria-label="anchor" href="#lo-esencial"><i class="fas fa-link"></i></a>
 </h3>
 <p>Lo mas simple es los siguiente:</p>
 <ul>
@@ -125,9 +118,9 @@
 </li>
 </ul>
 </div>
-<div id="listas" class="section level3" number="4.5.2">
+<div id="listas" class="section level3" number="5.5.2">
 <h3>
-<span class="header-section-number">4.5.2</span> Listas<a class="anchor" aria-label="anchor" href="#listas"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.5.2</span> Listas<a class="anchor" aria-label="anchor" href="#listas"><i class="fas fa-link"></i></a>
 </h3>
 <p>Existen 2 tipos de listas, las numeradas y las que no.</p>
 <ul>
@@ -151,11 +144,11 @@
 </li>
 </ul>
 </div>
-<div id="mostrar-ejemplos-de-de-código-sin-ejecutarlos" class="section level3" number="4.5.3">
+<div id="mostrar-ejemplos-de-de-código-sin-ejecutarlos" class="section level3" number="5.5.3">
 <h3>
-<span class="header-section-number">4.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)<a class="anchor" aria-label="anchor" href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)<a class="anchor" aria-label="anchor" href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><i class="fas fa-link"></i></a>
 </h3>
-<p>Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por <em>cremilla inversa</em> <code>`</code>. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo <code>2024-10-03</code> imprime la fecha actual en R: 2024-10-03</p>
+<p>Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por <em>cremilla inversa</em> <code>`</code>. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo <code>2024-10-17</code> imprime la fecha actual en R: 2024-10-17</p>
 <p>Usaremos un TAB, o 4 espacios para insertar un bloque de código</p>
 <p>Además de las imágenes quepodemos generar durante el uso mismo de R, podemos incrustar imágenes.</p>
 <ul>
@@ -163,14 +156,14 @@
 <strong>Imágenes</strong>: <code>![texto que describe imagen](archivo.png)</code>, podemos usar los mismos formatos de imagenes que usa HTML. Estos son al menos GIF, JPG y PNG. Nota: ajustar el tamaño de imágenes es considerado mas avanzado y puede hacerse embebiendo código HTML en markdown.</li>
 </ul>
 <p>Usaríamos:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb31-1"><a href="rmarkdown.html#cb31-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">figure</span><span class="dt">&gt;</span>       </span>
-<span id="cb31-2"><a href="rmarkdown.html#cb31-2" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"archivo.jpg"</span><span class="ot">  alt</span><span class="op">=</span><span class="st">"texto que describe la imágen (visible al pasar el mouse sobre ella)"</span><span class="dt">&gt;</span>                      </span>
-<span id="cb31-3"><a href="rmarkdown.html#cb31-3" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">figcaption</span><span class="dt">&gt;</span>CAPTION.<span class="dt">&lt;/</span><span class="kw">figcaption</span><span class="dt">&gt;</span></span>
-<span id="cb31-4"><a href="rmarkdown.html#cb31-4" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">figure</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb33-1"><a href="rmarkdown.html#cb33-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">figure</span><span class="dt">&gt;</span>       </span>
+<span id="cb33-2"><a href="rmarkdown.html#cb33-2" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"archivo.jpg"</span><span class="ot">  alt</span><span class="op">=</span><span class="st">"texto que describe la imágen (visible al pasar el mouse sobre ella)"</span><span class="dt">&gt;</span>                      </span>
+<span id="cb33-3"><a href="rmarkdown.html#cb33-3" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">figcaption</span><span class="dt">&gt;</span>CAPTION.<span class="dt">&lt;/</span><span class="kw">figcaption</span><span class="dt">&gt;</span></span>
+<span id="cb33-4"><a href="rmarkdown.html#cb33-4" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">figure</span><span class="dt">&gt;</span></span></code></pre></div>
 </div>
-<div id="figuras" class="section level3" number="4.5.4">
+<div id="figuras" class="section level3" number="5.5.4">
 <h3>
-<span class="header-section-number">4.5.4</span> Figuras<a class="anchor" aria-label="anchor" href="#figuras"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.5.4</span> Figuras<a class="anchor" aria-label="anchor" href="#figuras"><i class="fas fa-link"></i></a>
 </h3>
 <p>Podemos incluir figuras en un <code>.Rmd</code>. Esto es posible de muchas maneras, demostraremos 2:</p>
 <ol style="list-style-type: decimal">
@@ -182,83 +175,73 @@
 Debemos tener super claro el espacio de trabajo desde donde se ejecuta este <code>.Rmd</code>. Lo puedes verificar desde la consola usando <code><a href="https://rdrr.io/r/base/getwd.html">getwd()</a></code>.</li>
 <li>Usando la librería <em>knitr</em>. Existe una fnucion <code><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">knitr::include_graphics()</a></code> que permite un control mas fino de como se muestra la imagen.</li>
 </ul>
-<div class="sourceCode" id="cb32"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb32-1"><a href="rmarkdown.html#cb32-1" tabindex="-1"></a>  Incluir imágen externa usando kintr:</span>
-<span id="cb32-2"><a href="rmarkdown.html#cb32-2" tabindex="-1"></a>  </span>
-<span id="cb32-3"><a href="rmarkdown.html#cb32-3" tabindex="-1"></a>  ```{r chunk de imagen, echo=FALSE, out.width="50%", fig.cap="A nice image."}</span>
-<span id="cb32-4"><a href="rmarkdown.html#cb32-4" tabindex="-1"></a>    knitr::include_graphics("foo/bar.png")</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb34-1"><a href="rmarkdown.html#cb34-1" tabindex="-1"></a>  Incluir imágen externa usando kintr:</span>
+<span id="cb34-2"><a href="rmarkdown.html#cb34-2" tabindex="-1"></a>  </span>
+<span id="cb34-3"><a href="rmarkdown.html#cb34-3" tabindex="-1"></a>  ```{r chunk de imagen, echo=FALSE, out.width="50%", fig.cap="A nice image."}</span>
+<span id="cb34-4"><a href="rmarkdown.html#cb34-4" tabindex="-1"></a>    knitr::include_graphics("foo/bar.png")</span></code></pre></div>
 <p>Ojo, con la ruta de acceso a la imágen!</p>
-<pre><code>
-
-## MD -\&gt; HTML
-
-Cuando escribimos en markdown, la gran mayoría de las veces, el interpretador hará una transformación del documento a HTML. Esto ocurre de forma interna, no tienes nada que hacer. Un ejemplo de ello es pinchar en la opcion `Visual`, para verlo en HTML, o seguir usando la opción `Source` en la esquina superior izquierda de RStudio. 
-![Botón Visual/Source en RStudio](Source-Visual%20button.png)
-
-## Código R
-
-En un `.Rmd`, vamos a confinar el código que queremos que R procese un un *chunk*.
-
-Usaremos tres (3) *cremillas inversas*. Se pone entre corchetes `{}` el lenguaje que queremos que RStudio interprete. En general, este será `R`, pero podría ser otros que tu instalacion permita, como python, o bash.
-
-Dentro de los corchetes podemos incluir distintos parámetros con los que se ejecutara (o no) el código. Pero es mas sencillo usar el botón del engranaje: 
-![parámetros del chunk](./Chunk_gear_button.png)
-
-Pinchando en él, puedes ver que se permite ajustar los parámetros básicos, como título del chunk, si es que quieres que se ejecute o si quieres que no muestre los Warnings, etc...
-
-![parámtros de chunk 2](./Chunk_gear_button2.png){width=95%}
-
-**OJO QUE FINALMENTE:** 
-
-&gt; Es dentro del estos chunks donde ocurre la magia, RStudio los interpreta enviándolos a `R` para que los ejecute. Todo el resto es intepretado como un archivo Markdown que, al ser compilado es enviado a un HTML, PDF o DOCX para poder ser distribuido. 
-
-
-## Recursos
-
--   [Torpedo / CheatSheet](https://rstudio.github.io/cheatsheets/html/rmarkdown.html)
--   [R Markdown for scientists](https://rmd4sci.njtierney.com/)
--   [data wrangling cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
--   [tablas "bonitinhas" con Kable](https://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
-
-&lt;!--chapter:end:RMarkdown.Rmd--&gt;
-
-
-
-``` r
-# load libraries
-list.of.packages &lt;- c("sf","mapview","terra","dplyr","RColorBrewer")
-new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages,dep=TRUE,repos = "http://cran.us.r-project.org")</code></pre>
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># library(landscapemetrics)</span></span>
-<span><span class="co">#library(raster)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rspatial.org/">terra</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/mapview">mapview</a></span><span class="op">)</span></span></code></pre></div>
+<p>```</p>
 </div>
+</div>
+<div id="md---html" class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> MD -&gt; HTML<a class="anchor" aria-label="anchor" href="#md---html"><i class="fas fa-link"></i></a>
+</h2>
+<p>Cuando escribimos en markdown, la gran mayoría de las veces, el interpretador hará una transformación del documento a HTML. Esto ocurre de forma interna, no tienes nada que hacer. Un ejemplo de ello es pinchar en la opcion <code>Visual</code>, para verlo en HTML, o seguir usando la opción <code>Source</code> en la esquina superior izquierda de RStudio.
+<img src="Source-Visual%20button.png" alt="Botón Visual/Source en RStudio"></p>
+</div>
+<div id="código-r" class="section level2" number="5.7">
+<h2>
+<span class="header-section-number">5.7</span> Código R<a class="anchor" aria-label="anchor" href="#c%C3%B3digo-r"><i class="fas fa-link"></i></a>
+</h2>
+<p>En un <code>.Rmd</code>, vamos a confinar el código que queremos que R procese un un <em>chunk</em>.</p>
+<p>Usaremos tres (3) <em>cremillas inversas</em>. Se pone entre corchetes <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code> el lenguaje que queremos que RStudio interprete. En general, este será <code>R</code>, pero podría ser otros que tu instalacion permita, como python, o bash.</p>
+<div class="inline-figure">Dentro de los corchetes podemos incluir distintos parámetros con los que se ejecutara (o no) el código. Pero es mas sencillo usar el botón del engranaje:
+<img src="Chunk_gear_button.png" alt="parámetros del chunk">
+</div>
+<p>Pinchando en él, puedes ver que se permite ajustar los parámetros básicos, como título del chunk, si es que quieres que se ejecute o si quieres que no muestre los Warnings, etc…</p>
+<div class="float">
+<img src="Chunk_gear_button2.png" style="width:95.0%" alt="parámtros de chunk 2"><div class="figcaption">parámtros de chunk 2</div>
+</div>
+<p><strong>OJO QUE FINALMENTE:</strong></p>
+<blockquote>
+<p>Es dentro del estos chunks donde ocurre la magia, RStudio los interpreta enviándolos a <code>R</code> para que los ejecute. Todo el resto es intepretado como un archivo Markdown que, al ser compilado es enviado a un HTML, PDF o DOCX para poder ser distribuido.</p>
+</blockquote>
+</div>
+<div id="recursos-1" class="section level2" number="5.8">
+<h2>
+<span class="header-section-number">5.8</span> Recursos<a class="anchor" aria-label="anchor" href="#recursos-1"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><a href="https://rstudio.github.io/cheatsheets/html/rmarkdown.html">Torpedo / CheatSheet</a></li>
+<li><a href="https://rmd4sci.njtierney.com/">R Markdown for scientists</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">data wrangling cheatsheet</a></li>
+<li><a href="https://haozhu233.github.io/kableExtra/awesome_table_in_html.html">tablas “bonitinhas” con Kable</a></li>
+</ul>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></div>
-<div class="next"><a href="uso-de-r-como-sistema-de-informaci%C3%B3n-geogr%C3%A1fico.html"><span class="header-section-number">5</span> Uso de R como Sistema de Información Geográfico</a></div>
+<div class="prev"><a href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></div>
+<div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#rmarkdown"><span class="header-section-number">4</span> RMarkdown</a></li>
-<li><a class="nav-link" href="#qu%C3%A9-es-r-markdown"><span class="header-section-number">4.1</span> ¿Qué es R Markdown?</a></li>
-<li><a class="nav-link" href="#librer%C3%ADas"><span class="header-section-number">4.2</span> Librerías</a></li>
-<li><a class="nav-link" href="#crear-un-r-markdown"><span class="header-section-number">4.3</span> Crear un R Markdown</a></li>
-<li><a class="nav-link" href="#encabezado-yaml"><span class="header-section-number">4.4</span> Encabezado YAML</a></li>
+<li><a class="nav-link" href="#rmarkdown"><span class="header-section-number">5</span> RMarkdown</a></li>
+<li><a class="nav-link" href="#qu%C3%A9-es-r-markdown"><span class="header-section-number">5.1</span> ¿Qué es R Markdown?</a></li>
+<li><a class="nav-link" href="#librer%C3%ADas"><span class="header-section-number">5.2</span> Librerías</a></li>
+<li><a class="nav-link" href="#crear-un-r-markdown"><span class="header-section-number">5.3</span> Crear un R Markdown</a></li>
+<li><a class="nav-link" href="#encabezado-yaml"><span class="header-section-number">5.4</span> Encabezado YAML</a></li>
 <li>
-<a class="nav-link" href="#sint%C3%A1xis-de-markdown"><span class="header-section-number">4.5</span> Sintáxis de Markdown</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#lo-esencial"><span class="header-section-number">4.5.1</span> Lo esencial</a></li>
-<li><a class="nav-link" href="#listas"><span class="header-section-number">4.5.2</span> Listas</a></li>
-<li><a class="nav-link" href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><span class="header-section-number">4.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)</a></li>
-<li><a class="nav-link" href="#figuras"><span class="header-section-number">4.5.4</span> Figuras</a></li>
+<a class="nav-link" href="#sint%C3%A1xis-de-markdown"><span class="header-section-number">5.5</span> Sintáxis de Markdown</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lo-esencial"><span class="header-section-number">5.5.1</span> Lo esencial</a></li>
+<li><a class="nav-link" href="#listas"><span class="header-section-number">5.5.2</span> Listas</a></li>
+<li><a class="nav-link" href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><span class="header-section-number">5.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)</a></li>
+<li><a class="nav-link" href="#figuras"><span class="header-section-number">5.5.4</span> Figuras</a></li>
 </ul>
 </li>
+<li><a class="nav-link" href="#md---html"><span class="header-section-number">5.6</span> MD -&gt; HTML</a></li>
+<li><a class="nav-link" href="#c%C3%B3digo-r"><span class="header-section-number">5.7</span> Código R</a></li>
+<li><a class="nav-link" href="#recursos-1"><span class="header-section-number">5.8</span> Recursos</a></li>
 </ul>
 
       <div class="book-extra">
@@ -275,7 +258,7 @@ if(length(new.packages)) install.packages(new.packages,dep=TRUE,repos = "http://
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-03.</p>
+    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-17.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

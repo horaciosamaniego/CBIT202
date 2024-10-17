@@ -4,27 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 3 Principios de Tidydata | Programación y Análisis de Datos Geoespaciales</title>
+<title>Capítulo 4 Principios de Tidydata | Programación y Análisis de Datos Geoespaciales</title>
 <meta name="author" content="Horacio Samaniego">
 <meta name="description" content="Gran parte del manejo de datos consiste en limpiar, ordenar, redistribuir, reemplazar datos. La gran mayoría de esas tareas son complejas y repetitivas. La documentación dice aqui que: Los...">
 <meta name="generator" content="bookdown 0.40 with bs4_book()">
-<meta property="og:title" content="Capítulo 3 Principios de Tidydata | Programación y Análisis de Datos Geoespaciales">
+<meta property="og:title" content="Capítulo 4 Principios de Tidydata | Programación y Análisis de Datos Geoespaciales">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Gran parte del manejo de datos consiste en limpiar, ordenar, redistribuir, reemplazar datos. La gran mayoría de esas tareas son complejas y repetitivas. La documentación dice aqui que: Los...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 3 Principios de Tidydata | Programación y Análisis de Datos Geoespaciales">
+<meta name="twitter:title" content="Capítulo 4 Principios de Tidydata | Programación y Análisis de Datos Geoespaciales">
 <meta name="twitter:description" content="Gran parte del manejo de datos consiste en limpiar, ordenar, redistribuir, reemplazar datos. La gran mayoría de esas tareas son complejas y repetitivas. La documentación dice aqui que: Los...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-binding-2.2.2/leaflet.js"></script><script src="libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script><script src="libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
-<script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
-<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -52,10 +45,10 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html"><span class="header-section-number">1</span> Datos del curso</a></li>
-<li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></li>
-<li><a class="active" href="principios-de-tidydata.html"><span class="header-section-number">3</span> Principios de Tidydata</a></li>
-<li><a class="" href="rmarkdown.html"><span class="header-section-number">4</span> RMarkdown</a></li>
-<li><a class="" href="uso-de-r-como-sistema-de-informaci%C3%B3n-geogr%C3%A1fico.html"><span class="header-section-number">5</span> Uso de R como Sistema de Información Geográfico</a></li>
+<li><a class="" href="ejercicios-y-proyectos.html"><span class="header-section-number">2</span> Ejercicios y Proyectos</a></li>
+<li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="active" href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></li>
+<li><a class="" href="rmarkdown.html"><span class="header-section-number">5</span> RMarkdown</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,9 +56,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="principios-de-tidydata" class="section level1" number="3">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="principios-de-tidydata" class="section level1" number="4">
 <h1>
-<span class="header-section-number">Capítulo 3</span> Principios de Tidydata<a class="anchor" aria-label="anchor" href="#principios-de-tidydata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 4</span> Principios de Tidydata<a class="anchor" aria-label="anchor" href="#principios-de-tidydata"><i class="fas fa-link"></i></a>
 </h1>
 <p>Gran parte del manejo de datos consiste en limpiar, ordenar,
 redistribuir, reemplazar datos. La gran mayoría de esas tareas son
@@ -89,9 +82,9 @@ facilitar el análisis, lo que permite centrarse en la parte
 interesante del problema, no en lo “aburrido” de la logística de los
 datos.</p>
 </blockquote>
-<div id="definiciones" class="section level2" number="3.1">
+<div id="definiciones" class="section level2" number="4.1">
 <h2>
-<span class="header-section-number">3.1</span> Definiciones<a class="anchor" aria-label="anchor" href="#definiciones"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1</span> Definiciones<a class="anchor" aria-label="anchor" href="#definiciones"><i class="fas fa-link"></i></a>
 </h2>
 <p>En el manejo estadístico de los datos estructuramos, usualmente, con
 tablas (dataframes) con filas y columnas. Las columnas siempre tienen
@@ -104,7 +97,7 @@ tabla</div>
 agregar un año de colecta ficticio. Para eso, vamos a crear un vector
 con 3 fechas asignadas de forma aleatoria a cada fila. Veamos las
 primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code>.</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span>
 <span><span class="va">año</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2003"</span>,<span class="st">"2013"</span>,<span class="st">"2023"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
@@ -128,7 +121,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.4</td>
 <td align="right">0.2</td>
 <td align="left">setosa</td>
-<td align="left">2023</td>
+<td align="left">2003</td>
 </tr>
 <tr class="even">
 <td align="right">4.9</td>
@@ -136,7 +129,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.4</td>
 <td align="right">0.2</td>
 <td align="left">setosa</td>
-<td align="left">2023</td>
+<td align="left">2013</td>
 </tr>
 <tr class="odd">
 <td align="right">4.7</td>
@@ -144,7 +137,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.3</td>
 <td align="right">0.2</td>
 <td align="left">setosa</td>
-<td align="left">2003</td>
+<td align="left">2013</td>
 </tr>
 <tr class="even">
 <td align="right">4.6</td>
@@ -160,7 +153,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.4</td>
 <td align="right">0.2</td>
 <td align="left">setosa</td>
-<td align="left">2013</td>
+<td align="left">2003</td>
 </tr>
 <tr class="even">
 <td align="right">5.4</td>
@@ -168,7 +161,7 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.7</td>
 <td align="right">0.4</td>
 <td align="left">setosa</td>
-<td align="left">2023</td>
+<td align="left">2003</td>
 </tr>
 <tr class="odd">
 <td align="right">4.6</td>
@@ -176,22 +169,22 @@ primeras 7 filas con la función <code><a href="https://rdrr.io/r/utils/head.htm
 <td align="right">1.4</td>
 <td align="right">0.3</td>
 <td align="left">setosa</td>
-<td align="left">2023</td>
+<td align="left">2003</td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<div id="lógica-y-funciones" class="section level2" number="3.2">
+<div id="lógica-y-funciones" class="section level2" number="4.2">
 <h2>
-<span class="header-section-number">3.2</span> Lógica y funciones<a class="anchor" aria-label="anchor" href="#l%C3%B3gica-y-funciones"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2</span> Lógica y funciones<a class="anchor" aria-label="anchor" href="#l%C3%B3gica-y-funciones"><i class="fas fa-link"></i></a>
 </h2>
 <p>La lógica básica para el manejo de datos usando <code>dplyr</code> es que el
 resultado de una operación puede ser “conectada” a otra, lo que facilita
 la letura del código cuando lo revisitamos. Para eso existe una operador
 que hace esta conexión.</p>
-<div id="funciones-esenciales" class="section level3" number="3.2.1">
+<div id="funciones-esenciales" class="section level3" number="4.2.1">
 <h3>
-<span class="header-section-number">3.2.1</span> Funciones esenciales<a class="anchor" aria-label="anchor" href="#funciones-esenciales"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.1</span> Funciones esenciales<a class="anchor" aria-label="anchor" href="#funciones-esenciales"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -212,16 +205,16 @@ que hace esta conexión.</p>
 <em>arrange</em> ordenar</li>
 </ul>
 </div>
-<div id="pipe" class="section level3" number="3.2.2">
+<div id="pipe" class="section level3" number="4.2.2">
 <h3>
-<span class="header-section-number">3.2.2</span> pipe<a class="anchor" aria-label="anchor" href="#pipe"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.2</span> pipe<a class="anchor" aria-label="anchor" href="#pipe"><i class="fas fa-link"></i></a>
 </h3>
 <p>Esta “conexión”, se hace con este operador <code>%&gt;%</code> o bien <code>|&gt;</code>. La
 diferencia entre los dos es que el uso del segundo no debieras requerir
 pre cargar la librería y es de uso mas reciente.</p>
 <p>por ejemplo, podemos calcular el largo promedio de los petalos de las
 especie en el set de datos <code>iris</code>.</p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span><span class="va">iris</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">Species</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -233,9 +226,9 @@ especie en el set de datos <code>iris</code>.</p>
 <span><span class="co">#&gt; 2 versicolor     4.26</span></span>
 <span><span class="co">#&gt; 3 virginica      5.55</span></span></code></pre></div>
 </div>
-<div id="agrupar" class="section level3" number="3.2.3">
+<div id="agrupar" class="section level3" number="4.2.3">
 <h3>
-<span class="header-section-number">3.2.3</span> Agrupar<a class="anchor" aria-label="anchor" href="#agrupar"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.3</span> Agrupar<a class="anchor" aria-label="anchor" href="#agrupar"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>dplyr</code> provee un set acotado de funciones, pero muy poderosas para
 manejar y ordenarnos con los datos. El ejemplo anterior muestra como se
@@ -247,7 +240,7 @@ para calcular la media sobre los groupos de filas para cada especie.</p>
 columnas que son de tipo numérico, adjuntar una columna con el número de
 filas sobre el que calculamos dicha varianza y luego imprimirla a la
 pantalla de forma mas estilizada.</p>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">iris</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">Species</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="va">var</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, N <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">|&gt;</span></span>
@@ -338,13 +331,13 @@ virginica
 </tbody>
 </table></div>
 </div>
-<div id="filtrar" class="section level3" number="3.2.4">
+<div id="filtrar" class="section level3" number="4.2.4">
 <h3>
-<span class="header-section-number">3.2.4</span> Filtrar<a class="anchor" aria-label="anchor" href="#filtrar"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.4</span> Filtrar<a class="anchor" aria-label="anchor" href="#filtrar"><i class="fas fa-link"></i></a>
 </h3>
 <p>Filter nos permite encontrar, y operar, solo sobre filas que cumplen una
 condición determinada. Por ejemplo solo un tipo de especie</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">iris</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">Species</span> <span class="op">==</span> <span class="st">'virginica'</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -390,7 +383,7 @@ Año
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -430,7 +423,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -450,7 +443,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -470,7 +463,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -550,7 +543,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -570,7 +563,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -590,7 +583,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -630,7 +623,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -650,7 +643,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -750,7 +743,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -770,7 +763,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -810,7 +803,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -830,7 +823,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -910,7 +903,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -930,7 +923,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -950,7 +943,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -990,7 +983,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1010,7 +1003,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1050,7 +1043,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1070,7 +1063,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1090,7 +1083,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1110,7 +1103,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1130,7 +1123,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1150,7 +1143,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1170,7 +1163,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1190,7 +1183,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1210,7 +1203,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1230,7 +1223,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1250,7 +1243,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1270,7 +1263,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1290,7 +1283,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1310,7 +1303,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1330,7 +1323,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1350,7 +1343,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1370,7 +1363,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 </tbody>
@@ -1381,7 +1374,7 @@ un operador en el argumento de la función. En este caso era el operado
 <code>==</code> que es un <em>igual</em>, pero de forma literal, no como una asignación.
 Otro ejemplo podría ser seleccionar aquellas filas que tengan un largo
 de petalos mayor a 4.5, por ejemplo</p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">iris</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">Petal.Length</span> <span class="op">&gt;</span> <span class="fl">4.5</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1467,7 +1460,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1527,7 +1520,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1547,7 +1540,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -1567,7 +1560,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1607,7 +1600,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1667,7 +1660,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1687,7 +1680,7 @@ versicolor
 versicolor
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1707,7 +1700,7 @@ versicolor
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -1747,7 +1740,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -1767,7 +1760,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1787,7 +1780,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1847,7 +1840,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -1867,7 +1860,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1887,7 +1880,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -1927,7 +1920,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -1947,7 +1940,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2047,7 +2040,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2067,7 +2060,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -2107,7 +2100,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2127,7 +2120,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2207,7 +2200,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2227,7 +2220,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2247,7 +2240,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2287,7 +2280,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -2307,7 +2300,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 <tr>
@@ -2347,7 +2340,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2367,7 +2360,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2013
 </td>
 </tr>
 <tr>
@@ -2387,7 +2380,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2407,7 +2400,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2427,7 +2420,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2447,7 +2440,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2467,7 +2460,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2487,7 +2480,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2507,7 +2500,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2527,7 +2520,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2547,7 +2540,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2023
 </td>
 </tr>
 <tr>
@@ -2567,7 +2560,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2587,7 +2580,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2607,7 +2600,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2003
+2013
 </td>
 </tr>
 <tr>
@@ -2627,7 +2620,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2003
 </td>
 </tr>
 <tr>
@@ -2647,7 +2640,7 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2023
+2003
 </td>
 </tr>
 <tr>
@@ -2667,21 +2660,21 @@ virginica
 virginica
 </td>
 <td style="text-align:left;">
-2013
+2023
 </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<div id="crear-nuevas-variables" class="section level3" number="3.2.5">
+<div id="crear-nuevas-variables" class="section level3" number="4.2.5">
 <h3>
-<span class="header-section-number">3.2.5</span> Crear nuevas variables<a class="anchor" aria-label="anchor" href="#crear-nuevas-variables"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.5</span> Crear nuevas variables<a class="anchor" aria-label="anchor" href="#crear-nuevas-variables"><i class="fas fa-link"></i></a>
 </h3>
 <p>Con <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> podemos crear una nueva columna de forma explícita. Por
 ejemplo, si quisieramos saber cuales son las especies y años en que se
 colectaron especies con una razon largo/ancho determinado.</p>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">iris</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Petal.Ratio <span class="op">=</span> <span class="va">Petal.Length</span><span class="op">/</span><span class="va">Petal.Width</span><span class="op">)</span><span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">Petal.Ratio</span>,<span class="va">Species</span>,<span class="va">Año</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2694,13 +2687,13 @@ colectaron especies con una razon largo/ancho determinado.</p>
 <span><span class="co">#&gt; # Groups:   Species [3]</span></span>
 <span><span class="co">#&gt;   Species    Año   Petal.Ratio.Mean</span></span>
 <span><span class="co">#&gt;   &lt;fct&gt;      &lt;chr&gt;            &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1 setosa     2003              7.38</span></span>
-<span><span class="co">#&gt; 2 versicolor 2013              3.33</span></span>
-<span><span class="co">#&gt; 3 virginica  2023              2.85</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 setosa     2023              7.46</span></span>
+<span><span class="co">#&gt; 2 versicolor 2013              3.29</span></span>
+<span><span class="co">#&gt; 3 virginica  2023              2.79</span></span></code></pre></div>
 </div>
-<div id="responder" class="section level3" number="3.2.6">
+<div id="responder" class="section level3" number="4.2.6">
 <h3>
-<span class="header-section-number">3.2.6</span> Responder:<a class="anchor" aria-label="anchor" href="#responder"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.6</span> Responder:<a class="anchor" aria-label="anchor" href="#responder"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>¿Escriba la pregunta que responde el análisis?</li>
@@ -2711,20 +2704,20 @@ precisa en función del análisis anterior?</li>
 </ul>
 </div>
 </div>
-<div id="cambiar-formato-de-tabla" class="section level2" number="3.3">
+<div id="cambiar-formato-de-tabla" class="section level2" number="4.3">
 <h2>
-<span class="header-section-number">3.3</span> Cambiar formato de tabla<a class="anchor" aria-label="anchor" href="#cambiar-formato-de-tabla"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3</span> Cambiar formato de tabla<a class="anchor" aria-label="anchor" href="#cambiar-formato-de-tabla"><i class="fas fa-link"></i></a>
 </h2>
 <p>Muchas veces es necesario reorientar la tabla de datos.</p>
 <p>Primero, podríamos interesarnos en definir clases para las muestras.
 Definimos tamaños como clases usando terciles.</p>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">etiquetas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"alto"</span>,<span class="st">"medio"</span>,<span class="st">"bajo"</span><span class="op">)</span></span>
 <span><span class="va">miIris</span> <span class="op">&lt;-</span> <span class="va">iris</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Tamaño <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/ntile.html">ntile</a></span><span class="op">(</span><span class="va">Petal.Length</span><span class="op">/</span><span class="va">Petal.Width</span>,<span class="fl">3</span><span class="op">)</span>,ordered <span class="op">=</span> <span class="cn">TRUE</span>, labels <span class="op">=</span> <span class="va">etiquetas</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Luego vamos a re-orientar la tabla de manera a poder indagar si existe
 diferencia entre especies respecto de la característica <code>Tamaño</code></p>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">miIris</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">Species</span>, <span class="va">Año</span>,<span class="va">Tamaño</span>,<span class="va">Sepal.Width</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">Tamaño</span>, values_from <span class="op">=</span> <span class="va">Sepal.Width</span>,values_fn<span class="op">=</span><span class="va">mean</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2740,72 +2733,72 @@ diferencia entre especies respecto de la característica <code>Tamaño</code></p
 <tbody>
 <tr class="odd">
 <td align="left">setosa</td>
-<td align="left">2023</td>
-<td align="right">3.28000</td>
+<td align="left">2003</td>
+<td align="right">3.385000</td>
 <td align="right">3.900000</td>
 <td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">setosa</td>
-<td align="left">2003</td>
-<td align="right">3.35625</td>
-<td align="right">4.400000</td>
+<td align="left">2013</td>
+<td align="right">3.500000</td>
+<td align="right">3.850000</td>
 <td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">setosa</td>
-<td align="left">2013</td>
-<td align="right">3.56000</td>
-<td align="right">3.300000</td>
+<td align="left">2023</td>
+<td align="right">3.315385</td>
+<td align="right">NA</td>
 <td align="right">3.500000</td>
 </tr>
 <tr class="even">
 <td align="left">versicolor</td>
 <td align="left">2003</td>
-<td align="right">2.20000</td>
-<td align="right">2.855556</td>
-<td align="right">2.775000</td>
+<td align="right">2.450000</td>
+<td align="right">2.758333</td>
+<td align="right">2.900000</td>
 </tr>
 <tr class="odd">
 <td align="left">versicolor</td>
 <td align="left">2013</td>
-<td align="right">2.75000</td>
-<td align="right">2.808333</td>
-<td align="right">3.100000</td>
+<td align="right">2.800000</td>
+<td align="right">2.723077</td>
+<td align="right">3.125000</td>
 </tr>
 <tr class="even">
 <td align="left">versicolor</td>
 <td align="left">2023</td>
 <td align="right">NA</td>
-<td align="right">2.546154</td>
-<td align="right">3.000000</td>
+<td align="right">2.666667</td>
+<td align="right">2.850000</td>
 </tr>
 <tr class="odd">
 <td align="left">virginica</td>
-<td align="left">2023</td>
-<td align="right">2.60000</td>
-<td align="right">2.900000</td>
-<td align="right">2.933333</td>
+<td align="left">2013</td>
+<td align="right">2.600000</td>
+<td align="right">2.950000</td>
+<td align="right">2.966667</td>
 </tr>
 <tr class="even">
+<td align="left">virginica</td>
+<td align="left">2023</td>
+<td align="right">NA</td>
+<td align="right">2.971429</td>
+<td align="right">3.064286</td>
+</tr>
+<tr class="odd">
 <td align="left">virginica</td>
 <td align="left">2003</td>
 <td align="right">NA</td>
-<td align="right">2.966667</td>
-<td align="right">2.993750</td>
-</tr>
-<tr class="odd">
-<td align="left">virginica</td>
-<td align="left">2013</td>
-<td align="right">NA</td>
-<td align="right">2.916667</td>
-<td align="right">3.072727</td>
+<td align="right">2.700000</td>
+<td align="right">2.960000</td>
 </tr>
 </tbody>
 </table></div>
-<div id="podemos-explicar-que-sucedió-aquí" class="section level3" number="3.3.1">
+<div id="podemos-explicar-que-sucedió-aquí" class="section level3" number="4.3.1">
 <h3>
-<span class="header-section-number">3.3.1</span> ¿Podemos explicar que sucedió aquí?<a class="anchor" aria-label="anchor" href="#podemos-explicar-que-sucedi%C3%B3-aqu%C3%AD"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.1</span> ¿Podemos explicar que sucedió aquí?<a class="anchor" aria-label="anchor" href="#podemos-explicar-que-sucedi%C3%B3-aqu%C3%AD"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>¿En qué caso aparecen los <code>NA</code>?</li>
@@ -2815,12 +2808,12 @@ largo:ancho del pétalo y el ancho del sépalo?</li>
 </ul>
 </div>
 </div>
-<div id="ejercicio" class="section level2" number="3.4">
+<div id="ejercicio" class="section level2" number="4.4">
 <h2>
-<span class="header-section-number">3.4</span> Ejercicio<a class="anchor" aria-label="anchor" href="#ejercicio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4</span> Ejercicio<a class="anchor" aria-label="anchor" href="#ejercicio"><i class="fas fa-link"></i></a>
 </h2>
 <p>Usando la base de datos del repositorio del ministerio de ciencias, genera un dataframe que responda lo siguiente:</p>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto19/CasosActivosPorComuna_std.csv"</span></span>
 <span><span class="va">Casos_Activos</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span></code></pre></div>
 <ul>
@@ -2829,18 +2822,18 @@ largo:ancho del pétalo y el ancho del sépalo?</li>
 <li>Genera una tabla con las comunas que han tenido sobre 50 casos por cada 100.000 habitantes y de esas comunas crea una variable que sea la prevalencia máxima de dicha comuna.</li>
 </ul>
 </div>
-<div id="bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos" class="section level2" number="3.5">
+<div id="bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos" class="section level2" number="4.5">
 <h2>
-<span class="header-section-number">3.5</span> <strong>Bonus</strong> (Esto requiere investigar no basta con lo que aprendimos)<a class="anchor" aria-label="anchor" href="#bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.5</span> <strong>Bonus</strong> (Esto requiere investigar no basta con lo que aprendimos)<a class="anchor" aria-label="anchor" href="#bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li><p>Ve cuales son las 10 comunas que han tenido la mayor mediana de prevalencia, para cada una de estas 10 comunas, genera una tabla con la mediana, prevalencia máxima y fecha en que se alcanzó la prevalencia máxima</p></li>
 <li><p>La <em>prevalencia</em> es la proporción de la población afectada en un período de tiempo determinado.</p></li>
 </ul>
 </div>
-<div id="recursos" class="section level2" number="3.6">
+<div id="recursos" class="section level2" number="4.6">
 <h2>
-<span class="header-section-number">3.6</span> Recursos<a class="anchor" aria-label="anchor" href="#recursos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.6</span> Recursos<a class="anchor" aria-label="anchor" href="#recursos"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">data wrangling cheatsheet</a></li>
@@ -2849,29 +2842,29 @@ largo:ancho del pétalo y el ancho del sépalo?</li>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="introducci%C3%B3n.html"><span class="header-section-number">2</span> Introducción</a></div>
-<div class="next"><a href="rmarkdown.html"><span class="header-section-number">4</span> RMarkdown</a></div>
+<div class="prev"><a href="introducci%C3%B3n.html"><span class="header-section-number">3</span> Introducción</a></div>
+<div class="next"><a href="rmarkdown.html"><span class="header-section-number">5</span> RMarkdown</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#principios-de-tidydata"><span class="header-section-number">3</span> Principios de Tidydata</a></li>
-<li><a class="nav-link" href="#definiciones"><span class="header-section-number">3.1</span> Definiciones</a></li>
+<li><a class="nav-link" href="#principios-de-tidydata"><span class="header-section-number">4</span> Principios de Tidydata</a></li>
+<li><a class="nav-link" href="#definiciones"><span class="header-section-number">4.1</span> Definiciones</a></li>
 <li>
-<a class="nav-link" href="#l%C3%B3gica-y-funciones"><span class="header-section-number">3.2</span> Lógica y funciones</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#funciones-esenciales"><span class="header-section-number">3.2.1</span> Funciones esenciales</a></li>
-<li><a class="nav-link" href="#pipe"><span class="header-section-number">3.2.2</span> pipe</a></li>
-<li><a class="nav-link" href="#agrupar"><span class="header-section-number">3.2.3</span> Agrupar</a></li>
-<li><a class="nav-link" href="#filtrar"><span class="header-section-number">3.2.4</span> Filtrar</a></li>
-<li><a class="nav-link" href="#crear-nuevas-variables"><span class="header-section-number">3.2.5</span> Crear nuevas variables</a></li>
-<li><a class="nav-link" href="#responder"><span class="header-section-number">3.2.6</span> Responder:</a></li>
+<a class="nav-link" href="#l%C3%B3gica-y-funciones"><span class="header-section-number">4.2</span> Lógica y funciones</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#funciones-esenciales"><span class="header-section-number">4.2.1</span> Funciones esenciales</a></li>
+<li><a class="nav-link" href="#pipe"><span class="header-section-number">4.2.2</span> pipe</a></li>
+<li><a class="nav-link" href="#agrupar"><span class="header-section-number">4.2.3</span> Agrupar</a></li>
+<li><a class="nav-link" href="#filtrar"><span class="header-section-number">4.2.4</span> Filtrar</a></li>
+<li><a class="nav-link" href="#crear-nuevas-variables"><span class="header-section-number">4.2.5</span> Crear nuevas variables</a></li>
+<li><a class="nav-link" href="#responder"><span class="header-section-number">4.2.6</span> Responder:</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#cambiar-formato-de-tabla"><span class="header-section-number">3.3</span> Cambiar formato de tabla</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#podemos-explicar-que-sucedi%C3%B3-aqu%C3%AD"><span class="header-section-number">3.3.1</span> ¿Podemos explicar que sucedió aquí?</a></li></ul>
+<a class="nav-link" href="#cambiar-formato-de-tabla"><span class="header-section-number">4.3</span> Cambiar formato de tabla</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#podemos-explicar-que-sucedi%C3%B3-aqu%C3%AD"><span class="header-section-number">4.3.1</span> ¿Podemos explicar que sucedió aquí?</a></li></ul>
 </li>
-<li><a class="nav-link" href="#ejercicio"><span class="header-section-number">3.4</span> Ejercicio</a></li>
-<li><a class="nav-link" href="#bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos"><span class="header-section-number">3.5</span> Bonus (Esto requiere investigar no basta con lo que aprendimos)</a></li>
-<li><a class="nav-link" href="#recursos"><span class="header-section-number">3.6</span> Recursos</a></li>
+<li><a class="nav-link" href="#ejercicio"><span class="header-section-number">4.4</span> Ejercicio</a></li>
+<li><a class="nav-link" href="#bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos"><span class="header-section-number">4.5</span> Bonus (Esto requiere investigar no basta con lo que aprendimos)</a></li>
+<li><a class="nav-link" href="#recursos"><span class="header-section-number">4.6</span> Recursos</a></li>
 </ul>
 
       <div class="book-extra">
@@ -2888,7 +2881,7 @@ largo:ancho del pétalo y el ancho del sépalo?</li>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-03.</p>
+    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-17.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

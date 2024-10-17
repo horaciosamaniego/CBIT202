@@ -1,7 +1,7 @@
 ---
 title: "Programación y Análisis de Datos Geoespaciales"
 author: "Horacio Samaniego"
-date: "2024-10-03"
+date: "2024-10-17"
 site: bookdown::bookdown_site
 documentclass: book
 # bibliography: [book.bib, packages.bib]
@@ -133,7 +133,10 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
    - Operaciones espaciales básicas (unión, intersección, búfer)
    - Análisis de datos espaciales
 
-8. 10 Octubre — datos en grilla
+8. 10 Octubre (Semana de receso)
+
+
+8.1 — datos en grilla
     - Fuentes y formatos
     - filtros y procesamiento
     - algebra de mapa

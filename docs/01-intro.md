@@ -48,7 +48,7 @@ usemos, para esto utilizamos variables.
 Para realizar una asignación de variable:
 
 
-``` r
+```r
 a = 200
 ```
 
@@ -56,7 +56,7 @@ Luego, podemos utilizar el valor contenido en la variable, utilizando su
 nombre:
 
 
-``` r
+```r
 print(a)
 #> [1] 200
 ```
@@ -68,7 +68,7 @@ características del objeto que les es asignado. Para conocer a qué tipo
 corresponde un objeto usamos class:
 
 
-``` r
+```r
 x=7
 x
 #> [1] 7
@@ -77,7 +77,7 @@ class (x)
 ```
 
 
-``` r
+```r
 x=5/3
 x
 #> [1] 1.666667
@@ -86,7 +86,7 @@ class (x)
 ```
 
 
-``` r
+```r
 x="Trece"
 x
 #> [1] "Trece"
@@ -101,7 +101,7 @@ permiten realizar operaciones típicas sin necesidad de escribir grandes
 cantidades de código. Por ejemplo:
 
 
-``` r
+```r
 sqrt(10)
 #> [1] 3.162278
 round(1.9)
@@ -125,7 +125,7 @@ Por ejemplo, la función mean() no puede calcular el promedio si como
 argumentos se le pasan letras.
 
 
-``` r
+```r
 mean(c("a","b","c"))
 #> Warning in mean.default(c("a", "b", "c")): argument is not
 #> numeric or logical: returning NA
@@ -148,7 +148,7 @@ Conjunto ordenado de valores del mismo tipo, agrupados en un único
 objeto. Para crear una variable vector utilizamos:
 
 
-``` r
+```r
 v = c(1,1,2,3)
 vector = c("mi", "primer", "vector")
 vector
@@ -160,7 +160,7 @@ posición que ocupa dentro del vector, para acceder a una posición
 específica usamos:
 
 
-``` r
+```r
 vector[1]
 #> [1] "mi"
 vector[2]
@@ -172,7 +172,7 @@ vector[3]
 y si queremos reemplazar alguno de esos objetos:
 
 
-``` r
+```r
 vector[2]="segundo"
 vector
 #> [1] "mi"      "segundo" "vector"
@@ -182,7 +182,7 @@ Un vector permite almacenar varios valores en una única variable y
 permite ejecutar operaciones o funciones a un conjunto de datos:
 
 
-``` r
+```r
 vector = c(1,2,3,4,5)
 vector*2
 #> [1]  2  4  6  8 10
@@ -193,13 +193,13 @@ vector^2
 o incluso realizar operaciones entre vectores:
 
 
-``` r
+```r
 v1=c(1:3)
 v2=c(6,8,10)
 ```
 
 
-``` r
+```r
 v1
 #> [1] 1 2 3
 v2
@@ -207,22 +207,22 @@ v2
 ```
 
 
-``` r
+```r
 v1 + v2
 #> [1]  7 10 13
 ```
 
 
-``` r
+```r
 v1*v2
 #> [1]  6 16 30
 ```
 
 
-``` r
+```r
 v3=c("a","b","c")
 v1 * v3
-#> Error in v1 * v3: non-numeric argument to binary operator
+#> Error in v1 * v3: argumento no-numérico para operador binario
 ```
 
 
@@ -235,7 +235,7 @@ paquete "openxlsx", que nos permite leer archivos Excel. Para
 instalarlo:
 
 
-``` r
+```r
 install.packages("openxlsx")
 ```
 
@@ -243,7 +243,7 @@ Debe hacerse una única vez, los paquetes quedan instalados en nuestra
 versión de R. Y para usarlo dentro de nuestro proyecto:
 
 
-``` r
+```r
 library(openxlsx)
 ```
 
@@ -259,7 +259,7 @@ resultados directamente bajo el código.
 Para instalar esta librería:
 
 
-``` r
+```r
 install.packages("rmarkdown")
 ```
 

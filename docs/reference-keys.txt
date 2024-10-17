@@ -12,6 +12,9 @@ módulo-3-manipulación-de-datos-con-tidyverse
 modulo-5-visualización-de-datos
 módulo-6-introducción-al-análisis-geoespacial
 recursos-adicionales
+ejercicios-y-proyectos
+tareas-semanales
+descargar-ejercicios
 introducción
 objetos
 variables
@@ -46,16 +49,6 @@ lo-esencial
 listas
 mostrar-ejemplos-de-de-código-sin-ejecutarlos
 figuras
-uso-de-r-como-sistema-de-información-geográfico
-clasificación-de-mapas-y-manejo-de-cartografía
-usos-de-suelo-para-chile
-región-de-los-ríos
-unificamos-proyección-geográfica
-comunas-de-chile
-clipping-y-reclassificación-de-usos
-reclasificamos-a-usos-que-nos-interesan
-nos-interesan-retener-los-siguientes-usos
-bibliography-book.bib-packages.bib
 md---html
 código-r
 recursos-1
