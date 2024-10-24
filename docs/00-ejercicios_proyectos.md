@@ -41,3 +41,7 @@ githubURL <- 'https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo
 
 download.file(githubURL, "Ejercicios_4_CBIT202_R.Rmd")
 ```
+
+## **Proyecto**
+
+[LINK PROYECTO](https://ecoinformatica.notion.site/Proyecto-de-programaci-n-cbit202-12933a5f83a1806e9f56c5728b9904e9?pvs=4)

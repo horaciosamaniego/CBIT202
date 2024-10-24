@@ -58,7 +58,7 @@ Existen 2 tipos de listas, las numeradas y las que no.
 
 ### Mostrar ejemplos de de código (sin ejecutarlos)
 
-Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por *cremilla inversa* `` ` ``. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo `` 2024-10-17 `` imprime la fecha actual en R: 2024-10-17
+Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por *cremilla inversa* `` ` ``. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo `` 2024-10-24 `` imprime la fecha actual en R: 2024-10-24
 
 Usaremos un TAB, o 4 espacios para insertar un bloque de código
 

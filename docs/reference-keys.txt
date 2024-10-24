@@ -15,6 +15,7 @@ recursos-adicionales
 ejercicios-y-proyectos
 tareas-semanales
 descargar-ejercicios
+proyecto
 introducción
 objetos
 variables
