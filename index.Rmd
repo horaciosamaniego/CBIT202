@@ -21,18 +21,19 @@ csl: chicago-fullnote-bibliography.csl
 
 -   **Universidad Austral de Chile:** [Laboratorio de Ecoinformatica](http://www.ecoinformatica.cl)
 -   **Nombre asignatura:** Introducción al Análisis de Datos Geoespaciales
--   **Código asignatuta:** CBIT202-18   
+-   **Código asignatuta:** CBIT202-23   
 -   **Docente responsable:** Horacio Samaniego
 -   **Correo electrónico:** [horaciosamaniego\@uach.cl](mailto:horaciosamaniego@uach.cl){.email}
 -   **Creadores:** [Derek Corcoran B.](https://derek-corcoran-barrios.github.io/) & Giorgia Graells C.
 -   **Modalidad de clases:**
     -   Prácticas
     -   Presenciales
-    -   Consultas por [Discord](https://discord.gg/CQPepwS4) (chat o video) -- link válido 7 días! - hasta 29/8/2024
--   **Horario de clases:** Jueves 9:50 - 13:00 hrs
+    -   Consultas por [Discord](https://discord.gg/adqSpqVH7Z) (chat o video) -
+-   **Horario de clases:** Lunes 9:50 - 13:00 hrs
 -   **Lugar:** Sala de computación, Facultad de Ciencias Forestales y Recursos Naturales, Campus Isla Teja, Valdivia
--   **Inicio clases:** 8 agosto 2024
--   **Término clases:** 28 noviembre 2024 (puede modificarse según calendario académico)
+-   **Inicio clases:** 11 agosto 2025
+-   **Pausa lectiva** 13 - 17 Octubre 2025
+-   **Término clases:** 28 noviembre 2025 (puede modificarse según calendario académico)
 -   **Web del curso** [aqui](https://cbit202-18-analisis-de-datos-geo.github.io/CBIT202_libro/)
 
 ## DESCRIPCIÓN DEL CURSO
@@ -41,9 +42,9 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ### OBJETIVOS
 
-1.  Conocer y entender el concepto de Investigación Reproducible como una forma y filosofía de trabajo que permite que las investigaciones sean más ordenadas y replicables, desde la toma de datos hasta la escritura de resultados utilizando R
+1.  Conocer y entender el concepto de Investigación Reproducible como una forma y filosofía de trabajo que permite que las investigaciones sean más ordenadas y replicables, desde la toma de datos hasta la escritura de resultados utilizando R.
 
-2.  Realizar análisis críticos de la naturaleza de los datos al realizar análisis exploratorios y reforzar conociminetos en estadística
+2.  Realizar análisis críticos de la naturaleza de los datos al realizar análisis exploratorios y reforzar conociminetos en estadística.
 
 3.  Realizar análisis de datos espaciales, poder hacer mapas y aplicar a preguntas de conservación y manejo de recursos naturales.
 
@@ -51,8 +52,10 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ## Evaluación
 
-### tareas
--   Se entregarán ejercicios que deben resolverse semanales. La entrega se hará usando la plataforma GitHub. Cada estudiante será responsable de entregar su tarea y de corregir a tres compañeros al azar. Las correcciones ocurrirán en modalidad "doble ciego", es decir, tanto el corrector como el autor de la tarea serán mantenido como anónimo. Esta modalidad de corrección por pares será moderada por el profesor y seguirá una pauta entregada para cada tarea. Los estudiantes recibirán un punto por cada tarea revisada, lo que se sumará para completar el puntaje de su propia tarea. 
+### Tareas
+-   Se entregarán ejercicios que deben resolverse semanales. 
+<!-- La entrega se hará usando la plataforma GitHub. Cada estudiante será responsable de entregar su tarea y de corregir a tres compañeros al azar. Las correcciones ocurrirán en modalidad "doble ciego", es decir, tanto el corrector como el autor de la tarea serán mantenido como anónimo. Esta modalidad de corrección por pares será moderada por el profesor y seguirá una pauta entregada para cada tarea. Los estudiantes recibirán un punto por cada tarea revisada, lo que se sumará para completar el puntaje de su propia tarea.  -->
+
 
 ### proyectos
 -   Se desarrollán proyectos de análisis y de programación que consistirán en la resolución de un problema o set de preguntas.
@@ -77,14 +80,14 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ### Módulo 1: Introducción a R y RStudio
 
-1. 8 Agosto — Presentación del curso
+1. 11 Agosto — Presentación del curso
     - R como lenguaje de programación para análisis de datos
     - Entorno de RStudio: navegación básica y gestión del espacio de trabajo
     - Tipos y estructuras de datos: vectores, matrices, data frames y tibbles
     - Operaciones aritméticas y lógicas básicas
     - Introducción a paquetes y gestión de paquetes
   
-(.) 15 Agosto - FERIADO (Asunción de la Virgen) 
+18 Agosto - FERIADO (Asunción de la Virgen) 
 
 ### Módulo 2: R Markdown \& Github
 
