@@ -1,4 +1,4 @@
-datos-del-curso
+datos-del-curso-cbit202-23
 descripción-del-curso
 objetivos
 evaluación

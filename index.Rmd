@@ -4,6 +4,9 @@ author: "Horacio Samaniego"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+output:
+  bookdown::gitbook: 
+    css: "style.css"
 # bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -12,9 +15,10 @@ description: |
   Universidad Austral de Chile
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
+
 ---
 
-# Datos del curso
+# Datos del curso (CBIT202-23)
 
 -   **Universidad Austral de Chile:** [Laboratorio de Ecoinformatica](http://www.ecoinformatica.cl)
 -   **Nombre asignatura:** Introducción al Análisis de Datos Geoespaciales
@@ -50,7 +54,7 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 ## Evaluación
 
 ### Tareas
--   Se entregarán ejercicios que deben resolverse semanales. 
+-   Se entregarán ejercicios semanales que deben ser resueltos. 
 <!-- La entrega se hará usando la plataforma GitHub. Cada estudiante será responsable de entregar su tarea y de corregir a tres compañeros al azar. Las correcciones ocurrirán en modalidad "doble ciego", es decir, tanto el corrector como el autor de la tarea serán mantenido como anónimo. Esta modalidad de corrección por pares será moderada por el profesor y seguirá una pauta entregada para cada tarea. Los estudiantes recibirán un punto por cada tarea revisada, lo que se sumará para completar el puntaje de su propia tarea.  -->
 
 
@@ -76,16 +80,16 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ### Módulo 1: Introducción a R y RStudio
 
-1. 18 Agosto — Presentación del curso
+1. **18 Agosto** — Presentación del curso
     - R como lenguaje de programación para análisis de datos
     - Entorno de RStudio: navegación básica y gestión del espacio de trabajo
     - Tipos y estructuras de datos: vectores, matrices, data frames y tibbles
     - Operaciones aritméticas y lógicas básicas
     - Introducción a paquetes y gestión de paquetes
   
-### Módulo 2: HTML, R } Markdown \& Github
+### Módulo 2: HTML, R, Markdown \& Github
 
-2.  25 Agosto — Introducción a Markdown y R Markdown
+2.  **25 Agosto** — Introducción a Markdown y R Markdown
     - Creación de informes reproducibles
     - Sintaxis Markdown
     - Incorporación de fragmentos de código R
@@ -94,13 +98,13 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ### Módulo 3: Manipulación de Datos con Tidyverse
 
-3. 1 Septiembre — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
+3. **1 Septiembre** — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
     - Introducción al tidyverse
     - Importación y Exportación de Datos
     - Manejo de valores faltantes
     - Limpieza y preprocesamiento de datos
 
-4. 8 Septiembre  — ****
+4. **8 Septiembre**  — manejo de datos
     - Manipulación de datos con dplyr: select, filter, arrange, mutate, group_by, summarize
     - Tabulaciones
     - Ordenación de datos con tidyr: gather, spread, separate, unite
@@ -108,55 +112,54 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ### Modulo 5: Visualización de Datos
 
-5. 15 Septiembre — Introducción a ggplot2
+5. **15 Septiembre** — Introducción a ggplot2
     - Creación de diversos tipos de gráficos (diagramas de dispersión, histogramas, diagramas de caja, gráficos de barras, gráficos de líneas)
     - Personalización de gráficos con estética, escalas y temas
     - Facetas y capas de gráficos
-    
 
-6. 22 Septiembre — Visualización 
+6. **22 Septiembre** — Visualización 
     - Visualización interactiva
     - Mapview
     
 
-7. 29 Septiembre — *Presentación de resolución de problema* en 3'+2'
+7. **29 Septiembre** — *Presentación de resolución de problema* en 3'+2'
   - Presentación en ppt (markdown)
   - Resultados y Discusión
 
 ### Módulo 6: Introducción al Análisis Geoespacial
 
-8. 6 Octubre — Introducción a los datos espaciales
+8. **6 Octubre** — Introducción a los datos espaciales
 
    - Lectura y escritura de datos espaciales (shapefiles, GeoJSON, etc.)
    - Definir y transformar proyecciones
    - Operaciones espaciales básicas (unión, intersección, búfer)
    - Análisis de datos espaciales
 
-9. 13 Octubre (Semana de receso)
+9. **13 Octubre** — (Semana de receso)
 
 
-10 20 Octubre — datos en grilla
+10 **20 Octubre** — datos en grilla
     - Fuentes y formatos
     - filtros y procesamiento
     - algebra de mapa
     - mapas categóricos, clasificación y reclasificación
 
-11.  27 Octubre — Mapas
+11.  **27 Octubre** — Mapas
     - Cartografía
     - Mapas de distintas fuentes
     - Mapas interactivos, mapview y leaflet
   
-12. 3 Noviembre — Operaciones de grillas
+12. **3 Noviembre** — Operaciones de grillas
     - Operaciones espaciales conjuntas: puntos, vectores y grillas
     - Tabular informacion raster
     - interpolaciones
 
 
-13. 10 Noviembre — Proyectos
+13. **10 Noviembre** — Proyectos
 
-14. 17 Noviembre — Proyectos
+14. **17 Noviembre** — Proyectos
 
-15. 24 Noviembre — Proyectos
+15. **24 Noviembre** — Proyectos
 
 
 
