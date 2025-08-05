@@ -23,7 +23,7 @@ Los archivos que esten en formato Rmd se desplegaran como un archivo de texto, c
 O ejecute el siguiente código para descargar el archivo en su working directory
 
 
-```r
+``` r
 githubURL <- 'https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_3_CBIT202_R.Rmd'
 
 download.file(githubURL, "Ejercicios_3_CBIT202_R.Rmd")
@@ -36,7 +36,7 @@ download.file(githubURL, "Ejercicios_3_CBIT202_R.Rmd")
 O ejecute el siguiente código para descargar el archivo en su working directory
 
 
-```r
+``` r
 githubURL <- 'https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/blob/main/RMarkdown/Ejercicios_4_CBIT202.Rmd'
 
 download.file(githubURL, "Ejercicios_4_CBIT202_R.Rmd")

@@ -7,7 +7,7 @@
 <title>Capítulo 3 Introducción | Programación y Análisis de Datos Geoespaciales</title>
 <meta name="author" content="Horacio Samaniego">
 <meta name="description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
-<meta name="generator" content="bookdown 0.40 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="Capítulo 3 Introducción | Programación y Análisis de Datos Geoespaciales">
 <meta property="og:type" content="book">
 <meta property="og:description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -218,7 +218,7 @@ permite ejecutar operaciones o funciones a un conjunto de datos:</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">v3</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span><span class="op">)</span></span>
 <span><span class="va">v1</span> <span class="op">*</span> <span class="va">v3</span></span>
-<span><span class="co">#&gt; Error in v1 * v3: argumento no-numérico para operador binario</span></span></code></pre></div>
+<span><span class="co">#&gt; Error in v1 * v3: non-numeric argument to binary operator</span></span></code></pre></div>
 </div>
 <div id="instalar-librerías" class="section level2" number="3.5">
 <h2>
@@ -295,7 +295,9 @@ presiona <em>Ctrl+Shift+K</em> para previsualizar el archivo HMTL)</p>
 </li>
 <li>cree un <code>data.frame</code> con el mímimo código posible usando los datos de la siguiente imagen y llámelo <code>z</code>:</li>
 </ol>
-<div class="inline-figure"><img src="df.jpg" width="300"></div>
+<div class="inline-figure">
+<img src="df.jpg"><!-- -->
+</div>
 <ol start="15" style="list-style-type: decimal">
 <li>cree un dataframe de datos ficticios que represente una muestra de 100 individuos de aves y su tamaño corporal. Use 4 tipos de aves: un paseriforme, un columbiforme, un rapaz y trochiliformes en aproximadamente las mismas proporciones. (Averigue el real tamaño promedio de cada grupo)</li>
 <li>grafique los pesos corporales de cada grupo (ayuda: puede usar graficos de distribuciones, caja y bigote o bien de violín)</li>
@@ -336,7 +338,7 @@ presiona <em>Ctrl+Shift+K</em> para previsualizar el archivo HMTL)</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2024-10-24.</p>
+    <p>"<strong>Programación y Análisis de Datos Geoespaciales</strong>" was written by Horacio Samaniego. It was last built on 2025-08-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

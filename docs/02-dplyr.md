@@ -39,7 +39,7 @@ con 3 fechas asignadas de forma aleatoria a cada fila. Veamos las
 primeras 7 filas con la función `head()`.
 
 
-```r
+``` r
 
 data(iris)
 año <- sample(rep(c("2003","2013","2023"), nrow(iris) / 3))
@@ -53,12 +53,12 @@ kableExtra::kable(head(iris,7))
 
 | Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |Año  |
 |------------:|-----------:|------------:|-----------:|:-------|:----|
-|          5.1|         3.5|          1.4|         0.2|setosa  |2003 |
-|          4.9|         3.0|          1.4|         0.2|setosa  |2013 |
-|          4.7|         3.2|          1.3|         0.2|setosa  |2013 |
+|          5.1|         3.5|          1.4|         0.2|setosa  |2013 |
+|          4.9|         3.0|          1.4|         0.2|setosa  |2003 |
+|          4.7|         3.2|          1.3|         0.2|setosa  |2023 |
 |          4.6|         3.1|          1.5|         0.2|setosa  |2003 |
-|          5.0|         3.6|          1.4|         0.2|setosa  |2013 |
-|          5.4|         3.9|          1.7|         0.4|setosa  |2013 |
+|          5.0|         3.6|          1.4|         0.2|setosa  |2023 |
+|          5.4|         3.9|          1.7|         0.4|setosa  |2023 |
 |          4.6|         3.4|          1.4|         0.3|setosa  |2023 |
 
 
@@ -90,7 +90,7 @@ por ejemplo, podemos calcular el largo promedio de los petalos de las
 especie en el set de datos `iris`.
 
 
-```r
+``` r
 library(dplyr)
 iris |>
   group_by(Species) |>
@@ -118,7 +118,7 @@ filas sobre el que calculamos dicha varianza y luego imprimirla a la
 pantalla de forma mas estilizada.
 
 
-```r
+``` r
 iris |>
   group_by(Species) |>
   summarise(across(where(is.numeric), var, na.rm = TRUE), N = n())|>
@@ -173,7 +173,7 @@ Filter nos permite encontrar, y operar, solo sobre filas que cumplen una
 condición determinada. Por ejemplo solo un tipo de especie
 
 
-```r
+``` r
 iris |>
   filter(Species == 'virginica') |>
   kableExtra::kable() |> 
@@ -199,7 +199,7 @@ iris |>
    <td style="text-align:right;"> 6.0 </td>
    <td style="text-align:right;"> 2.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -207,7 +207,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.1 </td>
@@ -215,7 +215,7 @@ iris |>
    <td style="text-align:right;"> 5.9 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -247,7 +247,7 @@ iris |>
    <td style="text-align:right;"> 4.5 </td>
    <td style="text-align:right;"> 1.7 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.3 </td>
@@ -255,7 +255,7 @@ iris |>
    <td style="text-align:right;"> 6.3 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -279,7 +279,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -287,7 +287,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -295,7 +295,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.7 </td>
@@ -303,7 +303,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -311,7 +311,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 2.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -319,7 +319,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -327,7 +327,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -335,7 +335,7 @@ iris |>
    <td style="text-align:right;"> 6.7 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -343,7 +343,7 @@ iris |>
    <td style="text-align:right;"> 6.9 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -351,7 +351,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -359,7 +359,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.6 </td>
@@ -375,7 +375,7 @@ iris |>
    <td style="text-align:right;"> 6.7 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -383,7 +383,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -391,7 +391,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -399,7 +399,7 @@ iris |>
    <td style="text-align:right;"> 6.0 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.2 </td>
@@ -415,7 +415,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -423,7 +423,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -431,7 +431,7 @@ iris |>
    <td style="text-align:right;"> 5.8 </td>
    <td style="text-align:right;"> 1.6 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.4 </td>
@@ -439,7 +439,7 @@ iris |>
    <td style="text-align:right;"> 6.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.9 </td>
@@ -463,7 +463,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.1 </td>
@@ -471,7 +471,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -495,7 +495,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -511,7 +511,7 @@ iris |>
    <td style="text-align:right;"> 5.4 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -519,7 +519,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -535,7 +535,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -551,7 +551,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -559,7 +559,7 @@ iris |>
    <td style="text-align:right;"> 5.2 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -575,7 +575,7 @@ iris |>
    <td style="text-align:right;"> 5.2 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.2 </td>
@@ -605,7 +605,7 @@ Otro ejemplo podría ser seleccionar aquellas filas que tengan un largo
 de petalos mayor a 4.5, por ejemplo
 
 
-```r
+``` r
 iris |>
   filter(Petal.Length > 4.5) |>
   kableExtra::kable() |>
@@ -631,7 +631,7 @@ iris |>
    <td style="text-align:right;"> 4.7 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -639,7 +639,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -647,7 +647,7 @@ iris |>
    <td style="text-align:right;"> 4.6 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -671,7 +671,7 @@ iris |>
    <td style="text-align:right;"> 4.7 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.9 </td>
@@ -679,7 +679,7 @@ iris |>
    <td style="text-align:right;"> 4.8 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -711,7 +711,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 1.7 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -735,7 +735,7 @@ iris |>
    <td style="text-align:right;"> 4.6 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> versicolor </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -743,7 +743,7 @@ iris |>
    <td style="text-align:right;"> 6.0 </td>
    <td style="text-align:right;"> 2.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -751,7 +751,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.1 </td>
@@ -759,7 +759,7 @@ iris |>
    <td style="text-align:right;"> 5.9 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -791,7 +791,7 @@ iris |>
    <td style="text-align:right;"> 6.3 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -815,7 +815,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -823,7 +823,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -831,7 +831,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.7 </td>
@@ -839,7 +839,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.8 </td>
@@ -847,7 +847,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 2.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -855,7 +855,7 @@ iris |>
    <td style="text-align:right;"> 5.3 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.5 </td>
@@ -863,7 +863,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -871,7 +871,7 @@ iris |>
    <td style="text-align:right;"> 6.7 </td>
    <td style="text-align:right;"> 2.2 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -879,7 +879,7 @@ iris |>
    <td style="text-align:right;"> 6.9 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -887,7 +887,7 @@ iris |>
    <td style="text-align:right;"> 5.0 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -895,7 +895,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5.6 </td>
@@ -911,7 +911,7 @@ iris |>
    <td style="text-align:right;"> 6.7 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -919,7 +919,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -927,7 +927,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -935,7 +935,7 @@ iris |>
    <td style="text-align:right;"> 6.0 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.2 </td>
@@ -951,7 +951,7 @@ iris |>
    <td style="text-align:right;"> 4.9 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.4 </td>
@@ -959,7 +959,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.2 </td>
@@ -967,7 +967,7 @@ iris |>
    <td style="text-align:right;"> 5.8 </td>
    <td style="text-align:right;"> 1.6 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.4 </td>
@@ -975,7 +975,7 @@ iris |>
    <td style="text-align:right;"> 6.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.9 </td>
@@ -999,7 +999,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.1 </td>
@@ -1007,7 +1007,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 1.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7.7 </td>
@@ -1031,7 +1031,7 @@ iris |>
    <td style="text-align:right;"> 5.5 </td>
    <td style="text-align:right;"> 1.8 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.0 </td>
@@ -1047,7 +1047,7 @@ iris |>
    <td style="text-align:right;"> 5.4 </td>
    <td style="text-align:right;"> 2.1 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -1055,7 +1055,7 @@ iris |>
    <td style="text-align:right;"> 5.6 </td>
    <td style="text-align:right;"> 2.4 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.9 </td>
@@ -1071,7 +1071,7 @@ iris |>
    <td style="text-align:right;"> 5.1 </td>
    <td style="text-align:right;"> 1.9 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2013 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.8 </td>
@@ -1087,7 +1087,7 @@ iris |>
    <td style="text-align:right;"> 5.7 </td>
    <td style="text-align:right;"> 2.5 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.7 </td>
@@ -1095,7 +1095,7 @@ iris |>
    <td style="text-align:right;"> 5.2 </td>
    <td style="text-align:right;"> 2.3 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2003 </td>
+   <td style="text-align:left;"> 2013 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.3 </td>
@@ -1111,7 +1111,7 @@ iris |>
    <td style="text-align:right;"> 5.2 </td>
    <td style="text-align:right;"> 2.0 </td>
    <td style="text-align:left;"> virginica </td>
-   <td style="text-align:left;"> 2023 </td>
+   <td style="text-align:left;"> 2003 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6.2 </td>
@@ -1141,7 +1141,7 @@ ejemplo, si quisieramos saber cuales son las especies y años en que se
 colectaron especies con una razon largo/ancho determinado.
 
 
-```r
+``` r
 iris |>
   mutate(Petal.Ratio = Petal.Length/Petal.Width)|>
   select(Petal.Ratio,Species,Año) |>
@@ -1154,9 +1154,9 @@ iris |>
 #> # Groups:   Species [3]
 #>   Species    Año   Petal.Ratio.Mean
 #>   <fct>      <chr>            <dbl>
-#> 1 setosa     2003              7.62
-#> 2 versicolor 2023              3.34
-#> 3 virginica  2013              2.92
+#> 1 setosa     2003              7.47
+#> 2 versicolor 2003              3.29
+#> 3 virginica  2003              2.83
 ```
 
 ### Responder:
@@ -1175,7 +1175,7 @@ Primero, podríamos interesarnos en definir clases para las muestras.
 Definimos tamaños como clases usando terciles.
 
 
-```r
+``` r
 etiquetas <- c("alto","medio","bajo")
 miIris <- iris |>
   mutate(Tamaño = factor(ntile(Petal.Length/Petal.Width,3),ordered = TRUE, labels = etiquetas))
@@ -1185,7 +1185,7 @@ Luego vamos a re-orientar la tabla de manera a poder indagar si existe
 diferencia entre especies respecto de la característica `Tamaño`
 
 
-```r
+``` r
 miIris |>
   select(Species, Año,Tamaño,Sepal.Width) |>
   tidyr::pivot_wider(names_from = Tamaño, values_from = Sepal.Width,values_fn=mean) |>
@@ -1196,15 +1196,15 @@ miIris |>
 
 |Species    |Año  |     bajo|    medio|     alto|
 |:----------|:----|--------:|--------:|--------:|
-|setosa     |2003 | 3.288235|       NA|       NA|
-|setosa     |2013 | 3.350000| 3.866667|       NA|
-|setosa     |2023 | 3.566667|       NA| 3.500000|
-|versicolor |2013 |       NA| 2.662500| 2.850000|
-|versicolor |2003 | 2.800000| 2.800000| 3.116667|
-|versicolor |2023 | 2.450000| 2.737500| 2.733333|
-|virginica  |2003 | 2.600000| 3.100000| 3.069231|
-|virginica  |2023 |       NA| 2.983333| 3.013333|
-|virginica  |2013 |       NA| 2.780000| 2.875000|
+|setosa     |2013 | 3.235294|       NA|       NA|
+|setosa     |2003 | 3.373333| 3.300000| 3.500000|
+|setosa     |2023 | 3.621429| 4.150000|       NA|
+|versicolor |2023 | 2.700000| 2.600000| 3.266667|
+|versicolor |2003 | 2.500000| 2.877778| 2.900000|
+|versicolor |2013 |       NA| 2.714286| 2.828571|
+|virginica  |2023 | 2.600000| 3.200000| 3.042857|
+|virginica  |2013 |       NA| 2.800000| 3.000000|
+|virginica  |2003 |       NA| 2.800000| 2.961539|
 
 
 
@@ -1220,7 +1220,7 @@ miIris |>
 Usando la base de datos del repositorio del ministerio de ciencias, genera un dataframe que responda lo siguiente:
 
 
-```r
+``` r
 url <- "https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto19/CasosActivosPorComuna_std.csv"
 Casos_Activos <- read_csv(url)
 ```
