@@ -1,15 +1,17 @@
 ---
-title: "diapos"
+title: "Diapositivas CBIT202"
+author: "Horacio Samaniego"
+date: "2025-08-07"
 output: html_document
 ---
 
 #  Diapos
 
-Aqui se afichan las diapos del curso
+Aquí se afichan las diapos del curso
 
 ## Capítulo 1: Introducción 
-* [Clase 1 - TidyData](docs/Diapos/Clase1TidyData.html)
-* [Clase 1 - 2](docs/Diapos/Clase1_2-dplyr.html)
+* [Clase 1 - TidyData](Diapos/Clase1/Clase1TidyData.html)
+* [Clase 1 - 2](Diapos/Clase1/Clase1_2-dplyr.html)
 
 ## Capítulo 2: Introducción 
 * [Clase]()
