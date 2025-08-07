@@ -66,4 +66,3 @@ capítulo-9
 capítulo-10
 capítulo-12
 capítulo-13
-bibliography-book.bib-packages.bib
