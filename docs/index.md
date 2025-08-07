@@ -1,7 +1,7 @@
 ---
 title: "Programación y Análisis de Datos Geoespaciales"
 author: "Horacio Samaniego"
-date: "2025-08-05"
+date: "2025-08-07"
 site: bookdown::bookdown_site
 documentclass: book
 output:
@@ -25,7 +25,6 @@ csl: chicago-fullnote-bibliography.csl
 -   **Código asignatuta:** CBIT202-23   
 -   **Docente responsable:** Horacio Samaniego
 -   **Correo electrónico:** [horaciosamaniego\@uach.cl](mailto:horaciosamaniego@uach.cl){.email}
--   **Creadores:** [Derek Corcoran B.](https://derek-corcoran-barrios.github.io/) & Giorgia Graells C.
 -   **Modalidad de clases:**
     -   Prácticas
     -   Presenciales
@@ -33,9 +32,8 @@ csl: chicago-fullnote-bibliography.csl
 -   **Horario de clases:** Lunes 9:50 - 13:00 hrs
 -   **Lugar:** Sala de computación, Facultad de Ciencias Forestales y Recursos Naturales, Campus Isla Teja, Valdivia
 -   **Inicio clases:** 11 agosto 2025
--   **Pausa lectiva** 13 - 17 Octubre 2025
+-   **Pausa lectiva** _13 - 17 Octubre 2025_
 -   **Término clases:** 28 noviembre 2025 (puede modificarse según calendario académico)
--   **Web del curso** [aqui](https://cbit202-18-analisis-de-datos-geo.github.io/CBIT202_libro/)
 
 ## DESCRIPCIÓN DEL CURSO
 
@@ -87,9 +85,9 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
     - Operaciones aritméticas y lógicas básicas
     - Introducción a paquetes y gestión de paquetes
   
-### Módulo 2: HTML, R, Markdown \& Github
+### Módulo 2: HTML, Markdown \& R
 
-2.  **25 Agosto** — Introducción a Markdown y R Markdown
+2.  18 Agosto — Introducción a Markdown y R Markdown
     - Creación de informes reproducibles
     - Sintaxis Markdown
     - Incorporación de fragmentos de código R
@@ -98,17 +96,21 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ### Módulo 3: Manipulación de Datos con Tidyverse
 
-3. **1 Septiembre** — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
-    - Introducción al tidyverse
+3. 25 Agosto — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
+    - Introducción a `tidyverse`
     - Importación y Exportación de Datos
     - Manejo de valores faltantes
     - Limpieza y preprocesamiento de datos
 
-4. **8 Septiembre**  — manejo de datos
-    - Manipulación de datos con dplyr: select, filter, arrange, mutate, group_by, summarize
+4. 1 Septiembre  — Manejo y Análisis de datos
+    - Manipulación de datos con `dplyr`: `select`, `filter`, `arrange`, `mutate`, `group_by`, `summarize`
     - Tabulaciones
     - Ordenación de datos con tidyr: gather, spread, separate, unite
     - Transformación de datos con purrr: programación funcional para análisis de datos
+
+
+5. 8 Septiembre — Análisis y comunicación de resultados
+
 
 ### Modulo 5: Visualización de Datos
 
@@ -134,6 +136,7 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
    - Definir y transformar proyecciones
    - Operaciones espaciales básicas (unión, intersección, búfer)
    - Análisis de datos espaciales
+ 
 
 9. **13 Octubre** — (Semana de receso)
 
