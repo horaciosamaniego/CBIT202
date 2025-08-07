@@ -87,9 +87,15 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
     - Operaciones aritméticas y lógicas básicas
     - Introducción a paquetes y gestión de paquetes
   
+<<<<<<< HEAD
 ### Módulo 2: HTML, R, Markdown \& Github
 
 2.  **25 Agosto** — Introducción a Markdown y R Markdown
+=======
+### Módulo 2: HTML, Markdown \& R
+
+2.  18 Agosto — Introducción a Markdown y R Markdown
+>>>>>>> 015c331 (desde huepil)
     - Creación de informes reproducibles
     - Sintaxis Markdown
     - Incorporación de fragmentos de código R
@@ -98,17 +104,21 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
 
 ### Módulo 3: Manipulación de Datos con Tidyverse
 
-3. **1 Septiembre** — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
-    - Introducción al tidyverse
+3. 25 Agosto — datos desde varios formatos (CSV, Excel, bases de datos, etc.)
+    - Introducción a `tidyverse`
     - Importación y Exportación de Datos
     - Manejo de valores faltantes
     - Limpieza y preprocesamiento de datos
 
-4. **8 Septiembre**  — manejo de datos
-    - Manipulación de datos con dplyr: select, filter, arrange, mutate, group_by, summarize
+4. 1 Septiembre  — Manejo y Análisis de datos
+    - Manipulación de datos con `dplyr`: `select`, `filter`, `arrange`, `mutate`, `group_by`, `summarize`
     - Tabulaciones
     - Ordenación de datos con tidyr: gather, spread, separate, unite
     - Transformación de datos con purrr: programación funcional para análisis de datos
+
+
+5. 8 Septiembre — Análisis y comunicación de resultados
+
 
 ### Modulo 5: Visualización de Datos
 
@@ -134,6 +144,7 @@ Este curso tiene como objetivo central adquirir herramientas para el manejo de d
    - Definir y transformar proyecciones
    - Operaciones espaciales básicas (unión, intersección, búfer)
    - Análisis de datos espaciales
+ 
 
 9. **13 Octubre** — (Semana de receso)
 
