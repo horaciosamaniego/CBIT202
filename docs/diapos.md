@@ -5,6 +5,7 @@ output: html_document
 ---
 
 #  Diapositivas
+
 Aquí el repositorio con las [diapos del curso](https://github.com/horaciosamaniego/CBIT202/tree/master/Diapos)
 
 

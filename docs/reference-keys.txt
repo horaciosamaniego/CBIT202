@@ -51,3 +51,8 @@ listas
 mostrar-ejemplos-de-de-código-sin-ejecutarlos
 figuras
 capítulo-1-introducción
+output
+md---html
+código-r
+recursos-1
+diapositivas
