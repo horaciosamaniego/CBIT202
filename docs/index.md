@@ -18,7 +18,8 @@ csl: chicago-fullnote-bibliography.csl
 
 ---
 
-# Datos del curso (CBIT202-23)
+
+# CBIT202
 
 -   **Universidad Austral de Chile:** [Laboratorio de Ecoinformatica](http://www.ecoinformatica.cl)
 -   **Nombre asignatura:** Introducción al Análisis de Datos Geoespaciales
