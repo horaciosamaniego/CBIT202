@@ -50,10 +50,10 @@ po/*~
 rsconnect/
 
 _bookdown_files
-.Rproj.user
+#.Rproj.user
 .Rdata
 .DS_Store
 .quarto
-.RProj.user/*
+#.RProj.user/*
 
 */*.rds
