@@ -50,8 +50,4 @@ lo-esencial
 listas
 mostrar-ejemplos-de-de-código-sin-ejecutarlos
 figuras
-md---html
-código-r
-recursos-1
-diapos
 capítulo-1-introducción
