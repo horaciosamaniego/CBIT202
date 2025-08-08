@@ -1,7 +1,6 @@
 ---
-title: "Diapositivas CBIT202"
 author: "Horacio Samaniego"
-date: "`r Sys.Date()`"
+date: "2025-08-08"
 output: html_document
 ---
 
@@ -10,39 +9,16 @@ output: html_document
 Aquí se afichan las diapos del curso
 
 ## Capítulo 1: Introducción 
-* [Clase 1 - TidyData](../Diapos/Clase1/Clase1TidyData.html)
-* [Clase 1 - 2](../Diapos/Clase1/Clase1_2-dplyr.html)
+* [Clase 1 - TidyData](Diapos/Clase1/Clase1TidyData.html)
+* [Clase 1 - 2](Diapos/Clase1/Clase1_2-dplyr.html)
 
-## Capítulo 2: Introducción 
-* [Clase]()
 
-## Capítulo 3:
-* [Clase]()
 
-## Capítulo 4:
-* [Clase]()
 
-## Capítulo 5:
-* [Clase]()
 
-## Capítulo 6:
-* [Clase]()
-
-## Capítulo 7:
-* [Clase]()
-
-## Capítulo 8:
-* [Clase]()
-
-## Capítulo 9:
-* [Clase]()
-
-## Capítulo 10:
-* [Clase]()
-
-## Capítulo 12:
-* [Clase]()
-
-## Capítulo 13:
-* [Clase]()
-
+<iframe 
+  src="https://github.com/horaciosamaniego/CBIT202/tree/master/Diapos" 
+  width="800" height="600" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
