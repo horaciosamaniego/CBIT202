@@ -1,14 +1,14 @@
 ---
 title: "Programación y Análisis de Datos Geoespaciales"
 author: "Horacio Samaniego"
-date: "2025-08-07"
+date: "2025-08-08"
 site: bookdown::bookdown_site
 documentclass: book
-output:
-  bookdown::gitbook: 
-    css: "style.css"
+# output:
+#   bookdown::bs4_book: 
+    # css: "style.css"
 # bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
+url: https://github.com/horaciosamaniego/CBIT202
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
   Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),

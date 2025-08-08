@@ -1,445 +1,277 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 5 RMarkdown | Diapositivas CBIT202</title>
-  <meta name="description" content="<p>Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
-Universidad Austral de Chile</p>" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Capítulo 5 RMarkdown | Diapositivas CBIT202" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="<p>Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
-Universidad Austral de Chile</p>" />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 5 RMarkdown | Diapositivas CBIT202" />
-  
-  <meta name="twitter:description" content="<p>Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
-Universidad Austral de Chile</p>" />
-  
-
-<meta name="author" content="Horacio Samaniego" />
-
-
-<meta name="date" content="2025-08-07" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="principios-de-tidydata.html"/>
-<link rel="next" href="diapos.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-
-
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Capítulo 5 RMarkdown | Diapositivas CBIT202</title>
+<meta name="author" content="Horacio Samaniego">
+<meta name="description" content='5.1 ¿Qué es R Markdown?   5.2 Librerías # install.packages("rmarkdown") library(rmarkdown)  5.3 Crear un R Markdown   5.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta property="og:title" content="Capítulo 5 RMarkdown | Diapositivas CBIT202">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://github.com/horaciosamaniego/CBIT202/rmarkdown.html">
+<meta property="og:description" content='5.1 ¿Qué es R Markdown?   5.2 Librerías # install.packages("rmarkdown") library(rmarkdown)  5.3 Crear un R Markdown   5.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capítulo 5 RMarkdown | Diapositivas CBIT202">
+<meta name="twitter:description" content='5.1 ¿Qué es R Markdown?   5.2 Librerías # install.packages("rmarkdown") library(rmarkdown)  5.3 Crear un R Markdown   5.4 Encabezado YAML El archivo .Rmd comienza con una sección que definie los...'>
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Inter-0.4.10/font.css" rel="stylesheet">
+<link href="libs/Bitter-0.4.10/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Datos del curso (CBIT202-23)</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="RMarkdown.html"><a href="#descripci%C3%B3n-del-curso"><i class="fa fa-check"></i><b>1.1</b> DESCRIPCIÓN DEL CURSO</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#objetivos"><i class="fa fa-check"></i><b>1.1.1</b> OBJETIVOS</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="RMarkdown.html"><a href="#evaluaci%C3%B3n"><i class="fa fa-check"></i><b>1.2</b> Evaluación</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#tareas"><i class="fa fa-check"></i><b>1.2.1</b> Tareas</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#proyectos"><i class="fa fa-check"></i><b>1.2.2</b> proyectos</a></li>
-<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#calificaciones"><i class="fa fa-check"></i><b>1.2.3</b> calificaciones</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#calendario"><i class="fa fa-check"></i><b>1.3</b> Calendario</a>
-<ul>
-<li class="chapter" data-level="1.3.1" data-path="RMarkdown.html"><a href="#m%C3%B3dulo-1-introducci%C3%B3n-a-r-y-rstudio"><i class="fa fa-check"></i><b>1.3.1</b> Módulo 1: Introducción a R y RStudio</a></li>
-<li class="chapter" data-level="1.3.2" data-path="RMarkdown.html"><a href="#m%C3%B3dulo-2-html-markdown-r"><i class="fa fa-check"></i><b>1.3.2</b> Módulo 2: HTML, Markdown &amp; R</a></li>
-<li class="chapter" data-level="1.3.3" data-path="RMarkdown.html"><a href="#m%C3%B3dulo-3-manipulaci%C3%B3n-de-datos-con-tidyverse"><i class="fa fa-check"></i><b>1.3.3</b> Módulo 3: Manipulación de Datos con Tidyverse</a></li>
-<li class="chapter" data-level="1.3.4" data-path="RMarkdown.html"><a href="#modulo-5-visualizaci%C3%B3n-de-datos"><i class="fa fa-check"></i><b>1.3.4</b> Modulo 5: Visualización de Datos</a></li>
-<li class="chapter" data-level="1.3.5" data-path="RMarkdown.html"><a href="#m%C3%B3dulo-6-introducci%C3%B3n-al-an%C3%A1lisis-geoespacial"><i class="fa fa-check"></i><b>1.3.5</b> Módulo 6: Introducción al Análisis Geoespacial</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#recursos-adicionales"><i class="fa fa-check"></i><b>1.4</b> Recursos adicionales</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html"><i class="fa fa-check"></i><b>2</b> Ejercicios y Proyectos</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html#tareas-semanales"><i class="fa fa-check"></i><b>2.1</b> Tareas semanales</a></li>
-<li class="chapter" data-level="2.2" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html#descargar-ejercicios"><i class="fa fa-check"></i><b>2.2</b> Descargar Ejercicios</a></li>
-<li class="chapter" data-level="2.3" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html#proyecto"><i class="fa fa-check"></i><b>2.3</b> <strong>Proyecto</strong></a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="RMarkdown.html"><a href="#introducci%C3%B3n"><i class="fa fa-check"></i><b>3</b> Introducción</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>3.1</b> Objetos</a></li>
-<li class="chapter" data-level="3.2" data-path="introducción.html"><a href="introducción.html#variables"><i class="fa fa-check"></i><b>3.2</b> Variables</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="introducción.html"><a href="introducción.html#tipos-de-variables"><i class="fa fa-check"></i><b>3.2.1</b> Tipos de variables</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="introducción.html"><a href="introducción.html#funciones"><i class="fa fa-check"></i><b>3.3</b> Funciones</a></li>
-<li class="chapter" data-level="3.4" data-path="introducción.html"><a href="introducción.html#vectores"><i class="fa fa-check"></i><b>3.4</b> Vectores</a></li>
-<li class="chapter" data-level="3.5" data-path="RMarkdown.html"><a href="#instalar-librer%C3%ADas"><i class="fa fa-check"></i><b>3.5</b> Instalar librerías</a></li>
-<li class="chapter" data-level="3.6" data-path="introducción.html"><a href="introducción.html#r-notebook"><i class="fa fa-check"></i><b>3.6</b> R Notebook</a></li>
-<li class="chapter" data-level="3.7" data-path="introducción.html"><a href="introducción.html#leer-datos"><i class="fa fa-check"></i><b>3.7</b> Leer datos</a></li>
-<li class="chapter" data-level="3.8" data-path="introducción.html"><a href="introducción.html#ejercicios"><i class="fa fa-check"></i><b>3.8</b> Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html"><i class="fa fa-check"></i><b>4</b> Principios de Tidydata</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#definiciones"><i class="fa fa-check"></i><b>4.1</b> Definiciones</a></li>
-<li class="chapter" data-level="4.2" data-path="RMarkdown.html"><a href="#l%C3%B3gica-y-funciones"><i class="fa fa-check"></i><b>4.2</b> Lógica y funciones</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#funciones-esenciales"><i class="fa fa-check"></i><b>4.2.1</b> Funciones esenciales</a></li>
-<li class="chapter" data-level="4.2.2" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#pipe"><i class="fa fa-check"></i><b>4.2.2</b> pipe</a></li>
-<li class="chapter" data-level="4.2.3" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#agrupar"><i class="fa fa-check"></i><b>4.2.3</b> Agrupar</a></li>
-<li class="chapter" data-level="4.2.4" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#filtrar"><i class="fa fa-check"></i><b>4.2.4</b> Filtrar</a></li>
-<li class="chapter" data-level="4.2.5" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#crear-nuevas-variables"><i class="fa fa-check"></i><b>4.2.5</b> Crear nuevas variables</a></li>
-<li class="chapter" data-level="4.2.6" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#responder"><i class="fa fa-check"></i><b>4.2.6</b> Responder:</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#cambiar-formato-de-tabla"><i class="fa fa-check"></i><b>4.3</b> Cambiar formato de tabla</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="RMarkdown.html"><a href="#podemos-explicar-que-sucedi%C3%B3-aqu%C3%AD"><i class="fa fa-check"></i><b>4.3.1</b> ¿Podemos explicar que sucedió aquí?</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#ejercicio"><i class="fa fa-check"></i><b>4.4</b> Ejercicio</a></li>
-<li class="chapter" data-level="4.5" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos"><i class="fa fa-check"></i><b>4.5</b> <strong>Bonus</strong> (Esto requiere investigar no basta con lo que aprendimos)</a></li>
-<li class="chapter" data-level="4.6" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#recursos"><i class="fa fa-check"></i><b>4.6</b> Recursos</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>5</b> RMarkdown</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="RMarkdown.html"><a href="#qu%C3%A9-es-r-markdown"><i class="fa fa-check"></i><b>5.1</b> ¿Qué es R Markdown?</a></li>
-<li class="chapter" data-level="5.2" data-path="RMarkdown.html"><a href="#librer%C3%ADas"><i class="fa fa-check"></i><b>5.2</b> Librerías</a></li>
-<li class="chapter" data-level="5.3" data-path="rmarkdown.html"><a href="rmarkdown.html#crear-un-r-markdown"><i class="fa fa-check"></i><b>5.3</b> Crear un R Markdown</a></li>
-<li class="chapter" data-level="5.4" data-path="rmarkdown.html"><a href="rmarkdown.html#encabezado-yaml"><i class="fa fa-check"></i><b>5.4</b> Encabezado YAML</a></li>
-<li class="chapter" data-level="5.5" data-path="RMarkdown.html"><a href="#sint%C3%A1xis-de-markdown"><i class="fa fa-check"></i><b>5.5</b> Sintáxis de Markdown</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="rmarkdown.html"><a href="rmarkdown.html#lo-esencial"><i class="fa fa-check"></i><b>5.5.1</b> Lo esencial</a></li>
-<li class="chapter" data-level="5.5.2" data-path="rmarkdown.html"><a href="rmarkdown.html#listas"><i class="fa fa-check"></i><b>5.5.2</b> Listas</a></li>
-<li class="chapter" data-level="5.5.3" data-path="RMarkdown.html"><a href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><i class="fa fa-check"></i><b>5.5.3</b> Mostrar ejemplos de de código (sin ejecutarlos)</a></li>
-<li class="chapter" data-level="5.5.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figuras"><i class="fa fa-check"></i><b>5.5.4</b> Figuras</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="rmarkdown.html"><a href="rmarkdown.html#md---html"><i class="fa fa-check"></i><b>5.6</b> MD -&gt; HTML</a></li>
-<li class="chapter" data-level="5.7" data-path="RMarkdown.html"><a href="#c%C3%B3digo-r"><i class="fa fa-check"></i><b>5.7</b> Código R</a></li>
-<li class="chapter" data-level="5.8" data-path="rmarkdown.html"><a href="rmarkdown.html#recursos-1"><i class="fa fa-check"></i><b>5.8</b> Recursos</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="diapos.html"><a href="diapos.html"><i class="fa fa-check"></i><b>6</b> Diapos</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-1-introducci%C3%B3n"><i class="fa fa-check"></i><b>6.1</b> Capítulo 1: Introducción</a></li>
-<li class="chapter" data-level="6.2" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-2-introducci%C3%B3n"><i class="fa fa-check"></i><b>6.2</b> Capítulo 2: Introducción</a></li>
-<li class="chapter" data-level="6.3" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-3"><i class="fa fa-check"></i><b>6.3</b> Capítulo 3:</a></li>
-<li class="chapter" data-level="6.4" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-4"><i class="fa fa-check"></i><b>6.4</b> Capítulo 4:</a></li>
-<li class="chapter" data-level="6.5" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-5"><i class="fa fa-check"></i><b>6.5</b> Capítulo 5:</a></li>
-<li class="chapter" data-level="6.6" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-6"><i class="fa fa-check"></i><b>6.6</b> Capítulo 6:</a></li>
-<li class="chapter" data-level="6.7" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-7"><i class="fa fa-check"></i><b>6.7</b> Capítulo 7:</a></li>
-<li class="chapter" data-level="6.8" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-8"><i class="fa fa-check"></i><b>6.8</b> Capítulo 8:</a></li>
-<li class="chapter" data-level="6.9" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-9"><i class="fa fa-check"></i><b>6.9</b> Capítulo 9:</a></li>
-<li class="chapter" data-level="6.10" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-10"><i class="fa fa-check"></i><b>6.10</b> Capítulo 10:</a></li>
-<li class="chapter" data-level="6.11" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-12"><i class="fa fa-check"></i><b>6.11</b> Capítulo 12:</a></li>
-<li class="chapter" data-level="6.12" data-path="RMarkdown.html"><a href="#cap%C3%ADtulo-13"><i class="fa fa-check"></i><b>6.12</b> Capítulo 13:</a></li>
-</ul></li>
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Diapositivas CBIT202</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diapositivas CBIT202</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Datos del curso (CBIT202-23)</a></li>
+<li><a class="" href="ejercicios-y-proyectos.html"><span class="header-section-number">2</span> Ejercicios y Proyectos</a></li>
+<li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></li>
+<li><a class="active" href="rmarkdown.html"><span class="header-section-number">5</span> RMarkdown</a></li>
+<li><a class="" href="diapos.html"><span class="header-section-number">6</span> Diapos</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/horaciosamaniego/CBIT202">View book source <i class="fab fa-github"></i></a></p>
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="rmarkdown" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Capítulo 5</span> RMarkdown<a href="rmarkdown.html#rmarkdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="qué-es-r-markdown" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> ¿Qué es R Markdown?<a href="#qu%C3%A9-es-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+      </nav>
 </div>
-<div id="librerías" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Librerías<a href="#librer%C3%ADas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="rmarkdown.html#cb31-1" tabindex="-1"></a><span class="co"># install.packages(&quot;rmarkdown&quot;)</span></span>
-<span id="cb31-2"><a href="rmarkdown.html#cb31-2" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span></code></pre></div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rmarkdown" class="section level1" number="5">
+<h1>
+<span class="header-section-number">Capítulo 5</span> RMarkdown<a class="anchor" aria-label="anchor" href="#rmarkdown"><i class="fas fa-link"></i></a>
+</h1>
+<div id="qué-es-r-markdown" class="section level2" number="5.1">
+<h2>
+<span class="header-section-number">5.1</span> ¿Qué es R Markdown?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-es-r-markdown"><i class="fas fa-link"></i></a>
+</h2>
 </div>
-<div id="crear-un-r-markdown" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Crear un R Markdown<a href="rmarkdown.html#crear-un-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="librerías" class="section level2" number="5.2">
+<h2>
+<span class="header-section-number">5.2</span> Librerías<a class="anchor" aria-label="anchor" href="#librer%C3%ADas"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("rmarkdown")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown">rmarkdown</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="encabezado-yaml" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Encabezado YAML<a href="rmarkdown.html#encabezado-yaml" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="crear-un-r-markdown" class="section level2" number="5.3">
+<h2>
+<span class="header-section-number">5.3</span> Crear un R Markdown<a class="anchor" aria-label="anchor" href="#crear-un-r-markdown"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="encabezado-yaml" class="section level2" number="5.4">
+<h2>
+<span class="header-section-number">5.4</span> Encabezado YAML<a class="anchor" aria-label="anchor" href="#encabezado-yaml"><i class="fas fa-link"></i></a>
+</h2>
 <p>El archivo <code>.Rmd</code> comienza con una sección que definie los parámetros con que se va a compilar este <code>.Rmd</code>. En general, usa un lenguaje de serialización que sirve para definir configuraciones.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb32-1"><a href="rmarkdown.html#cb32-1" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb32-2"><a href="rmarkdown.html#cb32-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Informe de Biodiversity&quot;</span></span>
+<span id="cb32-2"><a href="rmarkdown.html#cb32-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Informe de Biodiversity"</span></span>
 <span id="cb32-3"><a href="rmarkdown.html#cb32-3" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Juan Pérez</span></span>
 <span id="cb32-4"><a href="rmarkdown.html#cb32-4" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 21/Oct/2024</span></span>
 <span id="cb32-5"><a href="rmarkdown.html#cb32-5" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
 <span id="cb32-6"><a href="rmarkdown.html#cb32-6" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p>La línea importante es la del <code>output</code>, pues indica el tipo de archivo que se producirá al compilar este <code>.Rmd</code>. Intentaremos usar HTML como output en cuánto se pueda. Es lo mas sencillo y liviano, puede verse en el navegador. Otra posibildad es usar PDF, pero eso requiere tener instaladas librerías que compilen un archivo LaTeX.</p>
 </div>
-<div id="sintáxis-de-markdown" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Sintáxis de Markdown<a href="#sint%C3%A1xis-de-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sintáxis-de-markdown" class="section level2" number="5.5">
+<h2>
+<span class="header-section-number">5.5</span> Sintáxis de Markdown<a class="anchor" aria-label="anchor" href="#sint%C3%A1xis-de-markdown"><i class="fas fa-link"></i></a>
+</h2>
 <p>Markdown es un lenguaje parecido a html que permite dar un ormato simplificado a documentos de texto. Puedes encontrar distintos recursos con ayudas para recordar como usarlo.</p>
 <ul>
 <li><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheatsheet</a></li>
 </ul>
-<div id="lo-esencial" class="section level3 hasAnchor" number="5.5.1">
-<h3><span class="header-section-number">5.5.1</span> Lo esencial<a href="rmarkdown.html#lo-esencial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="lo-esencial" class="section level3" number="5.5.1">
+<h3>
+<span class="header-section-number">5.5.1</span> Lo esencial<a class="anchor" aria-label="anchor" href="#lo-esencial"><i class="fas fa-link"></i></a>
+</h3>
 <p>Lo mas simple es los siguiente:</p>
 <ul>
-<li><strong>Títulos y subtítulos</strong>: se escriben con <code>#</code>, pueden haber hasta 4 niveles de subtítulos</li>
-<li><strong>Enlaces</strong>: <code>[texto a linkear](http://wwww.ENLACE.cl)</code></li>
-<li><strong>Negritas</strong>: flankear texto con <code>**</code>, asi <code>**negrita**</code></li>
-<li><strong>Itálica</strong>: flankear texto con solo un asterisco: <code>*</code></li>
+<li>
+<strong>Títulos y subtítulos</strong>: se escriben con <code>#</code>, pueden haber hasta 4 niveles de subtítulos</li>
+<li>
+<strong>Enlaces</strong>: <code>[texto a linkear](http://wwww.ENLACE.cl)</code>
+</li>
+<li>
+<strong>Negritas</strong>: flankear texto con <code>**</code>, asi <code>**negrita**</code>
+</li>
+<li>
+<strong>Itálica</strong>: flankear texto con solo un asterisco: <code>*</code>
+</li>
 </ul>
 </div>
-<div id="listas" class="section level3 hasAnchor" number="5.5.2">
-<h3><span class="header-section-number">5.5.2</span> Listas<a href="rmarkdown.html#listas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="listas" class="section level3" number="5.5.2">
+<h3>
+<span class="header-section-number">5.5.2</span> Listas<a class="anchor" aria-label="anchor" href="#listas"><i class="fas fa-link"></i></a>
+</h3>
 <p>Existen 2 tipos de listas, las numeradas y las que no.</p>
 <ul>
-<li><p><strong>Listas numeradas</strong>: Iniciar frase con un número seguido por un punto.</p>
+<li>
+<p><strong>Listas numeradas</strong>: Iniciar frase con un número seguido por un punto.</p>
 <blockquote>
 <ol style="list-style-type: decimal">
 <li>Primer elemento</li>
 <li>Segundo…</li>
 </ol>
-</blockquote></li>
-<li><p><strong>Listas simples</strong>: iniciar frase con un guión seguido por un espacio.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Listas simples</strong>: iniciar frase con un guión seguido por un espacio.</p>
 <blockquote>
 <ul>
 <li>elemento de list</li>
 <li>otro elemento</li>
 </ul>
-</blockquote></li>
+</blockquote>
+</li>
 </ul>
 </div>
-<div id="mostrar-ejemplos-de-de-código-sin-ejecutarlos" class="section level3 hasAnchor" number="5.5.3">
-<h3><span class="header-section-number">5.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)<a href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por <em>cremilla inversa</em> <code>`</code>. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo <code>2025-08-07</code> imprime la fecha actual en R: 2025-08-07</p>
+<div id="mostrar-ejemplos-de-de-código-sin-ejecutarlos" class="section level3" number="5.5.3">
+<h3>
+<span class="header-section-number">5.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)<a class="anchor" aria-label="anchor" href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><i class="fas fa-link"></i></a>
+</h3>
+<p>Los pedazos de código en la sección de text (no del chunk!) irán flankeadas por <em>cremilla inversa</em> <code>`</code>. Habrán veces en que necesitaremos no solo mostrar código en la linea (inline), sino que vamos a querer ejecutar código. En esos casos, podemos incluir el leguaje que RStudio debe usar para interpretar dicho código. Por ejemplo <code>2025-08-08</code> imprime la fecha actual en R: 2025-08-08</p>
 <p>Usaremos un TAB, o 4 espacios para insertar un bloque de código</p>
 <p>Además de las imágenes quepodemos generar durante el uso mismo de R, podemos incrustar imágenes.</p>
 <ul>
-<li><strong>Imágenes</strong>: <code>![texto que describe imagen](archivo.png)</code>, podemos usar los mismos formatos de imagenes que usa HTML. Estos son al menos GIF, JPG y PNG. Nota: ajustar el tamaño de imágenes es considerado mas avanzado y puede hacerse embebiendo código HTML en markdown.</li>
+<li>
+<strong>Imágenes</strong>: <code>![texto que describe imagen](archivo.png)</code>, podemos usar los mismos formatos de imagenes que usa HTML. Estos son al menos GIF, JPG y PNG. Nota: ajustar el tamaño de imágenes es considerado mas avanzado y puede hacerse embebiendo código HTML en markdown.</li>
 </ul>
 <p>Usaríamos:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb33-1"><a href="rmarkdown.html#cb33-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">figure</span><span class="dt">&gt;</span>       </span>
-<span id="cb33-2"><a href="rmarkdown.html#cb33-2" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;archivo.jpg&quot;</span><span class="ot">  alt</span><span class="op">=</span><span class="st">&quot;texto que describe la imágen (visible al pasar el mouse sobre ella)&quot;</span><span class="dt">&gt;</span>                      </span>
+<span id="cb33-2"><a href="rmarkdown.html#cb33-2" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"archivo.jpg"</span><span class="ot">  alt</span><span class="op">=</span><span class="st">"texto que describe la imágen (visible al pasar el mouse sobre ella)"</span><span class="dt">&gt;</span>                      </span>
 <span id="cb33-3"><a href="rmarkdown.html#cb33-3" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">figcaption</span><span class="dt">&gt;</span>CAPTION.<span class="dt">&lt;/</span><span class="kw">figcaption</span><span class="dt">&gt;</span></span>
 <span id="cb33-4"><a href="rmarkdown.html#cb33-4" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">figure</span><span class="dt">&gt;</span></span></code></pre></div>
 </div>
-<div id="figuras" class="section level3 hasAnchor" number="5.5.4">
-<h3><span class="header-section-number">5.5.4</span> Figuras<a href="rmarkdown.html#figuras" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="figuras" class="section level3" number="5.5.4">
+<h3>
+<span class="header-section-number">5.5.4</span> Figuras<a class="anchor" aria-label="anchor" href="#figuras"><i class="fas fa-link"></i></a>
+</h3>
 <p>Podemos incluir figuras en un <code>.Rmd</code>. Esto es posible de muchas maneras, demostraremos 2:</p>
 <ol style="list-style-type: decimal">
 <li>Usando la sintaxis de markdown (“nativa”).</li>
 </ol>
 <ul>
-<li><code>![caption](direcion/desde/el/espacio/de/trabajo)</code>
-Debemos tener super claro el espacio de trabajo desde donde se ejecuta este <code>.Rmd</code>. Lo puedes verificar desde la consola usando <code>getwd()</code>.</li>
-<li>Usando la librería <em>knitr</em>. Existe una fnucion <code>knitr::include_graphics()</code> que permite un control mas fino de como se muestra la imagen.</li>
+<li>
+<code>![caption](direcion/desde/el/espacio/de/trabajo)</code>
+Debemos tener super claro el espacio de trabajo desde donde se ejecuta este <code>.Rmd</code>. Lo puedes verificar desde la consola usando <code><a href="https://rdrr.io/r/base/getwd.html">getwd()</a></code>.</li>
+<li>Usando la librería <em>knitr</em>. Existe una fnucion <code><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">knitr::include_graphics()</a></code> que permite un control mas fino de como se muestra la imagen.</li>
 </ul>
 <div class="sourceCode" id="cb34"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb34-1"><a href="rmarkdown.html#cb34-1" tabindex="-1"></a>  Incluir imágen externa usando kintr:</span>
 <span id="cb34-2"><a href="rmarkdown.html#cb34-2" tabindex="-1"></a>  </span>
-<span id="cb34-3"><a href="rmarkdown.html#cb34-3" tabindex="-1"></a>  ```{r chunk de imagen, echo=FALSE, out.width=&quot;50%&quot;, fig.cap=&quot;A nice image.&quot;}</span>
-<span id="cb34-4"><a href="rmarkdown.html#cb34-4" tabindex="-1"></a>    knitr::include_graphics(&quot;foo/bar.png&quot;)</span></code></pre></div>
+<span id="cb34-3"><a href="rmarkdown.html#cb34-3" tabindex="-1"></a>  ```{r chunk de imagen, echo=FALSE, out.width="50%", fig.cap="A nice image."}</span>
+<span id="cb34-4"><a href="rmarkdown.html#cb34-4" tabindex="-1"></a>    knitr::include_graphics("foo/bar.png")</span></code></pre></div>
 <p>Ojo, con la ruta de acceso a la imágen!</p>
 <p>```</p>
 </div>
 </div>
-<div id="md---html" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> MD -&gt; HTML<a href="rmarkdown.html#md---html" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="md---html" class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> MD -&gt; HTML<a class="anchor" aria-label="anchor" href="#md---html"><i class="fas fa-link"></i></a>
+</h2>
 <p>Cuando escribimos en markdown, la gran mayoría de las veces, el interpretador hará una transformación del documento a HTML. Esto ocurre de forma interna, no tienes nada que hacer. Un ejemplo de ello es pinchar en la opcion <code>Visual</code>, para verlo en HTML, o seguir usando la opción <code>Source</code> en la esquina superior izquierda de RStudio.
-<img src="Source-Visual%20button.png" alt="Botón Visual/Source en RStudio" /></p>
+<img src="Source-Visual%20button.png" alt="Botón Visual/Source en RStudio"></p>
 </div>
-<div id="código-r" class="section level2 hasAnchor" number="5.7">
-<h2><span class="header-section-number">5.7</span> Código R<a href="#c%C3%B3digo-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="código-r" class="section level2" number="5.7">
+<h2>
+<span class="header-section-number">5.7</span> Código R<a class="anchor" aria-label="anchor" href="#c%C3%B3digo-r"><i class="fas fa-link"></i></a>
+</h2>
 <p>En un <code>.Rmd</code>, vamos a confinar el código que queremos que R procese un un <em>chunk</em>.</p>
-<p>Usaremos tres (3) <em>cremillas inversas</em>. Se pone entre corchetes <code>{}</code> el lenguaje que queremos que RStudio interprete. En general, este será <code>R</code>, pero podría ser otros que tu instalacion permita, como python, o bash.</p>
-<p>Dentro de los corchetes podemos incluir distintos parámetros con los que se ejecutara (o no) el código. Pero es mas sencillo usar el botón del engranaje:
-<img src="Chunk_gear_button.png" alt="parámetros del chunk" /></p>
+<p>Usaremos tres (3) <em>cremillas inversas</em>. Se pone entre corchetes <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code> el lenguaje que queremos que RStudio interprete. En general, este será <code>R</code>, pero podría ser otros que tu instalacion permita, como python, o bash.</p>
+<div class="inline-figure">Dentro de los corchetes podemos incluir distintos parámetros con los que se ejecutara (o no) el código. Pero es mas sencillo usar el botón del engranaje:
+<img src="Chunk_gear_button.png" alt="parámetros del chunk">
+</div>
 <p>Pinchando en él, puedes ver que se permite ajustar los parámetros básicos, como título del chunk, si es que quieres que se ejecute o si quieres que no muestre los Warnings, etc…</p>
 <div class="float">
-<img src="Chunk_gear_button2.png" style="width:95.0%" alt="parámtros de chunk 2" />
-<div class="figcaption">parámtros de chunk 2</div>
+<img src="Chunk_gear_button2.png" style="width:95.0%" alt="parámtros de chunk 2"><div class="figcaption">parámtros de chunk 2</div>
 </div>
 <p><strong>OJO QUE FINALMENTE:</strong></p>
 <blockquote>
 <p>Es dentro del estos chunks donde ocurre la magia, RStudio los interpreta enviándolos a <code>R</code> para que los ejecute. Todo el resto es intepretado como un archivo Markdown que, al ser compilado es enviado a un HTML, PDF o DOCX para poder ser distribuido.</p>
 </blockquote>
 </div>
-<div id="recursos-1" class="section level2 hasAnchor" number="5.8">
-<h2><span class="header-section-number">5.8</span> Recursos<a href="rmarkdown.html#recursos-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="recursos-1" class="section level2" number="5.8">
+<h2>
+<span class="header-section-number">5.8</span> Recursos<a class="anchor" aria-label="anchor" href="#recursos-1"><i class="fas fa-link"></i></a>
+</h2>
 <ul>
 <li><a href="https://rstudio.github.io/cheatsheets/html/rmarkdown.html">Torpedo / CheatSheet</a></li>
 <li><a href="https://rmd4sci.njtierney.com/">R Markdown for scientists</a></li>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">data wrangling cheatsheet</a></li>
 <li><a href="https://haozhu233.github.io/kableExtra/awesome_table_in_html.html">tablas “bonitinhas” con Kable</a></li>
 </ul>
-
 </div>
 </div>
-            </section>
+  <div class="chapter-nav">
+<div class="prev"><a href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></div>
+<div class="next"><a href="diapos.html"><span class="header-section-number">6</span> Diapos</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#rmarkdown"><span class="header-section-number">5</span> RMarkdown</a></li>
+<li><a class="nav-link" href="#qu%C3%A9-es-r-markdown"><span class="header-section-number">5.1</span> ¿Qué es R Markdown?</a></li>
+<li><a class="nav-link" href="#librer%C3%ADas"><span class="header-section-number">5.2</span> Librerías</a></li>
+<li><a class="nav-link" href="#crear-un-r-markdown"><span class="header-section-number">5.3</span> Crear un R Markdown</a></li>
+<li><a class="nav-link" href="#encabezado-yaml"><span class="header-section-number">5.4</span> Encabezado YAML</a></li>
+<li>
+<a class="nav-link" href="#sint%C3%A1xis-de-markdown"><span class="header-section-number">5.5</span> Sintáxis de Markdown</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lo-esencial"><span class="header-section-number">5.5.1</span> Lo esencial</a></li>
+<li><a class="nav-link" href="#listas"><span class="header-section-number">5.5.2</span> Listas</a></li>
+<li><a class="nav-link" href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><span class="header-section-number">5.5.3</span> Mostrar ejemplos de de código (sin ejecutarlos)</a></li>
+<li><a class="nav-link" href="#figuras"><span class="header-section-number">5.5.4</span> Figuras</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#md---html"><span class="header-section-number">5.6</span> MD -&gt; HTML</a></li>
+<li><a class="nav-link" href="#c%C3%B3digo-r"><span class="header-section-number">5.7</span> Código R</a></li>
+<li><a class="nav-link" href="#recursos-1"><span class="header-section-number">5.8</span> Recursos</a></li>
+</ul>
 
-          </div>
-        </div>
-      </div>
-<a href="principios-de-tidydata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="diapos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/horaciosamaniego/CBIT202/blob/master/RMarkdown.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/horaciosamaniego/CBIT202/edit/master/RMarkdown.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Diapositivas CBIT202</strong>" was written by Horacio Samaniego. It was last built on 2025-08-08.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -451,7 +283,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

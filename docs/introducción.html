@@ -1,260 +1,69 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 Introducción | Diapositivas CBIT202</title>
-  <meta name="description" content="<p>Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
-Universidad Austral de Chile</p>" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Capítulo 3 Introducción | Diapositivas CBIT202" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="<p>Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
-Universidad Austral de Chile</p>" />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 Introducción | Diapositivas CBIT202" />
-  
-  <meta name="twitter:description" content="<p>Gitbook para el curso Introducción al Análisis de Geoespaciales (CBIT202),
-Universidad Austral de Chile</p>" />
-  
-
-<meta name="author" content="Horacio Samaniego" />
-
-
-<meta name="date" content="2025-08-07" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="ejercicios-y-proyectos.html"/>
-<link rel="next" href="principios-de-tidydata.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-
-
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Capítulo 3 Introducción | Diapositivas CBIT202</title>
+<meta name="author" content="Horacio Samaniego">
+<meta name="description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta property="og:title" content="Capítulo 3 Introducción | Diapositivas CBIT202">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://github.com/horaciosamaniego/CBIT202/introducción.html">
+<meta property="og:description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capítulo 3 Introducción | Diapositivas CBIT202">
+<meta name="twitter:description" content="R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Permite hacer todos los análisis numéricos que requieras en tu vida profesional. Es una implementación de libre...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Inter-0.4.10/font.css" rel="stylesheet">
+<link href="libs/Bitter-0.4.10/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Datos del curso (CBIT202-23)</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="01-intro.html"><a href="#descripci%C3%B3n-del-curso"><i class="fa fa-check"></i><b>1.1</b> DESCRIPCIÓN DEL CURSO</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#objetivos"><i class="fa fa-check"></i><b>1.1.1</b> OBJETIVOS</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="01-intro.html"><a href="#evaluaci%C3%B3n"><i class="fa fa-check"></i><b>1.2</b> Evaluación</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#tareas"><i class="fa fa-check"></i><b>1.2.1</b> Tareas</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#proyectos"><i class="fa fa-check"></i><b>1.2.2</b> proyectos</a></li>
-<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#calificaciones"><i class="fa fa-check"></i><b>1.2.3</b> calificaciones</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#calendario"><i class="fa fa-check"></i><b>1.3</b> Calendario</a>
-<ul>
-<li class="chapter" data-level="1.3.1" data-path="01-intro.html"><a href="#m%C3%B3dulo-1-introducci%C3%B3n-a-r-y-rstudio"><i class="fa fa-check"></i><b>1.3.1</b> Módulo 1: Introducción a R y RStudio</a></li>
-<li class="chapter" data-level="1.3.2" data-path="01-intro.html"><a href="#m%C3%B3dulo-2-html-markdown-r"><i class="fa fa-check"></i><b>1.3.2</b> Módulo 2: HTML, Markdown &amp; R</a></li>
-<li class="chapter" data-level="1.3.3" data-path="01-intro.html"><a href="#m%C3%B3dulo-3-manipulaci%C3%B3n-de-datos-con-tidyverse"><i class="fa fa-check"></i><b>1.3.3</b> Módulo 3: Manipulación de Datos con Tidyverse</a></li>
-<li class="chapter" data-level="1.3.4" data-path="01-intro.html"><a href="#modulo-5-visualizaci%C3%B3n-de-datos"><i class="fa fa-check"></i><b>1.3.4</b> Modulo 5: Visualización de Datos</a></li>
-<li class="chapter" data-level="1.3.5" data-path="01-intro.html"><a href="#m%C3%B3dulo-6-introducci%C3%B3n-al-an%C3%A1lisis-geoespacial"><i class="fa fa-check"></i><b>1.3.5</b> Módulo 6: Introducción al Análisis Geoespacial</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#recursos-adicionales"><i class="fa fa-check"></i><b>1.4</b> Recursos adicionales</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html"><i class="fa fa-check"></i><b>2</b> Ejercicios y Proyectos</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html#tareas-semanales"><i class="fa fa-check"></i><b>2.1</b> Tareas semanales</a></li>
-<li class="chapter" data-level="2.2" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html#descargar-ejercicios"><i class="fa fa-check"></i><b>2.2</b> Descargar Ejercicios</a></li>
-<li class="chapter" data-level="2.3" data-path="ejercicios-y-proyectos.html"><a href="ejercicios-y-proyectos.html#proyecto"><i class="fa fa-check"></i><b>2.3</b> <strong>Proyecto</strong></a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="01-intro.html"><a href="#introducci%C3%B3n"><i class="fa fa-check"></i><b>3</b> Introducción</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>3.1</b> Objetos</a></li>
-<li class="chapter" data-level="3.2" data-path="introducción.html"><a href="introducción.html#variables"><i class="fa fa-check"></i><b>3.2</b> Variables</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="introducción.html"><a href="introducción.html#tipos-de-variables"><i class="fa fa-check"></i><b>3.2.1</b> Tipos de variables</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="introducción.html"><a href="introducción.html#funciones"><i class="fa fa-check"></i><b>3.3</b> Funciones</a></li>
-<li class="chapter" data-level="3.4" data-path="introducción.html"><a href="introducción.html#vectores"><i class="fa fa-check"></i><b>3.4</b> Vectores</a></li>
-<li class="chapter" data-level="3.5" data-path="01-intro.html"><a href="#instalar-librer%C3%ADas"><i class="fa fa-check"></i><b>3.5</b> Instalar librerías</a></li>
-<li class="chapter" data-level="3.6" data-path="introducción.html"><a href="introducción.html#r-notebook"><i class="fa fa-check"></i><b>3.6</b> R Notebook</a></li>
-<li class="chapter" data-level="3.7" data-path="introducción.html"><a href="introducción.html#leer-datos"><i class="fa fa-check"></i><b>3.7</b> Leer datos</a></li>
-<li class="chapter" data-level="3.8" data-path="introducción.html"><a href="introducción.html#ejercicios"><i class="fa fa-check"></i><b>3.8</b> Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html"><i class="fa fa-check"></i><b>4</b> Principios de Tidydata</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#definiciones"><i class="fa fa-check"></i><b>4.1</b> Definiciones</a></li>
-<li class="chapter" data-level="4.2" data-path="01-intro.html"><a href="#l%C3%B3gica-y-funciones"><i class="fa fa-check"></i><b>4.2</b> Lógica y funciones</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#funciones-esenciales"><i class="fa fa-check"></i><b>4.2.1</b> Funciones esenciales</a></li>
-<li class="chapter" data-level="4.2.2" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#pipe"><i class="fa fa-check"></i><b>4.2.2</b> pipe</a></li>
-<li class="chapter" data-level="4.2.3" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#agrupar"><i class="fa fa-check"></i><b>4.2.3</b> Agrupar</a></li>
-<li class="chapter" data-level="4.2.4" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#filtrar"><i class="fa fa-check"></i><b>4.2.4</b> Filtrar</a></li>
-<li class="chapter" data-level="4.2.5" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#crear-nuevas-variables"><i class="fa fa-check"></i><b>4.2.5</b> Crear nuevas variables</a></li>
-<li class="chapter" data-level="4.2.6" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#responder"><i class="fa fa-check"></i><b>4.2.6</b> Responder:</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#cambiar-formato-de-tabla"><i class="fa fa-check"></i><b>4.3</b> Cambiar formato de tabla</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="01-intro.html"><a href="#podemos-explicar-que-sucedi%C3%B3-aqu%C3%AD"><i class="fa fa-check"></i><b>4.3.1</b> ¿Podemos explicar que sucedió aquí?</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#ejercicio"><i class="fa fa-check"></i><b>4.4</b> Ejercicio</a></li>
-<li class="chapter" data-level="4.5" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#bonus-esto-requiere-investigar-no-basta-con-lo-que-aprendimos"><i class="fa fa-check"></i><b>4.5</b> <strong>Bonus</strong> (Esto requiere investigar no basta con lo que aprendimos)</a></li>
-<li class="chapter" data-level="4.6" data-path="principios-de-tidydata.html"><a href="principios-de-tidydata.html#recursos"><i class="fa fa-check"></i><b>4.6</b> Recursos</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>5</b> RMarkdown</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="01-intro.html"><a href="#qu%C3%A9-es-r-markdown"><i class="fa fa-check"></i><b>5.1</b> ¿Qué es R Markdown?</a></li>
-<li class="chapter" data-level="5.2" data-path="01-intro.html"><a href="#librer%C3%ADas"><i class="fa fa-check"></i><b>5.2</b> Librerías</a></li>
-<li class="chapter" data-level="5.3" data-path="rmarkdown.html"><a href="rmarkdown.html#crear-un-r-markdown"><i class="fa fa-check"></i><b>5.3</b> Crear un R Markdown</a></li>
-<li class="chapter" data-level="5.4" data-path="rmarkdown.html"><a href="rmarkdown.html#encabezado-yaml"><i class="fa fa-check"></i><b>5.4</b> Encabezado YAML</a></li>
-<li class="chapter" data-level="5.5" data-path="01-intro.html"><a href="#sint%C3%A1xis-de-markdown"><i class="fa fa-check"></i><b>5.5</b> Sintáxis de Markdown</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="rmarkdown.html"><a href="rmarkdown.html#lo-esencial"><i class="fa fa-check"></i><b>5.5.1</b> Lo esencial</a></li>
-<li class="chapter" data-level="5.5.2" data-path="rmarkdown.html"><a href="rmarkdown.html#listas"><i class="fa fa-check"></i><b>5.5.2</b> Listas</a></li>
-<li class="chapter" data-level="5.5.3" data-path="01-intro.html"><a href="#mostrar-ejemplos-de-de-c%C3%B3digo-sin-ejecutarlos"><i class="fa fa-check"></i><b>5.5.3</b> Mostrar ejemplos de de código (sin ejecutarlos)</a></li>
-<li class="chapter" data-level="5.5.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figuras"><i class="fa fa-check"></i><b>5.5.4</b> Figuras</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="rmarkdown.html"><a href="rmarkdown.html#md---html"><i class="fa fa-check"></i><b>5.6</b> MD -&gt; HTML</a></li>
-<li class="chapter" data-level="5.7" data-path="01-intro.html"><a href="#c%C3%B3digo-r"><i class="fa fa-check"></i><b>5.7</b> Código R</a></li>
-<li class="chapter" data-level="5.8" data-path="rmarkdown.html"><a href="rmarkdown.html#recursos-1"><i class="fa fa-check"></i><b>5.8</b> Recursos</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="diapos.html"><a href="diapos.html"><i class="fa fa-check"></i><b>6</b> Diapos</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="01-intro.html"><a href="#cap%C3%ADtulo-1-introducci%C3%B3n"><i class="fa fa-check"></i><b>6.1</b> Capítulo 1: Introducción</a></li>
-<li class="chapter" data-level="6.2" data-path="01-intro.html"><a href="#cap%C3%ADtulo-2-introducci%C3%B3n"><i class="fa fa-check"></i><b>6.2</b> Capítulo 2: Introducción</a></li>
-<li class="chapter" data-level="6.3" data-path="01-intro.html"><a href="#cap%C3%ADtulo-3"><i class="fa fa-check"></i><b>6.3</b> Capítulo 3:</a></li>
-<li class="chapter" data-level="6.4" data-path="01-intro.html"><a href="#cap%C3%ADtulo-4"><i class="fa fa-check"></i><b>6.4</b> Capítulo 4:</a></li>
-<li class="chapter" data-level="6.5" data-path="01-intro.html"><a href="#cap%C3%ADtulo-5"><i class="fa fa-check"></i><b>6.5</b> Capítulo 5:</a></li>
-<li class="chapter" data-level="6.6" data-path="01-intro.html"><a href="#cap%C3%ADtulo-6"><i class="fa fa-check"></i><b>6.6</b> Capítulo 6:</a></li>
-<li class="chapter" data-level="6.7" data-path="01-intro.html"><a href="#cap%C3%ADtulo-7"><i class="fa fa-check"></i><b>6.7</b> Capítulo 7:</a></li>
-<li class="chapter" data-level="6.8" data-path="01-intro.html"><a href="#cap%C3%ADtulo-8"><i class="fa fa-check"></i><b>6.8</b> Capítulo 8:</a></li>
-<li class="chapter" data-level="6.9" data-path="01-intro.html"><a href="#cap%C3%ADtulo-9"><i class="fa fa-check"></i><b>6.9</b> Capítulo 9:</a></li>
-<li class="chapter" data-level="6.10" data-path="01-intro.html"><a href="#cap%C3%ADtulo-10"><i class="fa fa-check"></i><b>6.10</b> Capítulo 10:</a></li>
-<li class="chapter" data-level="6.11" data-path="01-intro.html"><a href="#cap%C3%ADtulo-12"><i class="fa fa-check"></i><b>6.11</b> Capítulo 12:</a></li>
-<li class="chapter" data-level="6.12" data-path="01-intro.html"><a href="#cap%C3%ADtulo-13"><i class="fa fa-check"></i><b>6.12</b> Capítulo 13:</a></li>
-</ul></li>
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Diapositivas CBIT202</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diapositivas CBIT202</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Datos del curso (CBIT202-23)</a></li>
+<li><a class="" href="ejercicios-y-proyectos.html"><span class="header-section-number">2</span> Ejercicios y Proyectos</a></li>
+<li><a class="active" href="introducci%C3%B3n.html"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="" href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></li>
+<li><a class="" href="rmarkdown.html"><span class="header-section-number">5</span> RMarkdown</a></li>
+<li><a class="" href="diapos.html"><span class="header-section-number">6</span> Diapos</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/horaciosamaniego/CBIT202">View book source <i class="fab fa-github"></i></a></p>
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="introducción" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Capítulo 3</span> Introducción<a href="#introducci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introducción" class="section level1" number="3">
+<h1>
+<span class="header-section-number">Capítulo 3</span> Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"><i class="fas fa-link"></i></a>
+</h1>
 <p>R es un entorno y lenguaje de programación con un enfoque al análisis
 estadístico. Permite hacer todos los análisis numéricos que requieras en
 tu vida profesional. Es una implementación de libre distribución de otro
@@ -271,145 +80,178 @@ que, al igual que R, es software libre y permite integrar herramientas
 necesarias para el desarrollo y así facilitarlo. La página oficial para
 descargarlo es:</p>
 <p><a href="http://www.rstudio.com">www.rstudio.com</a></p>
-<div id="objetos" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Objetos<a href="introducción.html#objetos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="objetos" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Objetos<a class="anchor" aria-label="anchor" href="#objetos"><i class="fas fa-link"></i></a>
+</h2>
 <p>En términos genéricos, todos los elementos que R maneja son objetos. Un
 objeto tiene ciertas propiedades y en ocasiones es capaz de llevar a
 cabo ciertas tareas si se le dan los argumentos necesarios. Por ejemplo,
 un teléfono es capaz de realizar llamadas siempre que le demos el número
 a marcar.</p>
 </div>
-<div id="variables" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Variables<a href="introducción.html#variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="variables" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> Variables<a class="anchor" aria-label="anchor" href="#variables"><i class="fas fa-link"></i></a>
+</h2>
 <p>Al momento de trabajar, es probable que necesitemos guardar valores o
 cálculos, de manera que no necesitemos escribirlos cada vez que los
 usemos, para esto utilizamos variables.</p>
 <p>Para realizar una asignación de variable:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introducción.html#cb3-1" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">200</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a</span> <span class="op">=</span> <span class="fl">200</span></span></code></pre></div>
 <p>Luego, podemos utilizar el valor contenido en la variable, utilizando su
 nombre:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introducción.html#cb4-1" tabindex="-1"></a><span class="fu">print</span>(a)</span>
-<span id="cb4-2"><a href="introducción.html#cb4-2" tabindex="-1"></a><span class="co">#&gt; [1] 200</span></span></code></pre></div>
-<div id="tipos-de-variables" class="section level3 hasAnchor" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Tipos de variables<a href="introducción.html#tipos-de-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 200</span></span></code></pre></div>
+<div id="tipos-de-variables" class="section level3" number="3.2.1">
+<h3>
+<span class="header-section-number">3.2.1</span> Tipos de variables<a class="anchor" aria-label="anchor" href="#tipos-de-variables"><i class="fas fa-link"></i></a>
+</h3>
 <p>Existen diversos tipos o clases de variables, dependiendo de las
 características del objeto que les es asignado. Para conocer a qué tipo
 corresponde un objeto usamos class:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introducción.html#cb5-1" tabindex="-1"></a>x<span class="ot">=</span><span class="dv">7</span></span>
-<span id="cb5-2"><a href="introducción.html#cb5-2" tabindex="-1"></a>x</span>
-<span id="cb5-3"><a href="introducción.html#cb5-3" tabindex="-1"></a><span class="co">#&gt; [1] 7</span></span>
-<span id="cb5-4"><a href="introducción.html#cb5-4" tabindex="-1"></a><span class="fu">class</span> (x)</span>
-<span id="cb5-5"><a href="introducción.html#cb5-5" tabindex="-1"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introducción.html#cb6-1" tabindex="-1"></a>x<span class="ot">=</span><span class="dv">5</span><span class="sc">/</span><span class="dv">3</span></span>
-<span id="cb6-2"><a href="introducción.html#cb6-2" tabindex="-1"></a>x</span>
-<span id="cb6-3"><a href="introducción.html#cb6-3" tabindex="-1"></a><span class="co">#&gt; [1] 1.666667</span></span>
-<span id="cb6-4"><a href="introducción.html#cb6-4" tabindex="-1"></a><span class="fu">class</span> (x)</span>
-<span id="cb6-5"><a href="introducción.html#cb6-5" tabindex="-1"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introducción.html#cb7-1" tabindex="-1"></a>x<span class="ot">=</span><span class="st">&quot;Trece&quot;</span></span>
-<span id="cb7-2"><a href="introducción.html#cb7-2" tabindex="-1"></a>x</span>
-<span id="cb7-3"><a href="introducción.html#cb7-3" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Trece&quot;</span></span>
-<span id="cb7-4"><a href="introducción.html#cb7-4" tabindex="-1"></a><span class="fu">class</span> (x)</span>
-<span id="cb7-5"><a href="introducción.html#cb7-5" tabindex="-1"></a><span class="co">#&gt; [1] &quot;character&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="fl">7</span></span>
+<span><span class="va">x</span></span>
+<span><span class="co">#&gt; [1] 7</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span> <span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "numeric"</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="fl">5</span><span class="op">/</span><span class="fl">3</span></span>
+<span><span class="va">x</span></span>
+<span><span class="co">#&gt; [1] 1.666667</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span> <span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "numeric"</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="st">"Trece"</span></span>
+<span><span class="va">x</span></span>
+<span><span class="co">#&gt; [1] "Trece"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span> <span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "character"</span></span></code></pre></div>
 </div>
 </div>
-<div id="funciones" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Funciones<a href="introducción.html#funciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="funciones" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> Funciones<a class="anchor" aria-label="anchor" href="#funciones"><i class="fas fa-link"></i></a>
+</h2>
 <p>Muchas cosas en R pueden hacerse a través del uso de funciones, estas
 permiten realizar operaciones típicas sin necesidad de escribir grandes
 cantidades de código. Por ejemplo:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introducción.html#cb8-1" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">10</span>)</span>
-<span id="cb8-2"><a href="introducción.html#cb8-2" tabindex="-1"></a><span class="co">#&gt; [1] 3.162278</span></span>
-<span id="cb8-3"><a href="introducción.html#cb8-3" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">1.9</span>)</span>
-<span id="cb8-4"><a href="introducción.html#cb8-4" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
-<span id="cb8-5"><a href="introducción.html#cb8-5" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span>
-<span id="cb8-6"><a href="introducción.html#cb8-6" tabindex="-1"></a><span class="co">#&gt;  [1]  0  1  2  3  4  5  6  7  8  9 10</span></span>
-<span id="cb8-7"><a href="introducción.html#cb8-7" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">2</span>)</span>
-<span id="cb8-8"><a href="introducción.html#cb8-8" tabindex="-1"></a><span class="co">#&gt; [1]  0  2  4  6  8 10</span></span>
-<span id="cb8-9"><a href="introducción.html#cb8-9" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">5</span>,<span class="dv">10</span>)</span>
-<span id="cb8-10"><a href="introducción.html#cb8-10" tabindex="-1"></a><span class="co">#&gt;  [1] 5 5 5 5 5 5 5 5 5 5</span></span>
-<span id="cb8-11"><a href="introducción.html#cb8-11" tabindex="-1"></a><span class="fu">paste</span>(<span class="fu">seq</span>(<span class="dv">5</span>,<span class="dv">10</span>), <span class="st">&quot;elefantes&quot;</span>)</span>
-<span id="cb8-12"><a href="introducción.html#cb8-12" tabindex="-1"></a><span class="co">#&gt; [1] &quot;5 elefantes&quot;  &quot;6 elefantes&quot;  &quot;7 elefantes&quot; </span></span>
-<span id="cb8-13"><a href="introducción.html#cb8-13" tabindex="-1"></a><span class="co">#&gt; [4] &quot;8 elefantes&quot;  &quot;9 elefantes&quot;  &quot;10 elefantes&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 3.162278</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">1.9</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1]  0  1  2  3  4  5  6  7  8  9 10</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">10</span>,<span class="fl">2</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1]  0  2  4  6  8 10</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] 5 5 5 5 5 5 5 5 5 5</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">10</span><span class="op">)</span>, <span class="st">"elefantes"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "5 elefantes"  "6 elefantes"  "7 elefantes" </span></span>
+<span><span class="co">#&gt; [4] "8 elefantes"  "9 elefantes"  "10 elefantes"</span></span></code></pre></div>
 <p>Los datos o variables que van dentro de las funciones, se denominan
 <em>argumentos</em> y cada función requiere que se le entreguen los argumentos
 apropiados para ejecutar la acción prevista.</p>
 <p>Por ejemplo, la función mean() no puede calcular el promedio si como
 argumentos se le pasan letras.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introducción.html#cb9-1" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>))</span>
-<span id="cb9-2"><a href="introducción.html#cb9-2" tabindex="-1"></a><span class="co">#&gt; Warning in mean.default(c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)): argument is not</span></span>
-<span id="cb9-3"><a href="introducción.html#cb9-3" tabindex="-1"></a><span class="co">#&gt; numeric or logical: returning NA</span></span>
-<span id="cb9-4"><a href="introducción.html#cb9-4" tabindex="-1"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in mean.default(c("a", "b", "c")): argument is not</span></span>
+<span><span class="co">#&gt; numeric or logical: returning NA</span></span>
+<span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>Esto es importante, porque al introducir datos podemos estar utilizando
 números como palabras:</p>
 <p>1, 2, 3 ≠ “1”, “2”, “3”</p>
 <p>Si nos encontramos con este problema, debemos transformar los datos al
 tipo o clase adecuada, con las funciones:</p>
-<p><code>as.numeric()</code> y <code>as. character()</code>x`</p>
+<p><code><a href="https://rdrr.io/r/base/numeric.html">as.numeric()</a></code> y <code>as. character()</code>x`</p>
 </div>
-<div id="vectores" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Vectores<a href="introducción.html#vectores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="vectores" class="section level2" number="3.4">
+<h2>
+<span class="header-section-number">3.4</span> Vectores<a class="anchor" aria-label="anchor" href="#vectores"><i class="fas fa-link"></i></a>
+</h2>
 <p>Conjunto ordenado de valores del mismo tipo, agrupados en un único
 objeto. Para crear una variable vector utilizamos:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introducción.html#cb10-1" tabindex="-1"></a>v <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
-<span id="cb10-2"><a href="introducción.html#cb10-2" tabindex="-1"></a>vector <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;mi&quot;</span>, <span class="st">&quot;primer&quot;</span>, <span class="st">&quot;vector&quot;</span>)</span>
-<span id="cb10-3"><a href="introducción.html#cb10-3" tabindex="-1"></a>vector</span>
-<span id="cb10-4"><a href="introducción.html#cb10-4" tabindex="-1"></a><span class="co">#&gt; [1] &quot;mi&quot;     &quot;primer&quot; &quot;vector&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">v</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span></span>
+<span><span class="va">vector</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mi"</span>, <span class="st">"primer"</span>, <span class="st">"vector"</span><span class="op">)</span></span>
+<span><span class="va">vector</span></span>
+<span><span class="co">#&gt; [1] "mi"     "primer" "vector"</span></span></code></pre></div>
 <p>Cada objeto dentro de un vector posee un índice, el cual indica la
 posición que ocupa dentro del vector, para acceder a una posición
 específica usamos:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="introducción.html#cb11-1" tabindex="-1"></a>vector[<span class="dv">1</span>]</span>
-<span id="cb11-2"><a href="introducción.html#cb11-2" tabindex="-1"></a><span class="co">#&gt; [1] &quot;mi&quot;</span></span>
-<span id="cb11-3"><a href="introducción.html#cb11-3" tabindex="-1"></a>vector[<span class="dv">2</span>]</span>
-<span id="cb11-4"><a href="introducción.html#cb11-4" tabindex="-1"></a><span class="co">#&gt; [1] &quot;primer&quot;</span></span>
-<span id="cb11-5"><a href="introducción.html#cb11-5" tabindex="-1"></a>vector[<span class="dv">3</span>] </span>
-<span id="cb11-6"><a href="introducción.html#cb11-6" tabindex="-1"></a><span class="co">#&gt; [1] &quot;vector&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vector</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
+<span><span class="co">#&gt; [1] "mi"</span></span>
+<span><span class="va">vector</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
+<span><span class="co">#&gt; [1] "primer"</span></span>
+<span><span class="va">vector</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> </span>
+<span><span class="co">#&gt; [1] "vector"</span></span></code></pre></div>
 <p>y si queremos reemplazar alguno de esos objetos:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introducción.html#cb12-1" tabindex="-1"></a>vector[<span class="dv">2</span>]<span class="ot">=</span><span class="st">&quot;segundo&quot;</span></span>
-<span id="cb12-2"><a href="introducción.html#cb12-2" tabindex="-1"></a>vector</span>
-<span id="cb12-3"><a href="introducción.html#cb12-3" tabindex="-1"></a><span class="co">#&gt; [1] &quot;mi&quot;      &quot;segundo&quot; &quot;vector&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vector</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">=</span><span class="st">"segundo"</span></span>
+<span><span class="va">vector</span></span>
+<span><span class="co">#&gt; [1] "mi"      "segundo" "vector"</span></span></code></pre></div>
 <p>Un vector permite almacenar varios valores en una única variable y
 permite ejecutar operaciones o funciones a un conjunto de datos:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introducción.html#cb13-1" tabindex="-1"></a>vector <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb13-2"><a href="introducción.html#cb13-2" tabindex="-1"></a>vector<span class="sc">*</span><span class="dv">2</span></span>
-<span id="cb13-3"><a href="introducción.html#cb13-3" tabindex="-1"></a><span class="co">#&gt; [1]  2  4  6  8 10</span></span>
-<span id="cb13-4"><a href="introducción.html#cb13-4" tabindex="-1"></a>vector<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb13-5"><a href="introducción.html#cb13-5" tabindex="-1"></a><span class="co">#&gt; [1]  1  4  9 16 25</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vector</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">vector</span><span class="op">*</span><span class="fl">2</span></span>
+<span><span class="co">#&gt; [1]  2  4  6  8 10</span></span>
+<span><span class="va">vector</span><span class="op">^</span><span class="fl">2</span></span>
+<span><span class="co">#&gt; [1]  1  4  9 16 25</span></span></code></pre></div>
 <p>o incluso realizar operaciones entre vectores:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introducción.html#cb14-1" tabindex="-1"></a>v1<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb14-2"><a href="introducción.html#cb14-2" tabindex="-1"></a>v2<span class="ot">=</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introducción.html#cb15-1" tabindex="-1"></a>v1</span>
-<span id="cb15-2"><a href="introducción.html#cb15-2" tabindex="-1"></a><span class="co">#&gt; [1] 1 2 3</span></span>
-<span id="cb15-3"><a href="introducción.html#cb15-3" tabindex="-1"></a>v2</span>
-<span id="cb15-4"><a href="introducción.html#cb15-4" tabindex="-1"></a><span class="co">#&gt; [1]  6  8 10</span></span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="introducción.html#cb16-1" tabindex="-1"></a>v1 <span class="sc">+</span> v2</span>
-<span id="cb16-2"><a href="introducción.html#cb16-2" tabindex="-1"></a><span class="co">#&gt; [1]  7 10 13</span></span></code></pre></div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="introducción.html#cb17-1" tabindex="-1"></a>v1<span class="sc">*</span>v2</span>
-<span id="cb17-2"><a href="introducción.html#cb17-2" tabindex="-1"></a><span class="co">#&gt; [1]  6 16 30</span></span></code></pre></div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="introducción.html#cb18-1" tabindex="-1"></a>v3<span class="ot">=</span><span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>)</span>
-<span id="cb18-2"><a href="introducción.html#cb18-2" tabindex="-1"></a>v1 <span class="sc">*</span> v3</span>
-<span id="cb18-3"><a href="introducción.html#cb18-3" tabindex="-1"></a><span class="co">#&gt; Error in v1 * v3: non-numeric argument to binary operator</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">v1</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="va">v2</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span>,<span class="fl">8</span>,<span class="fl">10</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">v1</span></span>
+<span><span class="co">#&gt; [1] 1 2 3</span></span>
+<span><span class="va">v2</span></span>
+<span><span class="co">#&gt; [1]  6  8 10</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">v1</span> <span class="op">+</span> <span class="va">v2</span></span>
+<span><span class="co">#&gt; [1]  7 10 13</span></span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">v1</span><span class="op">*</span><span class="va">v2</span></span>
+<span><span class="co">#&gt; [1]  6 16 30</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">v3</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span><span class="op">)</span></span>
+<span><span class="va">v1</span> <span class="op">*</span> <span class="va">v3</span></span>
+<span><span class="co">#&gt; Error in v1 * v3: non-numeric argument to binary operator</span></span></code></pre></div>
 </div>
-<div id="instalar-librerías" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Instalar librerías<a href="#instalar-librer%C3%ADas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="instalar-librerías" class="section level2" number="3.5">
+<h2>
+<span class="header-section-number">3.5</span> Instalar librerías<a class="anchor" aria-label="anchor" href="#instalar-librer%C3%ADas"><i class="fas fa-link"></i></a>
+</h2>
 <p>Muchas veces las funciones incorporadas en R son insuficientes para
 nuestros fines, por lo que es necesario instalar paquetes o “packages”
 de herramientas hechas por la comunidad. En este caso, usaremos el
 paquete “openxlsx”, que nos permite leer archivos Excel. Para
 instalarlo:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="introducción.html#cb19-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;openxlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"openxlsx"</span><span class="op">)</span></span></code></pre></div>
 <p>Debe hacerse una única vez, los paquetes quedan instalados en nuestra
 versión de R. Y para usarlo dentro de nuestro proyecto:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introducción.html#cb20-1" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ycphs.github.io/openxlsx/index.html">openxlsx</a></span><span class="op">)</span></span></code></pre></div>
 <p>Debe incluirse en cada proyecto donde queramos usarlo y ejecutarse cada
 vez que abrimos R.</p>
 </div>
-<div id="r-notebook" class="section level2 hasAnchor" number="3.6">
-<h2><span class="header-section-number">3.6</span> R Notebook<a href="introducción.html#r-notebook" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="r-notebook" class="section level2" number="3.6">
+<h2>
+<span class="header-section-number">3.6</span> R Notebook<a class="anchor" aria-label="anchor" href="#r-notebook"><i class="fas fa-link"></i></a>
+</h2>
 <p>Un Notebook en R es un documento con bloques o “chunks” que pueden ser
 ejecutados directa e interactivamente, para así visualizar los
 resultados directamente bajo el código.</p>
 <p>Para instalar esta librería:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introducción.html#cb21-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"rmarkdown"</span><span class="op">)</span></span></code></pre></div>
 <p>Una vez instalada, puedes crear un nuevo notebook en RStudio llendo a
 <em>File -&gt; new file -&gt; R notebook</em>.</p>
 <p>Agrega un nuevo chunk haciendo click en el botón <em>Insert Chunk</em> en la
@@ -426,13 +268,17 @@ chunk.</p>
 resultados se guardará junto a él (Click en el botón de <em>Preview</em> o
 presiona <em>Ctrl+Shift+K</em> para previsualizar el archivo HMTL)</p>
 </div>
-<div id="leer-datos" class="section level2 hasAnchor" number="3.7">
-<h2><span class="header-section-number">3.7</span> Leer datos<a href="introducción.html#leer-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="leer-datos" class="section level2" number="3.7">
+<h2>
+<span class="header-section-number">3.7</span> Leer datos<a class="anchor" aria-label="anchor" href="#leer-datos"><i class="fas fa-link"></i></a>
+</h2>
 <p>Delimitados por coma: read_csv(“file.csv”)</p>
 <p>Con cualquier delimitador: read_delim(“file.txt”, delim = “|”)</p>
 </div>
-<div id="ejercicios" class="section level2 hasAnchor" number="3.8">
-<h2><span class="header-section-number">3.8</span> Ejercicios<a href="introducción.html#ejercicios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicios" class="section level2" number="3.8">
+<h2>
+<span class="header-section-number">3.8</span> Ejercicios<a class="anchor" aria-label="anchor" href="#ejercicios"><i class="fas fa-link"></i></a>
+</h2>
 <ol style="list-style-type: decimal">
 <li>Cree una nueva variable que contenga un vector con 10 números aleatorios</li>
 <li>multiplíquela por seis.</li>
@@ -441,85 +287,71 @@ presiona <em>Ctrl+Shift+K</em> para previsualizar el archivo HMTL)</p>
 <li>¿cuál es el largo de esta última variable creada?</li>
 <li>¿de qué tipo es esta variable?</li>
 <li>¿qué sucede si divie esta última variable por 3?</li>
-<li>cree un vector con los elementos 1 2 3 4 5 6 y llámelo <code>x</code></li>
-<li>cree un nuevo vector con los elementos 10 20 30 40 50 y llámelo <code>y</code></li>
+<li>cree un vector con los elementos 1 2 3 4 5 6 y llámelo <code>x</code>
+</li>
+<li>cree un nuevo vector con los elementos 10 20 30 40 50 y llámelo <code>y</code>
+</li>
 <li>¿qué ocurre si intenta sumar <code>x</code> e <code>y</code>? explique</li>
-<li>agregue el valor 60 al vector <code>y</code> (ayuda: puedes usar la función <code>c()</code>)</li>
-<li>sume <code>x</code> e <code>y</code></li>
-<li>multiplique <code>x</code> e <code>y</code></li>
+<li>agregue el valor 60 al vector <code>y</code> (ayuda: puedes usar la función <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>)</li>
+<li>sume <code>x</code> e <code>y</code>
+</li>
+<li>multiplique <code>x</code> e <code>y</code>
+</li>
 <li>cree un <code>data.frame</code> con el mímimo código posible usando los datos de la siguiente imagen y llámelo <code>z</code>:</li>
 </ol>
-<p><img src="df.jpg" /><!-- --></p>
+<div class="inline-figure">
+<img src="df.jpg"><!-- -->
+</div>
 <ol start="15" style="list-style-type: decimal">
 <li>cree un dataframe de datos ficticios que represente una muestra de 100 individuos de aves y su tamaño corporal. Use 4 tipos de aves: un paseriforme, un columbiforme, un rapaz y trochiliformes en aproximadamente las mismas proporciones. (Averigue el real tamaño promedio de cada grupo)</li>
 <li>grafique los pesos corporales de cada grupo (ayuda: puede usar graficos de distribuciones, caja y bigote o bien de violín)</li>
 </ol>
 <!-- ![¿Cuál es el código mas corto para crear este df?](df.JPG) -->
-
 </div>
 </div>
-            </section>
+  <div class="chapter-nav">
+<div class="prev"><a href="ejercicios-y-proyectos.html"><span class="header-section-number">2</span> Ejercicios y Proyectos</a></div>
+<div class="next"><a href="principios-de-tidydata.html"><span class="header-section-number">4</span> Principios de Tidydata</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introducci%C3%B3n"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="nav-link" href="#objetos"><span class="header-section-number">3.1</span> Objetos</a></li>
+<li>
+<a class="nav-link" href="#variables"><span class="header-section-number">3.2</span> Variables</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#tipos-de-variables"><span class="header-section-number">3.2.1</span> Tipos de variables</a></li></ul>
+</li>
+<li><a class="nav-link" href="#funciones"><span class="header-section-number">3.3</span> Funciones</a></li>
+<li><a class="nav-link" href="#vectores"><span class="header-section-number">3.4</span> Vectores</a></li>
+<li><a class="nav-link" href="#instalar-librer%C3%ADas"><span class="header-section-number">3.5</span> Instalar librerías</a></li>
+<li><a class="nav-link" href="#r-notebook"><span class="header-section-number">3.6</span> R Notebook</a></li>
+<li><a class="nav-link" href="#leer-datos"><span class="header-section-number">3.7</span> Leer datos</a></li>
+<li><a class="nav-link" href="#ejercicios"><span class="header-section-number">3.8</span> Ejercicios</a></li>
+</ul>
 
-          </div>
-        </div>
-      </div>
-<a href="ejercicios-y-proyectos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="principios-de-tidydata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/horaciosamaniego/CBIT202/blob/master/01-intro.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/horaciosamaniego/CBIT202/edit/master/01-intro.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Diapositivas CBIT202</strong>" was written by Horacio Samaniego. It was last built on 2025-08-08.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -531,7 +363,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

@@ -1,5 +1,13 @@
 bookdown::bs4_book:
-  css: style.css
   theme:
     primary: "#275c30"
-#  repo: https://github.com/rstudio/bookdown-demo
+    base_font:
+      google: Inter
+    heading_font:
+      google: "Bitter"
+  repo:
+    base: https://github.com/horaciosamaniego/CBIT202
+    branch: master
+  css: "style.css"
+  # toc: "toc.css" # does not work in bs4_book
+
