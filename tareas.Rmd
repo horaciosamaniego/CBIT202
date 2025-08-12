@@ -1,0 +1,56 @@
+---
+author: "Horacio Samaniego"
+date: "2025-08-08"
+output: html_document
+---
+
+#  Ejercicios, tareas y proyectos
+
+Aquí el repositorio de tareas:
+
+* [Tareas y Ejecicios](https://github.com/horaciosamaniego/CBIT202/tree/master/Tareas)
+
+
+## Tareas semanales
+
+Una objetivo de este curso es ejercitarnos con pequeños ejercicios semanales. Estos representan un 50% de la nota final. Podra encontrar, en la medida que se liberen, los links a los ejecicios, tareas y proyectos aquí:.
+
+Los archivos que esten en formato Rmd se desplegaran como un archivo de texto, compile este texto en un archivo Rmd en su R Studio.
+
+## Descargar Ejercicios
+
+**Tareas 1:** Conseptos basicos de programación en R.
+
+[LINK TAREA 1 PDF](https://github.com/horaciosamaniego/CBIT202/tree/master/Tareas)
+
+**Tareas 2:** Conseptos basicos de programación en R.
+
+[LINK TAREA 2 PDF](https://github.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/raw/main/RMarkdown/PDFs/Ejercicios_2_CBIT202_R.pdf).
+
+**Tareas 3:** Conseptos basicos de programación en R.
+
+[LINK TAREA 3 RMD](https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_3_CBIT202_R.Rmd?raw=true)
+
+O ejecute el siguiente código para descargar el archivo en su working directory
+
+```{r tarea3 , eval=FALSE, echo=TRUE}
+githubURL <- 'https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_3_CBIT202_R.Rmd'
+
+download.file(githubURL, "Ejercicios_3_CBIT202_R.Rmd")
+```
+
+**Tareas 4:** Conseptos basicos de programación en R.
+
+[LINK TAREA 4 RMD](https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/main/RMarkdown/Ejercicios_4_CBIT202.Rmd?raw=true)
+
+O ejecute el siguiente código para descargar el archivo en su working directory
+
+```{r tarea4 , eval=FALSE, echo=TRUE}
+githubURL <- 'https://raw.githubusercontent.com/CBIT202-18-Analisis-de-datos-geo/Ejercicios_CBIT202/blob/main/RMarkdown/Ejercicios_4_CBIT202.Rmd'
+
+download.file(githubURL, "Ejercicios_4_CBIT202_R.Rmd")
+```
+
+## **Proyecto**
+
+[LINK PROYECTO](https://ecoinformatica.notion.site/Proyecto-de-programaci-n-cbit202-12933a5f83a1806e9f56c5728b9904e9?pvs=4)
