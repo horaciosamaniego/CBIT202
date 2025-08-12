@@ -1,0 +1,68 @@
+---
+title: "Tarea0"
+author: "Horacio Samaniego"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+# Ejercicios N°0: Conceptos (súper) básicos
+
+
+Esta tarea no lleva nota. Por lo mismo, trata de hacerla. Compila el archivo .Rmd para obtener un archivo `html` que mostrar en clases. Afíchalo en el canal de tareas en Discord.
+
+- [Aquí](https://discord.gg/adqSpqVH7Z) puede inscribirte en Discord, si aún no lo has hecho.
+
+## Cómputos simples
+1. Calcula la suma de 100.1, 234.9 and 12.01
+
+```{r}
+# Por ejemplo:
+
+2+4
+
+
+```
+
+2. La raíz cuadrada de 256
+```{r}
+# incluye tu respuesta aqui:
+
+```
+3. El logaritmo (base 10) de 100, y multiplique el resultado por el coseno de n. Ayuda: vea ?log and ?pi.
+```{r}
+# incluye tu respuesta aqui:
+
+```
+4. Suma acumulada de 2, 3, 4, 5, 6.
+```{r}
+# incluye tu respuesta aqui:
+
+```
+5. Suma acumulada anterior, pero en orden inverso.
+```{r}
+# incluye tu respuesta aqui:
+
+```
+6. Encuentre 10 números enteros aleatorios entre 0 y 100 Ayuda: ?sample, ?runif, o una combinacion de aquello
+```{r}
+# incluye tu respuesta aqui:
+
+```
+
+7. Crea este `data.frame` en la variable `z`, usa una sola línea de código:
+
+
+| Número | Letra | Medida |
+|--------|-------|--------|
+| 5      | S     | 49.59  |
+| 4      | U     | 91.84  |
+| 3      | B     | 69.32  |
+| 2      | Q     | 72.25  |
+| 1      | A     |  0.51  |
+
+
+```{r}
+# incluye tu respuesta aqui:
+
+```
+

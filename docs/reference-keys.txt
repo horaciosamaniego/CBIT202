@@ -13,3 +13,4 @@ modulo-5-visualización-de-datos
 módulo-6-introducción-al-análisis-geoespacial
 recursos-adicionales
 diapositivas
+output
