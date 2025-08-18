@@ -6,7 +6,7 @@ output:
   ioslides_presentation:
     widescreen: true
     incremental: true
-    logo: LogoRverso.jpeg
+    logo: LogoEcoinfo.png
 revealjs::revealjs_presentation:
           theme: night
           center: true
@@ -121,7 +121,9 @@ DF <- mutate(iris, Petal.Sepal.Ratio = round((Petal.Length/Sepal.Length),2))
 kable(DF[seq(from = 15, to = 150, length.out = 10),], row.names = FALSE) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F) |> scroll_box(width = "900px", height = "200px")
 ```
 
-## Pipeline "|>" {.small .build}
+## Pipeline "%>%\" {.small .build}
+
+También "|>", sirve:
 
 - Para realizar varias operaciones de forma secuencial 
 - sin recurrir a parentesis anidados 
@@ -132,21 +134,17 @@ x <- c(1,4,6,8)
 y <- round(mean(sqrt(log(x))),2)
 ```
 
-- Que hice ahí?
+- en "tidy", sería:
 
 ```{r, eval=FALSE}
 x <- c(1,4,6,8)
 y <- x |> log() |> sqrt() |> mean() |> round(2)
 ```
 
-```{r, echo=FALSE}
-x <- c(1,4,6,8)
-x |> log() |> sqrt() |> mean() |> round(2)
-```
 
 ## Pipeline {.small .build}
 
-* Muchos objetos intermedios
+* Nos evita guardar muchos objetos intermedios en memoria. Por ejemplo:
 
 ```{r, eval=FALSE}
 DF <- mutate(iris, Petal.Sepal.Ratio = Petal.Length/Sepal.Length)
@@ -183,7 +181,7 @@ kable(Summary.Byspecies) |> kable_styling(bootstrap_options = c("striped", "hove
 ```
 
 
-## Pipeline, otro ejemplo
+## Pipeline, otro ejemplo {.small .build}
 
 ```{r, eval=FALSE}
 library(tidyverse)
@@ -194,7 +192,7 @@ MEAN <- iris |> group_by(Species) |> summarize_all(.funs = list(Mean = mean, SD 
 library(dplyr)
 library(knitr)
 MEAN <- iris |> group_by(Species) |> summarize_all(.funs = list(Mean = mean, SD =sd))
-kable(MEAN) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+kable(MEAN) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T,font_size = 6)
 ```
 # Mas dudas?
 
@@ -229,7 +227,7 @@ DF <- iris |> filter(Petal.Length >= 4 & Sepal.Length >= 5) |> group_by(Species)
 
 ```{r, echo = FALSE}
 DF <- iris |> filter(Petal.Length >= 4 & Sepal.Length >= 5) |> group_by(Species) |> summarise(N = n())
-kable(DF) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+kable(DF) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T)
 ```
 
 
@@ -264,18 +262,15 @@ iris |> group_by(Species) |> select(-Sepal.Length, -Sepal.Width) |> summarize_al
 iris |> group_by(Species) |> select(contains("Petal")) |> summarize_all(mean)
 ```
 
-```{r, eval=FALSE}
-iris |> group_by(Species) |> select(-contains("Sepal")) |> summarize_all(mean)
-```
 
-```{r, echo = FALSE}
-DF <- iris |> group_by(Species) |> select(-contains("Sepal")) |> summarize_all(mean)
-```
 
 ## Resultado
 
 ```{r, echo = FALSE}
-kable(DF) |> kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+DF |>
+  dplyr::select(c("Petal.Length_Mean","Sepal.Length_Mean")) |>
+  kable() |> 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T)
 ```
 
 
@@ -300,16 +295,5 @@ Usando la base de datos del repositorio del ministerio de ciencias, genera un da
 
 ## **Bonus** (Esto requiere investigar no basta con lo que aprendimos)
 
-* Ve cuales son las 10 comunas que han tenido la mayor mediana de prevalencia, para cada una de estas 10 comunas, genera una tabla con la mediana, prevalencia máxima y fecha en que se alcanzó la prevalencia máxima
+* ¿Cuáles son las 10 comunas que han tenido la mayor mediana de prevalencia? Para cada una de estas 10 comunas, genera una tabla con la mediana, prevalencia máxima y fecha en que se alcanzó la prevalencia máxima.
 
-* Nos vemos a las 12:45
-
-## Para la otra clase, es necesario: {.small .build}
-
-
-* Crearse cuenta de [github](https://github.com/)
-* Instalar los paquetes knitr, rmarkdown y kableExtra
-
-
-
-# Investigación reproducible y github
