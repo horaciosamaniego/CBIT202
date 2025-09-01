@@ -25,7 +25,7 @@ options("kableExtra.html.bsTable" = T)
   4. [Cheat sheet Rmd](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
   5. El botón mágico **Knit**
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, out.width=80%}
 knitr::include_graphics("https://derek-corcoran-barrios.github.io/Clase2/RMDexample.png")
 ```
 
@@ -35,7 +35,7 @@ knitr::include_graphics("https://derek-corcoran-barrios.github.io/Clase2/RMDexam
 
 [link](https://stackoverflow.com/users/3808018/derek-corcoran)
 
-```{r, echo = TRUE, eval=FALSE}
+```
 # Titulo
 
 ## subtitulo
@@ -80,6 +80,7 @@ knitr::include_graphics("https://derek-corcoran-barrios.github.io/Clase2/Chunk.p
 ## Ejemplo
 
 ```{r}
+library(tidyverse)
 data("msleep")
 Tabla <- msleep |> 
   group_by(vore) |>
