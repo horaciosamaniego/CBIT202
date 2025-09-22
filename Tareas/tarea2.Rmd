@@ -1,0 +1,55 @@
+---
+title: "Tarea BBS "
+author: "Horacio Samaniego"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Tarea N°2: el Breeding Bird Survey
+
+Proyecto del [BBS](https://www.pwrc.usgs.gov/bbs/rawdata/)
+
+## Introducción a los Censos de Aves Reproductoras
+
+Los censos de aves reproductoras (en inglés, *Breeding Bird Surveys - BBS*) son una herramienta clave en la **ornitología** y la **biología de la conservación**. Se utilizan para monitorear la abundancia y distribución de las especies de aves, proporcionando información crítica sobre las tendencias poblacionales, el uso del hábitat y los posibles impactos de cambios ambientales como el cambio climático o la pérdida de hábitat. Estos datos son esenciales para la planificación de estrategias de conservación y la toma de decisiones políticas dirigidas a proteger la biodiversidad aviar.
+
+------------------------------------------------------------------------
+
+## **Metodología de Recopilación de Datos**
+
+Los datos para este análisis fueron recolectados utilizando una **metodología de conteo por puntos** durante la temporada de reproducción. Esta técnica implica que observadores entrenados visitan una serie de lugares predeterminados (puntos) y registran todas las especies de aves escuchadas o vistas dentro de un radio específico durante un período de tiempo fijo. Las variables registradas en cada punto incluyen:
+
+-   **Identificación de la especie**
+-   **Número de individuos observados**
+-   **Hora de la observación**
+-   **Características del hábitat** (e.g., tipo de bosque, densidad de vegetación)
+-   **Condiciones ambientales** (e.g., clima, hora del día)
+
+Este enfoque estandarizado asegura que los datos sean comparables entre diferentes lugares y años, lo que los hace adecuados para análisis a gran escala.
+
+-   **Rutas de Muestreo:** Son recorridos lineales que atraviesan diferentes tipos de hábitat. La consistencia en el trayecto de cada ruta a lo largo de los años es fundamental para garantizar que los datos sean comparables.
+
+-   **Paradas de Conteo:** Cada parada es un punto georreferenciado donde el observador realiza un **conteo por puntos**. Durante un tiempo fijo (por ejemplo, 3 minutos), se registran todas las especies de aves que se ven o se escuchan dentro de un radio determinado (por ejemplo, 50 metros). La distancia entre paradas es uniforme (por ejemplo, 800 metros), lo que permite una cobertura sistemática del paisaje.
+
+------------------------------------------------------------------------
+
+## Procedimientos
+
+1. Descargar datos
+2. identificar archivos
+  - Archivos de rutas
+  - Abundancia y ocurrencia
+  - Taxonomía
+3. Definir qué tipo de herramientas necesitamos para conseguir los objetivos
+  Podría ser que debamos recordarnos de esos objetivos
+
+
+### **Estructura del Análisis Incremental**
+
+Este trabajo se centrará en un **análisis incremental** de los datos del censo para alcanzar dos objetivos principales:
+
+1.  **Análisis Exploratorio y No Espacial (Primera Etapa):** En esta sección inicial, realizaremos un análisis descriptivo para comprender las características básicas de los datos. Se explorará la frecuencia y abundancia de cada especie, y se identificarán aquellas con la **serie temporal de datos más discontinua**. Una serie temporal discontinua se refiere a una especie que no ha sido registrada de manera consistente en los puntos de muestreo a lo largo de los años, lo que puede dificultar el análisis de tendencias poblacionales.
+
+2.  **Análisis Espacial (Segunda Etapa):** Posteriormente, incorporaremos consideraciones espaciales al vincular los datos con las rutas de muestreo y su distribución geográfica. Este análisis buscará identificar la especie con la **mejor representación espacial**, es decir, la que se encuentra en un mayor número de rutas o con una distribución más amplia a lo largo del paisaje.
+
+El desarrollo de este análisis incremental permitirá no solo identificar las especies con series temporales irregulares y aquellas con la mejor distribución espacial, sino también demostrar la importancia de combinar métodos de análisis no espaciales y espaciales en la investigación ecológica. Los hallazgos servirán como un ejemplo práctico del uso de datos ecológicos para informar la gestión y conservación de la vida silvestre.
