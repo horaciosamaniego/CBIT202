@@ -33,16 +33,6 @@ Este enfoque estandarizado asegura que los datos sean comparables entre diferent
 
 ------------------------------------------------------------------------
 
-## Procedimientos
-
-1. Descargar datos
-2. identificar archivos
-  - Archivos de rutas
-  - Abundancia y ocurrencia
-  - Taxonomía
-3. Definir qué tipo de herramientas necesitamos para conseguir los objetivos
-  Podría ser que debamos recordarnos de esos objetivos
-
 
 ### **Estructura del Análisis Incremental**
 
@@ -53,3 +43,17 @@ Este trabajo se centrará en un **análisis incremental** de los datos del censo
 2.  **Análisis Espacial (Segunda Etapa):** Posteriormente, incorporaremos consideraciones espaciales al vincular los datos con las rutas de muestreo y su distribución geográfica. Este análisis buscará identificar la especie con la **mejor representación espacial**, es decir, la que se encuentra en un mayor número de rutas o con una distribución más amplia a lo largo del paisaje.
 
 El desarrollo de este análisis incremental permitirá no solo identificar las especies con series temporales irregulares y aquellas con la mejor distribución espacial, sino también demostrar la importancia de combinar métodos de análisis no espaciales y espaciales en la investigación ecológica. Los hallazgos servirán como un ejemplo práctico del uso de datos ecológicos para informar la gestión y conservación de la vida silvestre.
+
+------------------------------------------------------------------------
+
+## **Procedimientos**
+
+1. Descargar datos
+2. identificar archivos
+  - Archivos de rutas
+  - Abundancia y ocurrencia
+  - Taxonomía
+3. Definir qué tipo de herramientas necesitamos para conseguir los objetivos
+  Podría ser que debamos recordarnos de esos objetivos
+
+
